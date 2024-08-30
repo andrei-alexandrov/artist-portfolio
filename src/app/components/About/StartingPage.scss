@@ -1,7 +1,7 @@
 section {
-  //position: relative;
+  // position: relative;
   width: 100%;
-  height: 100vh; /* Full viewport height */
+  height: 100vh;
 
   .stars-container {
     position: absolute;
@@ -13,13 +13,10 @@ section {
   }
 
   .starting-content-wrapper {
-    position: relative; /* Ensure it is positioned correctly */
+    position: relative;
     margin-top: 5rem;
     display: flex;
     flex-direction: column;
-    // align-items: center;
-    //   justify-content: center;
-    //   height: 100%;
     z-index: 2;
 
     @media (min-width: 768px) {
@@ -30,114 +27,103 @@ section {
 
     .text-content {
       position: relative;
-      top: 0; /* Adjust as needed */
       z-index: 2;
       color: white;
       padding: 20px;
       text-align: center;
 
       @media (min-width: 768px) {
-        text-align: left; /* Align text to the left on larger screens */
+        text-align: left;
         padding: 20px 40px;
       }
-    }
 
-    .artist-name {
-      opacity: 0;
+      .artist-name {
+        opacity: 0;
+      }
+
+      .socials-container {
+        display: flex;
+        gap: 1rem;
+        margin-top: 2rem;
+
+        .social-icon {
+          max-width: 2.5rem;
+          transition: transform 0.7s;
+
+          &:hover {
+            cursor: pointer;
+            transform: scale(1.2);
+          }
+        }
+        .social-icon-special {
+          max-width: 2.5rem;
+          transition: transform 0.7s;
+          position: relative;
+          left: -6px;
+
+          &:hover {
+            cursor: pointer;
+            transform: scale(1.2);
+          }
+        }
+      }
+
+      .highlight-icon {
+        margin-top: 2.5rem;
+        transition: transform 0.7s;
+        max-width: 15rem;
+        &:hover {
+          cursor: pointer;
+          transform: scale(1.07);
+        }
+      }
+
+      .contact-button {
+        position: relative;
+        right: 5px;
+        margin-top: 2.6rem;
+        background-image: radial-gradient(
+          100% 100% at 100% 0,
+          hsla(206, 91%, 66%, 1) 0%,
+          hsla(240, 45%, 6%, 1) 52%
+        );
+        border: 0;
+        border-radius: 50px;
+        color: #cca752;
+        cursor: pointer;
+        height: 50px;
+        padding-left: 35px;
+        padding-right: 35px;
+        font-size: 16px;
+        transition: transform 0.7s;
+
+        &:hover {
+          box-shadow: #cca752 0 -2px 0 inset;
+        }
+
+        &:active {
+          transform: translateY(15px);
+        }
+      }
     }
 
     .artist-image {
-      width: 100%; /* Make image responsive */
-      max-width: 20rem; /* Max width for larger screens */
-      height: auto; /* Maintain aspect ratio */
-      border-radius: 15px; /* Rounded corners for a classy look */
-      object-fit: cover; /* Cover the area with the image */
+      width: 100%;
+      max-width: 20rem;
+      height: auto;
+      border-radius: 15px;
+      object-fit: cover;
       transition: transform 0.3s ease, filter 0.3s ease;
 
       &:hover {
-        transform: scale(1.05); /* Slight zoom effect on hover */
-        filter: brightness(1.1); /* Lighten the image on hover */
+        transform: scale(1.05);
+        filter: brightness(1.1);
       }
 
       @media (min-width: 768px) {
-        max-width: 20rem; /* Larger max width for larger screens */
+        max-width: 20rem;
       }
     }
-  }
-  .socials-container {
-    display: flex;
-    gap: 1rem;
-    margin-top: 2rem;
-
-    .social-icon {
-      max-width: 2.4rem;
-      transition: transform 0.7s;
-      &:hover {
-        cursor: pointer;
-        transform: scale(1.2); /* Zoom the icon slightly */
-      }
-    }
-    // .hexagon-wrapper {
-    //   text-align: initial;
-    //   width: 70px;
-    //   height: 70px;
-    //   cursor: pointer;
-    // }
-
-    // .hexagon {
-    //   position: relative;
-    //   width: 46%;
-    //   height: 80%;
-    //   color: white;
-    //   background: linear-gradient(-180deg, white, #0a014b);
-    //   display: flex;
-    //   align-items: center;
-    //   justify-content: center;
-    //   transition: 0.5s; /* Smooth transition */
-
-    //   i {
-    //     z-index: 1;
-    //     margin: auto;
-    //     font-size: 22px;
-    //     background-clip: text;
-    //     -webkit-background-clip: text; /* Background clip for text */
-    //   }
-
-    //   &:before,
-    //   &:after {
-    //     position: absolute;
-    //     content: "";
-    //     background: inherit;
-    //     height: 100%;
-    //     width: 100%;
-    //     border-radius: 0;
-    //     transition: 0.5s;
-    //     transform-origin: center;
-    //   }
-
-    //   &:before {
-    //     transform: rotateZ(60deg);
-    //   }
-
-    //   &:after {
-    //     transform: rotateZ(-60deg);
-    //   }
-
-    //   &:hover {
-    //     border-radius: 50px;
-    //     transition: 0.5s;
-
-    //     &:before {
-    //       border-radius: 50px;
-    //       transition: 0.5s;
-    //     }
-
-    //     &:after {
-    //       border-radius: 50px;
-    //       transition: 0.5s;
-    //     }
-    //   }
-    // }
   }
 
   .musical-divider {
@@ -146,7 +132,6 @@ section {
   }
 }
 
-/* Optional: Adjustments for very small screens */
 @media (max-width: 764px) {
   section {
     .starting-content-wrapper {
@@ -155,15 +140,32 @@ section {
       align-items: center;
       .socials-container {
         justify-content: center;
+        position: relative;
+        left: 8px;
       }
 
       .artist-image {
         max-width: 15rem;
       }
+
+      .highlight-icon {
+        position: relative;
+        left: 9px;
+      }
+      .contact-button {
+        left: 5px;
+      }
     }
     .musical-divider {
-      position: relative;
       bottom: 2rem;
+    }
+  }
+}
+
+@media (min-width: 765px) and (max-width: 1400px) {
+  section {
+    .musical-divider {
+      bottom: 1rem;
     }
   }
 }

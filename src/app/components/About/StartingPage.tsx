@@ -5,11 +5,14 @@ import { gsap } from "gsap";
 import Stars from "../Stars";
 import Image from "next/image";
 
-import iskraPhoto from "../../assets/iskra-photo.jpg";
-import facebookIcon from "../../assets/facebook-icon.png";
-import instagramIcon from "../../assets/instagram-icon.png";
-import linkedInIcon from "../../assets/linkedin-icon.png";
+import artistPhoto from "../../assets/photos/iskra-photo.jpg";
+import facebookIcon from "../../assets/icons/facebook-icon.png";
+import instagramIcon from "../../assets/icons/instagram-icon.png";
+import linkedInIcon from "../../assets/icons/linkedin-icon.png";
+import musicTalentsIcon from "../../assets/icons/music-talents.png";
+import highlightLogo from "../../assets/icons/highlight-logo-light.png";
 import musicDivider from "../../assets/music-divider.png";
+
 import "./StartingPage.scss";
 
 const About = () => {
@@ -38,24 +41,8 @@ const About = () => {
       <div className="starting-content-wrapper">
         <div className="text-content">
           <h1 className="artist-name">Iskra Milkova Angelova</h1>
-          <p>"Highligh the way"</p>
+          <p>"Highligh the way!"</p>
           <p>Vocal and artist coach, founder of "Highlight Singing Academy"</p>
-          {/* <div className="socials-container">
-            <div className="hexagon-wrapper">
-              <div className="hexagon">
-                <i className="fab fa-facebook"></i>
-              </div>
-            </div>
-            <div className="hexagon-wrapper">
-              <div className="hexagon">
-                <i className="fab fa-linkedin"></i>
-              </div>
-            </div>
-            <div className="hexagon-wrapper">
-              <div className="hexagon">
-                <i className="fab fa-instagram"></i>
-              </div>
-            </div> */}
 
           <div className="socials-container">
             <a
@@ -66,7 +53,7 @@ const About = () => {
               <Image
                 className="social-icon"
                 src={linkedInIcon}
-                alt="linkedIn-icon"
+                alt="linkedIn icon"
                 layout="responsive"
               />
             </a>
@@ -78,7 +65,7 @@ const About = () => {
               <Image
                 className="social-icon"
                 src={instagramIcon}
-                alt="facebook-icon"
+                alt="instagram icon"
                 layout="responsive"
               />
             </a>
@@ -90,17 +77,47 @@ const About = () => {
               <Image
                 className="social-icon"
                 src={facebookIcon}
-                alt="facebook-icon"
+                alt="facebook icon"
+                layout="responsive"
+              />
+            </a>
+            <a
+              href="https://muzikalnite-talanti.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Image
+                className="social-icon-special"
+                src={musicTalentsIcon}
+                alt="music talents icon"
                 layout="responsive"
               />
             </a>
           </div>
-          {/* </div> */}
+
+          <div>
+            <a
+              href="https://highlight-singing.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Image
+                className="highlight-icon"
+                src={highlightLogo}
+                alt="highlight academy icon"
+                layout="responsive"
+              />
+            </a>
+          </div>
+          <div className="contact-button-wrapper">
+            <button className="contact-button">Contact</button>
+          </div>
         </div>
+
         <Image
           className="artist-image"
-          src={iskraPhoto}
-          alt="Искра Милкова Ангелова"
+          src={artistPhoto}
+          alt="artist photo"
           layout="responsive"
         />
       </div>
