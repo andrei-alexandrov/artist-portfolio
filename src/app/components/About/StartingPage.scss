@@ -1,0 +1,169 @@
+section {
+  //position: relative;
+  width: 100%;
+  height: 100vh; /* Full viewport height */
+
+  .stars-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+
+  .starting-content-wrapper {
+    position: relative; /* Ensure it is positioned correctly */
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    // align-items: center;
+    //   justify-content: center;
+    //   height: 100%;
+    z-index: 2;
+
+    @media (min-width: 768px) {
+      flex-direction: row;
+      justify-content: space-around;
+      padding: 0 20px;
+    }
+
+    .text-content {
+      position: relative;
+      top: 0; /* Adjust as needed */
+      z-index: 2;
+      color: white;
+      padding: 20px;
+      text-align: center;
+
+      @media (min-width: 768px) {
+        text-align: left; /* Align text to the left on larger screens */
+        padding: 20px 40px;
+      }
+    }
+
+    .artist-name {
+      opacity: 0;
+    }
+
+    .artist-image {
+      width: 100%; /* Make image responsive */
+      max-width: 20rem; /* Max width for larger screens */
+      height: auto; /* Maintain aspect ratio */
+      border-radius: 15px; /* Rounded corners for a classy look */
+      object-fit: cover; /* Cover the area with the image */
+      transition: transform 0.3s ease, filter 0.3s ease;
+
+      &:hover {
+        transform: scale(1.05); /* Slight zoom effect on hover */
+        filter: brightness(1.1); /* Lighten the image on hover */
+      }
+
+      @media (min-width: 768px) {
+        max-width: 20rem; /* Larger max width for larger screens */
+      }
+    }
+  }
+  .socials-container {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+
+    .social-icon {
+      max-width: 2.4rem;
+      transition: transform 0.7s;
+      &:hover {
+        cursor: pointer;
+        transform: scale(1.2); /* Zoom the icon slightly */
+      }
+    }
+    // .hexagon-wrapper {
+    //   text-align: initial;
+    //   width: 70px;
+    //   height: 70px;
+    //   cursor: pointer;
+    // }
+
+    // .hexagon {
+    //   position: relative;
+    //   width: 46%;
+    //   height: 80%;
+    //   color: white;
+    //   background: linear-gradient(-180deg, white, #0a014b);
+    //   display: flex;
+    //   align-items: center;
+    //   justify-content: center;
+    //   transition: 0.5s; /* Smooth transition */
+
+    //   i {
+    //     z-index: 1;
+    //     margin: auto;
+    //     font-size: 22px;
+    //     background-clip: text;
+    //     -webkit-background-clip: text; /* Background clip for text */
+    //   }
+
+    //   &:before,
+    //   &:after {
+    //     position: absolute;
+    //     content: "";
+    //     background: inherit;
+    //     height: 100%;
+    //     width: 100%;
+    //     border-radius: 0;
+    //     transition: 0.5s;
+    //     transform-origin: center;
+    //   }
+
+    //   &:before {
+    //     transform: rotateZ(60deg);
+    //   }
+
+    //   &:after {
+    //     transform: rotateZ(-60deg);
+    //   }
+
+    //   &:hover {
+    //     border-radius: 50px;
+    //     transition: 0.5s;
+
+    //     &:before {
+    //       border-radius: 50px;
+    //       transition: 0.5s;
+    //     }
+
+    //     &:after {
+    //       border-radius: 50px;
+    //       transition: 0.5s;
+    //     }
+    //   }
+    // }
+  }
+
+  .musical-divider {
+    position: relative;
+    bottom: 7rem;
+  }
+}
+
+/* Optional: Adjustments for very small screens */
+@media (max-width: 764px) {
+  section {
+    .starting-content-wrapper {
+      margin-top: 5px;
+      padding: 10px;
+      align-items: center;
+      .socials-container {
+        justify-content: center;
+      }
+
+      .artist-image {
+        max-width: 15rem;
+      }
+    }
+    .musical-divider {
+      position: relative;
+      bottom: 2rem;
+    }
+  }
+}

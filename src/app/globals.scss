@@ -1,0 +1,29 @@
+@import "~bootstrap/scss/bootstrap";
+
+@font-face {
+  font-family: "Gumela";
+  src: url("../../public/fonts/Gumela.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  // overflow-x: hidden;
+  background-color: #080815;
+  font-family: "Gumela", sans-serif;
+  // background: linear-gradient(18deg, #e37682, #a58fe9);
+  
+  background: linear-gradient(360deg, hsla(206, 91%, 66%, 1) 0%, hsla(240, 45%, 6%, 1) 52%);
+  background: linear-gradient(360deg, hsla(206, 91%, 66%, 1) 0%, hsla(240, 45%, 6%, 1) 40%);
+  background-image: linear-gradient(to top, #080815, #010f1f, #011231, rgb(26, 8, 29));
+  
+
+}
