@@ -35,6 +35,12 @@
       border-radius: 35px;
       max-width: 40rem;
       aspect-ratio: 600/380;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+      &:hover {
+        transform: scale(1) rotate(1deg);
+        box-shadow: 0 0 10px 4px $main-color;
+      }
     }
 
     .project-video {

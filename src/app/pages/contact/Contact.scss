@@ -1,0 +1,93 @@
+@import "../../../variables";
+@import "../../../mixins";
+
+.contact-form {
+    .title {
+        margin-top: 8rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .title>:nth-child(1) {
+        color: $main-color;
+        font-weight: bold;
+        font-size: 2.5rem;
+    }
+
+    .title>:nth-child(2) {
+        color: $main-color;
+        font-weight: bold;
+        font-size: 2.5rem;
+    }
+
+    .sackboy-meditate {
+        margin-top: 1.5rem;
+        margin-bottom: 1rem;
+        width: 7.2rem;
+    }
+
+    .sackboy-happy {
+        display: none;
+    }
+
+    .form {
+
+        >form {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            align-items: center;
+            justify-content: center;
+            // margin-left: 8rem;
+        }
+    }
+
+    .form .user {
+        width: 20rem;
+        height: 2rem;
+        pad: 0.3em;
+        outline: none;
+        border: 2px solid $main-color;
+        border-radius: 8px;
+        font-size: 1rem;
+        padding-left: 8px;
+    }
+
+    textarea {
+        height: 11rem !important;
+    }
+
+    .button {
+        @include portfolio-button();
+    }
+
+    .sent-message-text {
+        position: relative;
+        bottom: 14rem;
+
+        span {
+            color: #fba61e;
+            font-size: 1.2rem;
+        }
+
+        img {
+            width: 60px;
+            height: 70px;
+        }
+    }
+}
+
+@media screen and (min-width: 481px) and (max-width: 111111px) {
+    .button {
+        @include portfolio-button();
+        z-index: 1500;
+    }
+}
+
+@media screen and (min-width: 1600px) {
+    .contact-form {
+        position: relative;
+        top: 3rem;
+    }
+}

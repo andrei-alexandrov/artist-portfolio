@@ -39,13 +39,12 @@ export default function Home() {
             <Certificates />
           </Col>
         </Row>
+        <Row>
+          <Col>
+            <Contact />
+          </Col>
+        </Row>
       </Container>
-
-      <Row>
-        <Col>
-          <Contact />
-        </Col>
-      </Row>
     </main>
   );
 }
