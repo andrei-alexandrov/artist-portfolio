@@ -1,0 +1,61 @@
+@import "../../../variables";
+@import "../../../fonts";
+
+.about-container {
+  position: relative;
+  bottom: 8rem;
+
+  .about-description {
+    text-align: justify;
+    font-size: $small-font;
+
+    .animate-from-left,
+    .animate-from-right {
+      display: block;
+      opacity: 0;
+    }
+  }
+}
+
+@media (min-width: 200px) and (max-width: 380px) {
+  .about-container {
+    position: relative;
+    top: 24rem;
+    .portfolio-header{
+      text-align: center;
+    }
+    .about-description {
+      text-align: center;
+    }
+  }
+}
+
+@media (min-width: 381px) and (max-width: 764px) {
+  .about-container {
+    position: relative;
+    top: 15rem;
+    text-align: center;
+    .portfolio-header {
+      font-size: $large-font;
+    }
+
+    .about-description {
+      font-size: 18px;
+    }
+  }
+}
+
+
+@media (min-width: 764px) and (max-width: 991px) {
+  .about-container {
+    position: relative;
+    bottom: 5rem;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+  .about-container {
+    position: relative;
+    bottom: 4rem;
+  }
+}

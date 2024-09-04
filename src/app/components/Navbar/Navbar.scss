@@ -1,3 +1,6 @@
+@import "../../../variables";
+@import "../../../fonts";
+
 .navbar-container {
   position: relative;
   padding: 10px 20px;
@@ -6,9 +9,7 @@
   //   #1b1b61, /* Dark blue color */
   //   #e6b6a4  /* Pink gold color */
   // );
-  background-color: #080815;
-  background-color: transparent;
-
+  background-color: white; //Discuss the color, or make the color transparent so that the stars animation gets on top of it too.
   height: 70px;
   display: flex;
   align-items: center;
@@ -16,12 +17,11 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   z-index: 99;
 
-  .logo {
-    font-size: 24px;
-    // font-weight: bold;
-    letter-spacing: 1.5px;
-    color: #cca752;
-  }
+  // .logo {
+  //   font-size: 24px;
+  //   letter-spacing: 1.5px;
+  //   color: $main-color;
+  // }
 
   .navbar-content {
     flex-grow: 1;
@@ -40,16 +40,17 @@
 
         a {
           text-decoration: none;
-          font-size: 20px;
+          font-size: $small-font;
           // transition: color 0.3s ease, transform 0.3s ease;
           // background-image: linear-gradient(to bottom, #fefcbf, #f59e0b);
           // background-clip: text;
           // -webkit-background-clip: text;
           // color: transparent;
-          color: #cca752;
+          color: $main-color;
 
           &:hover {
-            color: #f5c039;
+            color: $main-hover-color;
+            cursor: pointer;
           }
         }
 
@@ -60,7 +61,7 @@
           left: 0;
           right: 0;
           height: 2px;
-          background-color: #f59e0b;
+          background-color: $main-hover-color;
           transform: scaleX(0);
           transform-origin: right;
           transition: transform 0.3s ease;
@@ -80,7 +81,7 @@
     right: 20px;
     background: none;
     border: none;
-    color: #f5f5f5;
+    color: $main-color;
     font-size: 28px;
     cursor: pointer;
     transition: transform 0.3s ease;
@@ -98,7 +99,7 @@
     width: 300px;
     height: 100%;
     background-color: #2c2c2c;
-    color: #f5f5f5;
+    color: $main-color;
     padding: 30px;
     transition: right 0.4s ease-in-out;
     z-index: 1000;
@@ -118,7 +119,7 @@
       transition: transform 0.3s ease;
 
       &:hover {
-        color: #ffd057;
+        color: $main-hover-color;
         transform: rotate(-90deg);
       }
     }
@@ -132,14 +133,14 @@
           margin: 25px 0;
 
           a {
-            color: #f5f5f5;
+            color: $main-color;
             text-decoration: none;
             font-size: 18px;
             font-weight: 500;
             transition: color 0.3s ease, transform 0.3s ease;
 
             &:hover {
-              color: #ffd057;
+              color: $main-hover-color;
               transform: translateX(5px);
             }
           }

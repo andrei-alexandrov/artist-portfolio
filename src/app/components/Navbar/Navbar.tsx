@@ -2,6 +2,7 @@
 
 import { useState, useRef, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
+import {Link} from "react-scroll";
 import "./Navbar.scss";
 
 const Navbar = () => {
@@ -34,36 +35,79 @@ const Navbar = () => {
 
   return (
     <>
-      {/* Navbar Content */}
       <div className="navbar-container">
         {/* Logo Placeholder, change later with real one and style */}
-        <div className="logo">Logo</div>
+        {/* <div className="logo">Logo</div> */}
         <Container className="navbar-content">
           <Row>
             <Col className="d-none d-md-flex justify-content-end">
               <nav>
                 <ul className="navbar-menu">
                   <li>
-                    <a href="#about">About Me</a>
+                    <Link
+                      activeClass="active"
+                      to="about"
+                      spy={true}
+                      smooth={true}
+                      duration={50}
+                      offset={-70}
+                    >
+                      About Me
+                    </Link>
                   </li>
                   <li>
-                    <a href="#projects">Projects</a>
+                    <Link
+                      activeClass="active"
+                      to="activities"
+                      spy={true}
+                      smooth={true}
+                      duration={50}
+                      offset={-70}
+                    >
+                      Activities
+                    </Link>
                   </li>
                   <li>
-                    <a href="#clients">Clients</a>
+                    <Link
+                      activeClass="active"
+                      to="certificates"
+                      spy={true}
+                      smooth={true}
+                      duration={50}
+                      offset={-70}
+                    >
+                      Certificates
+                    </Link>
                   </li>
                   <li>
-                    <a href="#media">Media</a>
+                    <Link
+                      activeClass="active"
+                      to="inspirations"
+                      spy={true}
+                      smooth={true}
+                      duration={50}
+                      offset={-70}
+                    >
+                    Inspirations
+                    </Link>
                   </li>
                   <li>
-                    <a href="#contact">Contact</a>
+                    <Link
+                      activeClass="active"
+                      to="contact"
+                      spy={true}
+                      smooth={true}
+                      duration={50}
+                      offset={-70}
+                    >
+                      Contact
+                    </Link>
                   </li>
                 </ul>
               </nav>
             </Col>
             <Col className="d-flex d-md-none justify-content-end">
               <button className="hamburger-menu" onClick={handleToggleSidebar}>
-                {/* Navbar hamburger icon - change later */}
                 &#9776;
               </button>
             </Col>
@@ -76,35 +120,69 @@ const Navbar = () => {
           className={`sidebar ${sidebarOpen ? "open" : ""}`}
         >
           <button className="close-btn" onClick={handleToggleSidebar}>
-            {/* "x" symbol, change later with a nice icon */}
             &times;
           </button>
           <nav>
             <ul>
               <li>
-                <a href="#about" onClick={handleToggleSidebar}>
+                <Link
+                  to="about"
+                  spy={true}
+                  smooth={true}
+                  duration={50}
+                  offset={-70}
+                  onClick={handleToggleSidebar}
+                >
                   About Me
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#projects" onClick={handleToggleSidebar}>
+                <Link
+                  to="projects"
+                  spy={true}
+                  smooth={true}
+                  duration={50}
+                  offset={-70}
+                  onClick={handleToggleSidebar}
+                >
                   Projects
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#clients" onClick={handleToggleSidebar}>
+                <Link
+                  to="clients"
+                  spy={true}
+                  smooth={true}
+                  duration={50}
+                  offset={-70}
+                  onClick={handleToggleSidebar}
+                >
                   Clients
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#media" onClick={handleToggleSidebar}>
+                <Link
+                  to="media"
+                  spy={true}
+                  smooth={true}
+                  duration={50}
+                  offset={-70}
+                  onClick={handleToggleSidebar}
+                >
                   Media
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#contact" onClick={handleToggleSidebar}>
+                <Link
+                  to="contact"
+                  spy={true}
+                  smooth={true}
+                  duration={50}
+                  offset={-70}
+                  onClick={handleToggleSidebar}
+                >
                   Contact
-                </a>
+                </Link>
               </li>
             </ul>
           </nav>

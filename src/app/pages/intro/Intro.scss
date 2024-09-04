@@ -1,0 +1,173 @@
+@import "../../../variables";
+@import "../../../fonts";
+@import "../../../mixins";
+
+section {
+ 
+  // position: relative;
+  width: 100%;
+  height: 100vh;
+
+  .stars-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+
+  .starting-content-wrapper {
+    position: relative;
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    z-index: 2;
+
+    @media (min-width: 768px) {
+      flex-direction: row;
+      justify-content: space-around;
+      padding: 0 20px;
+    }
+
+    .starting-content {
+      position: relative;
+      z-index: 2;
+      padding: 20px;
+      text-align: center;
+
+      @media (min-width: 768px) {
+        text-align: left;
+      }
+
+      .artist-name {
+        opacity: 0;
+        @include header-title();
+      }
+
+      .slogan {
+        font-size: $medium-font;
+        color: black;
+      }
+
+      .artist-short-info {
+        font-size: $small-font;
+        color: black;
+      }
+
+      .socials-container {
+        display: flex;
+        gap: 1rem;
+        margin-top: 2rem;
+
+        .social-icon {
+          max-width: 2.4rem;
+          transition: transform 0.4s;
+
+          &:hover {
+            cursor: pointer;
+            transform: scale(1.1);
+          }
+        }
+        .social-icon-special {
+          max-width: 2.4rem;
+          transition: transform 0.4s;
+          position: relative;
+          left: -6px;
+
+          &:hover {
+            cursor: pointer;
+            transform: scale(1.1);
+          }
+        }
+      }
+
+      .highlight-icon {
+        margin-top: 2.5rem;
+        transition: transform 0.7s;
+        max-width: 15rem;
+        &:hover {
+          cursor: pointer;
+          transform: scale(1.03);
+        }
+      }
+
+      .contact-button {
+        margin-top: 2.6rem;
+        @include portfolio-button();
+      }
+    }
+
+    .artist-image {
+      width: 100%;
+      max-width: 20rem;
+      height: auto;
+      border-radius: 15px;
+      object-fit: cover;
+      transition: transform 0.3s ease, filter 0.3s ease;
+
+      &:hover {
+        transform: scale(1.05);
+        filter: brightness(1.1);
+      }
+
+      @media (min-width: 768px) {
+        max-width: 20rem;
+      }
+    }
+  }
+
+  .musical-divider {
+    position: relative;
+    bottom: 7rem;
+  }
+}
+
+@media (max-width: 764px) {
+  section {
+    .starting-content-wrapper {
+      padding: 10px;
+      align-items: center;
+      margin-top: 3.5rem;
+
+      .socials-container {
+        justify-content: center;
+        position: relative;
+        left: 8px;
+      }
+
+      .artist-image {
+        margin-top: 2rem;
+        max-width: 15rem;
+      }
+
+      .highlight-icon {
+        position: relative;
+        left: 9px;
+      }
+      .contact-button {
+        left: 5px;
+      }
+    }
+    .musical-divider {
+      bottom: 2rem;
+    }
+  }
+}
+
+@media (min-width: 765px) and (max-width: 992px) {
+  section {
+    .starting-content-wrapper {
+      padding: 0;
+      .starting-content {
+        .artist-name {
+          font-size: 26px;
+        }
+      }
+    }
+
+    .musical-divider {
+      bottom: 1.9rem;
+    }
+  }
+}

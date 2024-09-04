@@ -1,0 +1,37 @@
+@import "./variables";
+
+@mixin header-title() {
+  color: $main-color;
+  font-size: 38px;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+@mixin portfolio-button {
+  width: 130px;
+  height: 50px;
+  background: none;
+  border-radius: 50px;
+  border: 1px solid $main-color;
+  color: $main-color;
+  cursor: pointer;
+  font-size: 16px;
+  text-align: center;
+  line-height: 50px;
+  transition: transform 0.7s, background-color 0.3s, box-shadow 0.3s, color 0.3s;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: inline-block;
+
+  &:hover {
+    background-color: $main-color;
+    color: white;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.18);
+  }
+
+  &:active {
+    transform: translateY(5px);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+}
