@@ -1,7 +1,7 @@
 "use client";
-import { useState } from "react";
-
 import Image from "next/image";
+import Modal from "@/app/components/Modal/Modal";
+import { useModal } from "../../customHooks/useModal";
 
 import certificateOne from "../../assets/certificates/1.jpg";
 import certificateTwo from "../../assets/certificates/2.jpg";
@@ -10,15 +10,7 @@ import certificateThree from "../../assets/certificates/3.jpg";
 import "./Certificates.scss";
 
 const Certificates = () => {
-  const [selectedImage, setSelectedImage] = useState(null);
-
-  const openModal = (imageSrc) => {
-    setSelectedImage(imageSrc);
-  };
-
-  const closeModal = () => {
-    setSelectedImage(null);
-  };
+  const { isOpen, imageSrc, openModal, closeModal } = useModal();
 
   return (
     <div id="certificates">
@@ -47,19 +39,7 @@ const Certificates = () => {
         />
       </div>
 
-      {selectedImage && (
-        <div className="modal" onClick={closeModal}>
-          <span className="close">&times;</span>
-          <div className="modal-content">
-            <Image
-              src={selectedImage}
-              alt="Full Screen Certificate"
-              layout="fill"
-              objectFit="contain"
-            />
-          </div>
-        </div>
-      )}
+      <Modal isOpen={isOpen} onClose={closeModal} imageSrc={imageSrc} />
     </div>
   );
 };

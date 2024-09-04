@@ -1,8 +1,10 @@
 "use client";
-import { useState } from "react";
+
 import { EffectCoverflow, Pagination, Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import Image from "next/image";
+import { useModal } from "../../customHooks/useModal";
+import Modal from "@/app/components/Modal/Modal";
 
 import inspirationImages from "./inspirationImages";
 import "swiper/css";
@@ -12,32 +14,7 @@ import "swiper/css/navigation";
 import "./Inspirations.scss";
 
 const Inspirations = () => {
-  const [modalOpen, setModalOpen] = useState(false);
-  const [currentImage, setCurrentImage] = useState("");
-
-  const openModal = (imageSrc) => {
-    setCurrentImage(imageSrc);
-    setModalOpen(true);
-  };
-
-  const closeModal = () => {
-    setModalOpen(false);
-    setCurrentImage("");
-  };
-
-  // Modal component defined inside the Inspirations component
-  const Modal = ({ isOpen, onClose, imageSrc }) => {
-    if (!isOpen || !imageSrc) return null;
-
-    return (
-      <div className="modal-overlay" onClick={onClose}>
-        <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-          <Image src={imageSrc} alt="Full size view" layout="fill" objectFit="contain" />
-          <button className="modal-close" onClick={onClose}>X</button>
-        </div>
-      </div>
-    );
-  };
+  const { isOpen, imageSrc, openModal, closeModal } = useModal();
 
   return (
     <div id="inspirations" className="container">
@@ -76,8 +53,7 @@ const Inspirations = () => {
         </div>
       </Swiper>
 
-      {/* Modal component usage */}
-      <Modal isOpen={modalOpen} onClose={closeModal} imageSrc={currentImage} />
+      <Modal isOpen={isOpen} onClose={closeModal} imageSrc={imageSrc} />
     </div>
   );
 };
