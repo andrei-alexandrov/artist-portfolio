@@ -16,7 +16,6 @@ import musicDivider from "../../assets/music-divider.png";
 
 import "./Intro.scss";
 
-
 const Intro = () => {
   useEffect(() => {
     const timelineTwo = gsap.timeline({ defaults: { duration: 1.7 } });
@@ -43,11 +42,11 @@ const Intro = () => {
       <div className="starting-content-wrapper">
         <div className="starting-content">
           <p className="artist-name">Iskra Milkova Angelova</p>
-          <p className="slogan">"Highligh the way!"</p>
+          <p className="slogan">&quot;Highlight the way!&quot;</p>
           <p className="artist-short-info">
-            Vocal and artist coach, founder of "Highlight Singing Academy"
+            Vocal and artist coach, founder of &quot;Highlight Singing
+            Academy&quot;
           </p>
-
           <div className="socials-container">
             <Link
               href="https://www.linkedin.com/in/iskra-milkova-228991ab/"
@@ -98,7 +97,6 @@ const Intro = () => {
               />
             </Link>
           </div>
-
           <div>
             <Link
               href="https://highlight-singing.com/"

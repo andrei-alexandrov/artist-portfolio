@@ -6,7 +6,6 @@ import dynamic from "next/dynamic";
 import Button from "@/app/components/Button/Button";
 import "./Contact.scss";
 
-// Dynamically import Lottie and ScrollToTopBtn, disable SSR
 const Lottie = dynamic(() => import("lottie-react"), { ssr: false });
 const ScrollToTopBtn = dynamic(
   () => import("../../components/ScrollToTopButton/ScrollToTopBtn"),
@@ -49,8 +48,8 @@ const Contact = () => {
   return (
     <div className="contact-form" id="contact">
       <div className="title">
-        <div>Let's connect</div>
-        {/* Render Lottie animation */}
+      <div>Let&#39;s connect</div>
+
         <Lottie style={{ width: "110px" }} animationData={connectMic} />
       </div>
 
@@ -83,14 +82,13 @@ const Contact = () => {
             title="Message must be at least 10 characters long"
             onClick={() => setInputClicked(true)}
           />
-          <Button>Let's talk </Button>
+          <Button>Send</Button> 
           {done && (
             <div className="sent-message-text">
               <span>Thanks for contacting me.</span>
               {/* Add any custom image for the thanks icon if needed */}
             </div>
           )}
-          {/* Scroll to Top Button */}
           <ScrollToTopBtn />
         </form>
       </div>
