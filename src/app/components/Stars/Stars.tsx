@@ -18,7 +18,45 @@ export default function StarGrid() {
 
     const tl = gsap.timeline();
 
-    // Entrance animation
+    const mm = gsap.matchMedia();
+    mm.add("(max-width: 768px)", () => {
+      gsap.set(container.current, { y: -51 });
+      tl.to(".star-grid-item", {
+        keyframes: [
+          {
+            opacity: 0,
+            duration: 0,
+          },
+          {
+            opacity: 0.8,
+            rotate: "+=180",
+            color: "#ffd057",
+            scale: 4,
+            duration: 0.7,
+            stagger: {
+              amount: 4,
+              grid: grid,
+              from: "center",
+            },
+          },
+          {
+            opacity: 0.3,
+            rotate: "+=180",
+            color: "#fff",
+            scale: 0,
+            delay: -2,
+            duration: 0.8,
+            stagger: {
+              amount: 3,
+              grid: grid,
+              from: "center",
+            },
+          },
+        ],
+      });
+    });
+
+    // Default (for larger screens)
     tl.to(".star-grid-item", {
       keyframes: [
         {
@@ -52,40 +90,6 @@ export default function StarGrid() {
         },
       ],
     });
-
-    // Loop animation
-    tl.to(".star-grid-item", {
-      delay: 2,
-      repeat: -1,
-      repeatDelay: 2,
-      keyframes: [
-        {
-          opacity: 0.6,
-          rotate: "+=180",
-          color: "#ffd057",
-          scale: 3,
-          duration: 0.8,
-          stagger: {
-            amount: 2,
-            grid: grid,
-            from: "center",
-          },
-        },
-        {
-          opacity: 0.3,
-          rotate: "+=180",
-          color: "#fff",
-          scale: 0,
-          delay: -2,
-          duration: 0.8,
-          stagger: {
-            amount: 3,
-            grid: grid,
-            from: "center",
-          },
-        },
-      ],
-    });
   }, []);
 
   return (
@@ -93,7 +97,7 @@ export default function StarGrid() {
       xmlns="http://www.w3.org/2000/svg"
       fill="none"
       viewBox="0 0 935 460"
-      className=""
+      className="star-grid"
       id="star-grid"
       ref={container}
       opacity={0}

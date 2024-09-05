@@ -6,4 +6,19 @@
     height: 100%;
     z-index: 1;
   }
+  .star-grid {
+    width: 100vw; // Full screen width
+    height: 100vh; // Full screen height
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+  
+  @media (max-width: 768px) {
+    .star-grid {
+      width: 120vw; // Larger width for small screens
+      height: 120vh; // Larger height for small screens
+    }
+  }
   
