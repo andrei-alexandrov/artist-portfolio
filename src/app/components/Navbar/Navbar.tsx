@@ -2,7 +2,10 @@
 
 import { useState, useRef, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import {Link} from "react-scroll";
+import { Link } from "react-scroll";
+import Image from "next/image";
+
+import navbarLogo from "../../assets/icons/no-bg-logo.png";
 import "./Navbar.scss";
 
 const Navbar = () => {
@@ -37,7 +40,13 @@ const Navbar = () => {
     <>
       <div className="navbar-container">
         {/* Logo Placeholder, change later with real one and style */}
-        {/* <div className="logo">Logo</div> */}
+        <Image
+          className="logo"
+          src={navbarLogo}
+          alt="logo"
+          width={66}
+          height={66}
+        />
         <Container className="navbar-content">
           <Row>
             <Col className="d-none d-md-flex justify-content-end">
@@ -88,7 +97,7 @@ const Navbar = () => {
                       duration={50}
                       offset={-70}
                     >
-                    Inspirations
+                      Inspirations
                     </Link>
                   </li>
                   <li>

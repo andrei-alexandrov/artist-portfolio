@@ -13,8 +13,8 @@ const Certificates = () => {
   const { isOpen, imageSrc, openModal, closeModal } = useModal();
 
   return (
-    <div id="certificates">
-      <div className="portfolio-header">Certificates</div>
+    <div className="c-container" id="certificates">
+      <div className="portfolio-section-title">Certificates</div>
       <div className="certificates-container">
         <Image
           src={certificateOne}

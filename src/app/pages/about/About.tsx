@@ -4,14 +4,15 @@ import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 // import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "./About.scss";
+import ClientCard from "@/app/components/ClientCard/ClientCard";
 
 // gsap.registerPlugin(ScrollTrigger);
 
 const About = () => {
-  const clientsRef = useRef<HTMLDivElement>(null);
+  const aboutMeRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const element = clientsRef.current;
+    const element = aboutMeRef.current;
     if (!element) return;
 
     gsap.fromTo(
@@ -19,7 +20,9 @@ const About = () => {
       {
         opacity: 0,
         x: (i, target) => {
-          return (target as HTMLElement).classList.contains("animate-from-left") ? -100 : 100;
+          return (target as HTMLElement).classList.contains("animate-from-left")
+            ? -100
+            : 100;
         },
       },
       {
@@ -39,43 +42,39 @@ const About = () => {
 
   return (
     <div id="about" className="about-container">
-      <h1 className="portfolio-header">About me</h1>
+      <h1 className="portfolio-section-title">About me</h1>
       <div className="about-description">
         Some info about you as a short tale... then we can add the following:
         <br />
         <br />
-        <p>
-          Founder of Highlight Singing Academy <br />
-          Founder of Music Talents <br />
-          Creative director of NEXT ARTIST singing competition <br />
-          Вокален педагог в X-factor сезони ... <br />
-          Certified vocal coach in IVA-USA <br />
-          Вокален педагог за българската делегация на конкурса Европвизия 2017
-          г.
-        </p>
-  
-        <p style={{ color: "#cca752" }}>
-          Among her clients:
-        </p>
-        <p className="clients" ref={clientsRef}>
-          <span className="animate-from-left">Mihaela Fileva - pop star</span>
-
-          <span className="animate-from-right">
-            Dara Yotova - pop/hip-hop star
+        <p className="" ref={aboutMeRef}>
+          <span className="animate-from-left">
+            Founder of Highlight Singing Academy
           </span>
 
+          <span className="animate-from-right">Founder of Music Talents</span>
+
           <span className="animate-from-left">
-            Jaklin Tarakchi - the winner of The Voice of Bulgaria 2022
+            Creative director of NEXT ARTIST singing competition
           </span>
 
           <span className="animate-from-right">
-            Kristian Kostov - second place at Eurovision 2017
+            Вокален педагог в X-factor сезони ...
           </span>
 
           <span className="animate-from-left">
-            Pollya Ivanova - finalist at Bulgaria's Got Talent
+            Certified vocal coach in IVA-USA
+          </span>
+
+          <span className="animate-from-right">
+            Вокален педагог за българската делегация на конкурса Европвизия 2017
+            г.
           </span>
         </p>
+        <p style={{ marginTop: "6rem" }} className="portfolio-section-title">
+          Clients
+        </p>
+        <ClientCard />
       </div>
     </div>
   );

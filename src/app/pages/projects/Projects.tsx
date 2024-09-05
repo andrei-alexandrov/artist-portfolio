@@ -9,7 +9,7 @@ import Link from "next/link";
 const Projects = () => {
   return (
     <div id="activities" className="projects-container">
-      <div className="portfolio-header">Activities</div>
+      <div className="portfolio-section-title">Activities</div>
       {/* <div className="projects-content"> */}
         {/* <div className="stars">
           <Stars />

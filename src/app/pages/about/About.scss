@@ -6,7 +6,8 @@
   bottom: 8rem;
 
   .about-description {
-    text-align: justify;
+    margin-top: 1rem;
+    text-align: center;
     font-size: $small-font;
 
     .animate-from-left,
@@ -21,9 +22,7 @@
   .about-container {
     position: relative;
     top: 24rem;
-    .portfolio-header{
-      text-align: center;
-    }
+
     .about-description {
       text-align: center;
     }
@@ -35,16 +34,12 @@
     position: relative;
     top: 15rem;
     text-align: center;
-    .portfolio-header {
-      font-size: $large-font;
-    }
 
     .about-description {
       font-size: 18px;
     }
   }
 }
-
 
 @media (min-width: 764px) and (max-width: 991px) {
   .about-container {

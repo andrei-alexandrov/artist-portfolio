@@ -1,18 +1,22 @@
 "use client";
 
 import React, { useRef, useState } from "react";
-
 import emailjs from "@emailjs/browser";
-import heathEmoji from "../../images/contact/hearthEmoji.png";
-import ScrollToTopBtn from "../../components/ScrollToTopButton/ScrollToTopBtn";
-import Lottie from "lottie-react";
-// import sendMessage from "../../animations/send-message-three.json";
-
+import dynamic from "next/dynamic";
+import Button from "@/app/components/Button/Button";
 import "./Contact.scss";
 
+// Dynamically import Lottie and ScrollToTopBtn, disable SSR
+const Lottie = dynamic(() => import("lottie-react"), { ssr: false });
+const ScrollToTopBtn = dynamic(
+  () => import("../../components/ScrollToTopButton/ScrollToTopBtn"),
+  { ssr: false }
+);
+
+import connectMic from "../../assets/lottie-animations/connect-mic-2.json";
+
 const Contact = () => {
-  const form =useRef<HTMLFormElement | null>(null);
-  
+  const form = useRef<HTMLFormElement | null>(null);
   const [done, setDone] = useState(false);
   const [isInputClicked, setInputClicked] = useState(false);
 
@@ -46,11 +50,8 @@ const Contact = () => {
     <div className="contact-form" id="contact">
       <div className="title">
         <div>Let's connect</div>
-        <div>Contact me</div>
-        {/* <Lottie
-          style={!isInputClicked ? sendMeesageStyles : earthStyles} //Временно дублиране
-          animationData={!isInputClicked ? sendMessage : sendMessage} //Временно дублиране
-        ></Lottie> */}
+        {/* Render Lottie animation */}
+        <Lottie style={{ width: "110px" }} animationData={connectMic} />
       </div>
 
       <div className="form">
@@ -82,17 +83,14 @@ const Contact = () => {
             title="Message must be at least 10 characters long"
             onClick={() => setInputClicked(true)}
           />
-          <input type="submit" value="Let's talk" className="button" />
-          <span
-            style={{ color: "#242D49", fontWeight: "bold", fontSize: "26px" }}
-          >
-            {done && (
-              <div className="sent-message-text">
-                <span>Thanks for contacting me.</span>
-                {/* <img src={heathEmoji} alt="thanks-icon" /> */}
-              </div>
-            )}
-          </span>
+          <Button>Let's talk </Button>
+          {done && (
+            <div className="sent-message-text">
+              <span>Thanks for contacting me.</span>
+              {/* Add any custom image for the thanks icon if needed */}
+            </div>
+          )}
+          {/* Scroll to Top Button */}
           <ScrollToTopBtn />
         </form>
       </div>

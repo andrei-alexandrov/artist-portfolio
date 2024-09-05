@@ -2,13 +2,17 @@
 @import "../../../fonts";
 
 .navbar-container {
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
   padding: 10px 20px;
   // background: linear-gradient(
   //   to right,
   //   #1b1b61, /* Dark blue color */
   //   #e6b6a4  /* Pink gold color */
   // );
+  background-color: black;
   background-color: white; //Discuss the color, or make the color transparent so that the stars animation gets on top of it too.
   height: 70px;
   display: flex;
@@ -17,11 +21,10 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   z-index: 99;
 
-  // .logo {
-  //   font-size: 24px;
-  //   letter-spacing: 1.5px;
-  //   color: $main-color;
-  // }
+  .logo {
+    position: relative;
+    right: 8px;
+  }
 
   .navbar-content {
     flex-grow: 1;
@@ -146,6 +149,15 @@
           }
         }
       }
+    }
+  }
+}
+
+@media (max-width: 564px) {
+  .navbar-container{
+    .logo{
+      height: 56px;
+      width: 56px;
     }
   }
 }

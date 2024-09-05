@@ -1,17 +1,30 @@
-.certificates-container {
-  position: relative;
-  top: 5rem;
-  text-align: center;
+.c-container {
+  margin-top: 3rem;
+  
+  .certificates-container {
+    position: relative;
+    margin-top: 2rem;
+    text-align: center;
 
-  & img {
-    border-radius: 20px;
-    margin: 10px;
-    cursor: pointer;
-    transition: transform 0.3s ease, filter 0.3s ease;
+    & img {
+      border-radius: 20px;
+      margin: 10px;
+      cursor: pointer;
+      transition: transform 0.3s ease, filter 0.3s ease;
 
-    &:hover {
-      transform: scale(1.05);
-      filter: brightness(1.2);
+      &:hover {
+        transform: scale(1.05);
+        filter: brightness(1.2);
+      }
+    }
+  }
+}
+
+@media (max-width: 564px) {
+  .certificates-container {
+    & img {
+      width: 300px;
+      height: 200px;
     }
   }
 }

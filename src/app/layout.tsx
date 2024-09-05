@@ -7,6 +7,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 import "./globals.scss";
+import Footer from "./components/Footer/Footer";
 
 export const metadata: Metadata = {
   title: "Iskra's Portfolio",
@@ -35,6 +36,7 @@ export default function RootLayout({
       <body>
         <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );

@@ -17,8 +17,10 @@ const Inspirations = () => {
   const { isOpen, imageSrc, openModal, closeModal } = useModal();
 
   return (
-    <div id="inspirations" className="container">
-      <h1 className="portfolio-header">Inspirations</h1>
+    <div id="inspirations" className="inspirations-container">
+      <div className="section-title-wrapper">
+        <h1 className="portfolio-section-title">Inspirations</h1>
+      </div>
       <Swiper
         effect={"coverflow"}
         grabCursor={true}
