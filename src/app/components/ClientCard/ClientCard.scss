@@ -55,6 +55,36 @@
   color: #d4d3d3;
 }
 
+@media (max-width: 527px) {
+  .card-container > div {
+    max-width: 150px;
+    flex: 1 1 150px;
+  }
+
+  .card-img {
+    height: 180px;
+  }
+
+  .card-data {
+    padding: 0.8rem;
+  }
+
+  .card-name {
+    font-size: 1.4rem;
+  }
+
+  .card-description {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 764px) {
+  .card-container {
+    margin-bottom: 19rem;
+  }
+}
+
 @media (max-width: 768px) {
   .card-container {
     gap: 0.5rem;
