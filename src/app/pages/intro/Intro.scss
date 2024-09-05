@@ -8,6 +8,7 @@ section {
   height: 100vh;
 
   .stars-container {
+    overflow: hidden;
     position: absolute;
     top: 0;
     left: 0;

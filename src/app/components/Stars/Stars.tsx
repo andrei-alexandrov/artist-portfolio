@@ -1,10 +1,29 @@
-"use client";
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useState } from "react";
 import "./Stars.scss";
 import gsap from "gsap";
 
 export default function StarGrid() {
   const container = useRef(null);
+  const [viewBox, setViewBox] = useState("0 0 935 460");
+
+  useEffect(() => {
+    // Update viewBox based on window width
+    const updateViewBox = () => {
+      if (window.innerWidth < 768) {
+        setViewBox("0 0 335 660");
+      } else {
+        setViewBox("0 0 935 460");
+      }
+    };
+
+    updateViewBox();
+
+    window.addEventListener("resize", updateViewBox);
+
+    return () => {
+      window.removeEventListener("resize", updateViewBox);
+    };
+  }, []);
 
   useEffect(() => {
     const grid = [14, 30] as const;
@@ -18,45 +37,6 @@ export default function StarGrid() {
 
     const tl = gsap.timeline();
 
-    const mm = gsap.matchMedia();
-    mm.add("(max-width: 768px)", () => {
-      gsap.set(container.current, { y: -51 });
-      tl.to(".star-grid-item", {
-        keyframes: [
-          {
-            opacity: 0,
-            duration: 0,
-          },
-          {
-            opacity: 0.8,
-            rotate: "+=180",
-            color: "#ffd057",
-            scale: 4,
-            duration: 0.7,
-            stagger: {
-              amount: 4,
-              grid: grid,
-              from: "center",
-            },
-          },
-          {
-            opacity: 0.3,
-            rotate: "+=180",
-            color: "#fff",
-            scale: 0,
-            delay: -2,
-            duration: 0.8,
-            stagger: {
-              amount: 3,
-              grid: grid,
-              from: "center",
-            },
-          },
-        ],
-      });
-    });
-
-    // Default (for larger screens)
     tl.to(".star-grid-item", {
       keyframes: [
         {
@@ -96,7 +76,7 @@ export default function StarGrid() {
     <svg
       xmlns="http://www.w3.org/2000/svg"
       fill="none"
-      viewBox="0 0 935 460"
+      viewBox={viewBox}
       className="star-grid"
       id="star-grid"
       ref={container}
