@@ -14,8 +14,8 @@ const Modal = ({ isOpen, onClose, imageSrc }: ModalProps) => {
         <Image
           src={imageSrc}
           alt="Full size view"
-          layout="fill"
-          objectFit="contain"
+          fill
+          style={{ objectFit: "contain" }}
         />
         <button className="modal-close" onClick={onClose}>
           &times;

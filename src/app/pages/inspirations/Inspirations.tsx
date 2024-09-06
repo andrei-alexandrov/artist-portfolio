@@ -43,14 +43,17 @@ const Inspirations = () => {
       >
         {inspirationImages.map((img, index) => (
           <SwiperSlide key={index} onClick={() => openModal(img)}>
-            <Image src={img} alt="image" width={400} height={300} />
+            <Image
+              src={img}
+              alt="image"
+              fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            />
           </SwiperSlide>
         ))}
         <div className="slider-container">
           <div className="slider-controler">
-            <div className="swiper-button-prev slider-arrow"></div>
             <div className="swiper-pagination"></div>
-            <div className="swiper-button-next slider-arrow"></div>
           </div>
         </div>
       </Swiper>

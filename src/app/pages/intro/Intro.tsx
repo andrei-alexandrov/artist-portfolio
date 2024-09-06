@@ -35,7 +35,7 @@ const Intro = () => {
   }, []);
 
   return (
-    <section>
+    <section id="intro">
       <div className="stars-container">
         <Stars />
       </div>

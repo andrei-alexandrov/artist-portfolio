@@ -11,13 +11,13 @@ const Projects = () => {
       <div className="portfolio-section-title">Activities</div>
       {projectsData.map((item) => (
         <div key={item.title} className="project-card">
-          <div className="project-info">
+          <div className="card-content-wrapper">
             <h3 className="project-title">{item.title}</h3>
             <p className="project-desc">{item.description}</p>
             <div className="project-logo">
-              <Image
-                src={item.logo}
-                alt={`${item.title} logo`}
+              <img
+                src={typeof item.logo === "string" ? item.logo : item.logo.src}
+                alt={"highlight-logo"}
                 width={item.logoWidth}
                 height={item.logoHeight}
               />
@@ -48,13 +48,13 @@ const Projects = () => {
               className="project-image"
               src={item.img}
               alt={`${item.title}`}
-              layout="responsive"
+              fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             />
           )}
         </div>
       ))}
     </div>
-    // </div>
   );
 };
 

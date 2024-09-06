@@ -40,7 +40,23 @@ const Navbar = () => {
     <>
       <div className="navbar-container">
         {/* Logo Placeholder, change later with real one and style */}
-        <Image className="logo" src={navbarLogo} alt="logo" width={71} height={71} />
+        <Link
+          activeClass="active"
+          to="intro"
+          spy={true}
+          smooth={true}
+          duration={50}
+          offset={-160}
+        >
+          <Image
+            className="logo"
+            src={navbarLogo}
+            alt="logo"
+            width={71}
+            height={71}
+          />
+        </Link>
+
         <Container className="navbar-content">
           <Row>
             <Col className="d-none d-md-flex justify-content-end">
