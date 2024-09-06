@@ -7,7 +7,6 @@ export default function StarGrid() {
   const [viewBox, setViewBox] = useState("0 0 935 460");
 
   useEffect(() => {
-    // Update viewBox based on window width
     const updateViewBox = () => {
       if (window.innerWidth < 768) {
         setViewBox("0 0 335 660");
@@ -17,7 +16,6 @@ export default function StarGrid() {
     };
 
     updateViewBox();
-
     window.addEventListener("resize", updateViewBox);
 
     return () => {
@@ -35,7 +33,7 @@ export default function StarGrid() {
     });
     gsap.set(container.current, { opacity: 1 });
 
-    const tl = gsap.timeline();
+    const tl = gsap.timeline({ repeat: -1, repeatDelay: 2 });
 
     tl.to(".star-grid-item", {
       keyframes: [

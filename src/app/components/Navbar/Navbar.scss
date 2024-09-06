@@ -7,17 +7,11 @@
   left: 0;
   right: 0;
   padding: 10px 20px;
-  // background: linear-gradient(
-  //   to right,
-  //   #1b1b61, /* Dark blue color */
-  //   #e6b6a4  /* Pink gold color */
-  // );
-  background-color: black;
+  background-color: $black-color;
   background-color: white; //Discuss the color, or make the color transparent so that the stars animation gets on top of it too.
   height: 70px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   z-index: 99;
 
@@ -80,7 +74,7 @@
 
   .hamburger-menu {
     position: absolute;
-    top: 10px;
+    top: 14px;
     right: 20px;
     background: none;
     border: none;
@@ -98,15 +92,16 @@
   .sidebar {
     position: fixed;
     top: 0;
-    right: -300px; /* Hidden by default */
-    width: 300px;
+    right: -300px;
+    width: 250px;
     height: 100%;
-    background-color: #2c2c2c;
+    background-color: $black-color;
     color: $main-color;
     padding: 30px;
     transition: right 0.4s ease-in-out;
     z-index: 1000;
     box-shadow: -4px 0 8px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
 
     &.open {
       right: 0;
@@ -154,8 +149,8 @@
 }
 
 @media (max-width: 564px) {
-  .navbar-container{
-    .logo{
+  .navbar-container {
+    .logo {
       height: 56px;
       width: 56px;
     }

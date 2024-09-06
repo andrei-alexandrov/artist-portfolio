@@ -12,7 +12,7 @@ import instagramIcon from "../../assets/icons/instagram-icon.png";
 import linkedInIcon from "../../assets/icons/linkedin-icon.png";
 import musicTalentsIcon from "../../assets/icons/music-talents.png";
 import highlightLogo from "../../assets/icons/highlight-logo-dark.png";
-import musicDivider from "../../assets/music-divider.png";
+import musicDivider from "../../assets/icons/music-divider-2.png";
 
 import "./Intro.scss";
 
@@ -20,7 +20,7 @@ const Intro = () => {
   useEffect(() => {
     const timelineTwo = gsap.timeline({ defaults: { duration: 1.7 } });
     timelineTwo.fromTo(
-      ".artist-name ",
+      ".artist-name",
       {
         opacity: 0,
         y: "-300%",
@@ -53,48 +53,60 @@ const Intro = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Image
-                className="social-icon"
-                src={linkedInIcon}
-                alt="linkedIn icon"
-                layout="responsive"
-              />
+              <div className="social-icon-wrapper">
+                <Image
+                  className="social-icon"
+                  src={linkedInIcon}
+                  alt="linkedIn icon"
+                  fill
+                  sizes="(max-width: 768px) 24px, (max-width: 1200px) 30px, 40px"
+                />
+              </div>
             </Link>
             <Link
               href="https://www.instagram.com/iskra_milkova_vocal_coach/"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Image
-                className="social-icon"
-                src={instagramIcon}
-                alt="instagram icon"
-                layout="responsive"
-              />
+              <div className="social-icon-wrapper">
+                <Image
+                  className="social-icon"
+                  src={instagramIcon}
+                  alt="instagram icon"
+                  fill
+                  sizes="(max-width: 768px) 24px, (max-width: 1200px) 30px, 40px"
+                />
+              </div>
             </Link>
             <Link
               href="https://www.facebook.com/iskra.milkova1"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Image
-                className="social-icon"
-                src={facebookIcon}
-                alt="facebook icon"
-                layout="responsive"
-              />
+              <div className="social-icon-wrapper">
+                <Image
+                  className="social-icon"
+                  src={facebookIcon}
+                  alt="facebook icon"
+                  fill
+                  sizes="(max-width: 768px) 24px, (max-width: 1200px) 30px, 40px"
+                />
+              </div>
             </Link>
             <Link
               href="https://muzikalnite-talanti.com/"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Image
-                className="social-icon-special"
-                src={musicTalentsIcon}
-                alt="music talents icon"
-                layout="responsive"
-              />
+              <div className="social-icon-wrapper">
+                <Image
+                  className="social-icon-special"
+                  src={musicTalentsIcon}
+                  alt="music talents icon"
+                  fill
+                  sizes="(max-width: 768px) 24px, (max-width: 1200px) 30px, 40px"
+                />
+              </div>
             </Link>
           </div>
           <div>
@@ -103,12 +115,15 @@ const Intro = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Image
-                className="highlight-icon"
-                src={highlightLogo}
-                alt="highlight academy icon"
-                layout="responsive"
-              />
+              <div className="highlight-icon-wrapper">
+                <Image
+                  className="highlight-icon"
+                  src={highlightLogo}
+                  alt="highlight academy icon"
+                  fill
+                  sizes="(max-width: 768px) 150px, (max-width: 1200px) 200px, 300px"
+                />
+              </div>
             </Link>
           </div>
           <div className="contact-button-wrapper">
@@ -116,20 +131,27 @@ const Intro = () => {
           </div>
         </div>
 
+        <div className="artist-photo-wrapper">
+          <div className="artist-image-wrapper">
+            <Image
+              className="artist-image"
+              src={artistPhoto}
+              alt="artist photo"
+              fill
+              sizes="(max-width: 768px) 150px, (max-width: 1200px) 200px, 300px"
+            />
+          </div>
+        </div>
+      </div>
+      <div className="music-divider-container">
         <Image
-          className="artist-image"
-          src={artistPhoto}
-          alt="artist photo"
-          layout="responsive"
+          className="music-divider"
+          src={musicDivider}
+          alt="piano-note"
+          fill
+          // sizes="(max-width: 768px) 100px, (max-width: 1200px) 120px, 150px"
         />
       </div>
-
-      <Image
-        className="musical-divider"
-        src={musicDivider}
-        alt="piano-note"
-        layout="responsive"
-      />
     </section>
   );
 };

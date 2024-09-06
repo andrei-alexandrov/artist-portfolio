@@ -15,7 +15,7 @@
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  background-color: #131416;
+  background-color: $black-color;
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
@@ -40,7 +40,7 @@
   text-align: center;
   border-top-left-radius: 12px;
   border-top-right-radius: 12px;
-  background-color: #131416;
+  background-color: $black-color;
 }
 
 .card-name {

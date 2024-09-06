@@ -31,11 +31,7 @@ const About = () => {
         duration: 1,
         stagger: 0.3,
         ease: "power2.out",
-        scrollTrigger: {
-          trigger: element,
-          start: "top 80%",
-          toggleActions: "play none none none",
-        },
+      
       }
     );
   }, []);

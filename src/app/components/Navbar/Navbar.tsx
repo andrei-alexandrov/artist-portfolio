@@ -5,7 +5,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import { Link } from "react-scroll";
 import Image from "next/image";
 
-import navbarLogo from "../../assets/icons/no-bg-logo.png";
+import navbarLogo from "../../assets/icons/music-mic.png";
 import "./Navbar.scss";
 
 const Navbar = () => {
@@ -40,13 +40,7 @@ const Navbar = () => {
     <>
       <div className="navbar-container">
         {/* Logo Placeholder, change later with real one and style */}
-        <Image
-          className="logo"
-          src={navbarLogo}
-          alt="logo"
-          width={66}
-          height={66}
-        />
+        <Image className="logo" src={navbarLogo} alt="logo" width={71} height={71} />
         <Container className="navbar-content">
           <Row>
             <Col className="d-none d-md-flex justify-content-end">
