@@ -8,7 +8,7 @@
   right: 0;
   padding: 10px 20px;
   background-color: $black-color;
-  background-color: white; //Discuss the color, or make the color transparent so that the stars animation gets on top of it too.
+  background-color: white; // Discuss the color, or make the color transparent so that the stars animation gets on top of it too.
   height: 70px;
   display: flex;
   align-items: center;
@@ -38,11 +38,6 @@
         a {
           text-decoration: none;
           font-size: $small-font;
-          // transition: color 0.3s ease, transform 0.3s ease;
-          // background-image: linear-gradient(to bottom, #fefcbf, #f59e0b);
-          // background-clip: text;
-          // -webkit-background-clip: text;
-          // color: transparent;
           color: $main-color;
 
           &:hover {
@@ -141,6 +136,34 @@
               color: $main-hover-color;
               transform: translateX(5px);
             }
+          }
+        }
+      }
+    }
+
+    .sidebar-icons {
+      position: absolute;
+      bottom: 30px;
+      left: 30px;
+      display: flex;
+      flex-direction: row;
+      gap: 13px;
+
+      .icon-container {
+        width: 23px;
+        height: 23px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        svg {
+          width: 23px;
+          height: 23px;
+          cursor: pointer;
+          color: $main-color;
+
+          &:hover {
+            opacity: 0.7;
           }
         }
       }

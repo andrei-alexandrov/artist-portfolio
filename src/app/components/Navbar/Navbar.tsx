@@ -5,6 +5,8 @@ import { Container, Row, Col } from "react-bootstrap";
 import { Link } from "react-scroll";
 import Image from "next/image";
 
+import { FaLinkedin } from "react-icons/fa";
+import { FaInstagram, FaSquareFacebook } from "react-icons/fa6";
 import navbarLogo from "../../assets/icons/music-mic.png";
 import "./Navbar.scss";
 
@@ -157,7 +159,7 @@ const Navbar = () => {
               </li>
               <li>
                 <Link
-                  to="projects"
+                  to="activities"
                   spy={true}
                   smooth={true}
                   duration={50}
@@ -169,7 +171,7 @@ const Navbar = () => {
               </li>
               <li>
                 <Link
-                  to="clients"
+                  to="certificates"
                   spy={true}
                   smooth={true}
                   duration={50}
@@ -181,7 +183,7 @@ const Navbar = () => {
               </li>
               <li>
                 <Link
-                  to="media"
+                  to="inspirations"
                   spy={true}
                   smooth={true}
                   duration={50}
@@ -205,6 +207,36 @@ const Navbar = () => {
               </li>
             </ul>
           </nav>
+          {/* Sidebar Icons */}
+          <div className="sidebar-icons">
+            <a
+              href="https://www.linkedin.com/in/iskra-milkova-228991ab/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div className="icon-container">
+                <FaLinkedin />
+              </div>
+            </a>
+            <a
+              href="https://www.facebook.com/iskra.milkova1"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div className="icon-container">
+                <FaSquareFacebook />
+              </div>
+            </a>
+            <a
+              href="https://www.instagram.com/iskra_milkova_vocal_coach/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div className="icon-container">
+                <FaInstagram />
+              </div>
+            </a>
+          </div>
         </div>
       </div>
     </>

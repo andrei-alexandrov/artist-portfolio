@@ -5,7 +5,6 @@ import Projects from "./pages/projects/Projects";
 import Inspirations from "./pages/inspirations/Inspirations";
 import Contact from "./pages/contact/Contact";
 import Certificates from "./pages/certificates/Certificates";
-import ClientCard from "./components/ClientCard/ClientCard";
 
 export default function Home() {
   return (

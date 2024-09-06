@@ -72,7 +72,7 @@ const Intro = () => {
           src={musicDivider}
           alt="piano-note"
           fill
-          // sizes="(max-width: 768px) 100px, (max-width: 1200px) 120px, 150px"
+          sizes="(max-width: 768px) 150px, (max-width: 1200px) 200px, 300px"
         />
       </div>
     </section>

@@ -13,7 +13,7 @@ const MediaIcons = () => {
   return (
     <>
       <div className="socials-container">
-        <Link
+        <a
           href="https://www.linkedin.com/in/iskra-milkova-228991ab/"
           target="_blank"
           rel="noopener noreferrer"
@@ -27,8 +27,8 @@ const MediaIcons = () => {
               sizes="(max-width: 768px) 24px, (max-width: 1200px) 30px, 40px"
             />
           </div>
-        </Link>
-        <Link
+        </a>
+        <a
           href="https://www.instagram.com/iskra_milkova_vocal_coach/"
           target="_blank"
           rel="noopener noreferrer"
@@ -42,8 +42,8 @@ const MediaIcons = () => {
               sizes="(max-width: 768px) 24px, (max-width: 1200px) 30px, 40px"
             />
           </div>
-        </Link>
-        <Link
+        </a>
+        <a
           href="https://www.facebook.com/iskra.milkova1"
           target="_blank"
           rel="noopener noreferrer"
@@ -57,8 +57,8 @@ const MediaIcons = () => {
               sizes="(max-width: 768px) 24px, (max-width: 1200px) 30px, 40px"
             />
           </div>
-        </Link>
-        <Link
+        </a>
+        <a
           href="https://muzikalnite-talanti.com/"
           target="_blank"
           rel="noopener noreferrer"
@@ -72,10 +72,10 @@ const MediaIcons = () => {
               sizes="(max-width: 768px) 24px, (max-width: 1200px) 30px, 40px"
             />
           </div>
-        </Link>
+        </a>
       </div>
       <div>
-        <Link
+        <a
           href="https://highlight-singing.com/"
           target="_blank"
           rel="noopener noreferrer"
@@ -89,7 +89,7 @@ const MediaIcons = () => {
               sizes="(max-width: 768px) 150px, (max-width: 1200px) 200px, 300px"
             />
           </div>
-        </Link>
+        </a>
       </div>
     </>
   );

@@ -4,6 +4,7 @@ import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import dynamic from "next/dynamic";
 import Button from "@/app/components/Button/Button";
+
 import "./Contact.scss";
 
 const Lottie = dynamic(() => import("lottie-react"), { ssr: false });
@@ -47,8 +48,8 @@ const Contact = () => {
   };
 
   return (
-    <>
-      <div id="contact" className="title-container">
+    <div id="contact">
+      <div className="title-container">
         <div className="portfolio-section-title">Let&#39;s connect</div>
         <Lottie style={{ width: "110px" }} animationData={connectMic} />
       </div>
@@ -120,7 +121,7 @@ const Contact = () => {
         </p>
       </div>
       <ScrollToTopBtn />
-    </>
+    </div>
   );
 };
 
