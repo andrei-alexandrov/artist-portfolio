@@ -9,16 +9,15 @@ const ScrollToTopBtn = () => {
   const [backToTop, setBackToTop] = useState(false);
   const [isClient, setIsClient] = useState(false);
 
-  // Ensure this code runs only on the client side
   useEffect(() => {
-    setIsClient(true); // Set the state to true once on the client side
+    setIsClient(true);
   }, []);
 
   useEffect(() => {
-    if (!isClient) return; // Avoid accessing window if not on client side
+    if (!isClient) return;
 
     const handleScroll = () => {
-      if (window.scrollY > 300) {
+      if (window.scrollY > 1001) {
         setBackToTop(true);
       } else {
         setBackToTop(false);
@@ -30,7 +29,7 @@ const ScrollToTopBtn = () => {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, [isClient]); // Re-run the effect when isClient becomes true
+  }, [isClient]);
 
   const goUp = () => {
     if (isClient) {
@@ -43,10 +42,12 @@ const ScrollToTopBtn = () => {
 
   return (
     <>
-      {isClient && backToTop && (
-        <div onClick={goUp}>
+      {isClient && (
+        <div
+          onClick={goUp}
+          className={`scroll-to-top-btn ${backToTop ? "visible" : ""}`}
+        >
           <Lottie
-            className="scroll-to-top-btn"
             role="img"
             aria-label="backToTop Icon"
             animationData={backToTop1}

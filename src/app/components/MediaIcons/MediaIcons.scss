@@ -1,0 +1,72 @@
+@import "../../../mixins";
+
+.socials-container {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+
+  .social-icon-wrapper {
+    position: relative;
+    width: 2.4rem;
+    height: 2.4rem;
+    transition: transform 0.4s;
+
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.1);
+    }
+  }
+
+  .social-icon-special {
+    position: relative;
+    width: 2.4rem;
+    height: 2.4rem;
+    transition: transform 0.4s;
+    left: -6px;
+
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.1);
+    }
+  }
+}
+
+.highlight-icon-wrapper {
+  position: relative;
+  margin-top: 2.5rem;
+  width: 15rem;
+  height: 5rem;
+  transition: transform 0.7s;
+
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.03);
+  }
+}
+
+.contact-button {
+  margin-top: 2.6rem;
+  @include portfolio-button();
+}
+
+@media (min-width: 200px) and (max-width: 445px) {
+  .socials-container {
+    display: flex;
+    justify-content: center;
+
+    /*Temporary fix */
+    & a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      left: 8px;
+    }
+  }
+}
+
+@media (min-width: 446px) and (max-width: 764px) {
+  .socials-container {
+    justify-content: center;
+  }
+}

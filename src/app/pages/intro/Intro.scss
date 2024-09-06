@@ -55,55 +55,6 @@ section {
         font-size: $small-font;
         color: black;
       }
-
-      .socials-container {
-        display: flex;
-        gap: 1rem;
-        margin-top: 2rem;
-
-        .social-icon-wrapper {
-          position: relative;
-          width: 2.4rem;
-          height: 2.4rem;
-          transition: transform 0.4s;
-
-          &:hover {
-            cursor: pointer;
-            transform: scale(1.1);
-          }
-        }
-
-        .social-icon-special {
-          position: relative;
-          width: 2.4rem;
-          height: 2.4rem;
-          transition: transform 0.4s;
-          left: -6px;
-
-          &:hover {
-            cursor: pointer;
-            transform: scale(1.1);
-          }
-        }
-      }
-
-      .highlight-icon-wrapper {
-        position: relative;
-        margin-top: 2.5rem;
-        width: 15rem;
-        height: 5rem;
-        transition: transform 0.7s;
-
-        &:hover {
-          cursor: pointer;
-          transform: scale(1.03);
-        }
-      }
-
-      .contact-button {
-        margin-top: 2.6rem;
-        @include portfolio-button();
-      }
     }
 
     .artist-photo-wrapper {
@@ -151,10 +102,6 @@ section {
   section {
     margin-top: -1.9rem;
     .starting-content-wrapper {
-      .socials-container {
-        justify-content: center;
-      }
-
       .artist-photo-wrapper {
         margin-top: 2rem;
         max-width: 15rem;
@@ -183,11 +130,6 @@ section {
   section {
     .starting-content-wrapper {
       margin-top: 3.5rem;
-      .starting-content {
-        .socials-container {
-          justify-content: center;
-        }
-      }
 
       .artist-photo-wrapper {
         margin-top: 2rem;

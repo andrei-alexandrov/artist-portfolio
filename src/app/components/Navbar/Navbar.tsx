@@ -117,7 +117,7 @@ const Navbar = () => {
                       spy={true}
                       smooth={true}
                       duration={50}
-                      offset={-70}
+                      offset={-86}
                     >
                       Contact
                     </Link>
@@ -164,7 +164,7 @@ const Navbar = () => {
                   offset={-70}
                   onClick={handleToggleSidebar}
                 >
-                  Projects
+                  Activities
                 </Link>
               </li>
               <li>
@@ -176,7 +176,7 @@ const Navbar = () => {
                   offset={-70}
                   onClick={handleToggleSidebar}
                 >
-                  Clients
+                  Certificates
                 </Link>
               </li>
               <li>
@@ -188,7 +188,7 @@ const Navbar = () => {
                   offset={-70}
                   onClick={handleToggleSidebar}
                 >
-                  Media
+                  Inspirations
                 </Link>
               </li>
               <li>

@@ -1,9 +1,24 @@
 .scroll-to-top-btn {
-    position: relative;
-    top: 2rem;
-    height: 80px;
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  height: 60px;
+  width: 60px;
+  z-index: 1000;
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out, transform 0.3s ease;
 
-    &:hover {
-        cursor: pointer;
-    }
+  &.visible {
+    opacity: 1;
+  }
+
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+  }
+  
+  //Temporary
+  @media (max-width: 564px) {
+    display: none;
+  }
 }

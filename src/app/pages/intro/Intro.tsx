@@ -15,6 +15,7 @@ import highlightLogo from "../../assets/icons/highlight-logo-dark.png";
 import musicDivider from "../../assets/icons/music-divider-2.png";
 
 import "./Intro.scss";
+import MediaIcons from "@/app/components/MediaIcons/MediaIcons";
 
 const Intro = () => {
   useEffect(() => {
@@ -47,85 +48,7 @@ const Intro = () => {
             Vocal and artist coach, founder of &quot;Highlight Singing
             Academy&quot;
           </p>
-          <div className="socials-container">
-            <Link
-              href="https://www.linkedin.com/in/iskra-milkova-228991ab/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <div className="social-icon-wrapper">
-                <Image
-                  className="social-icon"
-                  src={linkedInIcon}
-                  alt="linkedIn icon"
-                  fill
-                  sizes="(max-width: 768px) 24px, (max-width: 1200px) 30px, 40px"
-                />
-              </div>
-            </Link>
-            <Link
-              href="https://www.instagram.com/iskra_milkova_vocal_coach/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <div className="social-icon-wrapper">
-                <Image
-                  className="social-icon"
-                  src={instagramIcon}
-                  alt="instagram icon"
-                  fill
-                  sizes="(max-width: 768px) 24px, (max-width: 1200px) 30px, 40px"
-                />
-              </div>
-            </Link>
-            <Link
-              href="https://www.facebook.com/iskra.milkova1"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <div className="social-icon-wrapper">
-                <Image
-                  className="social-icon"
-                  src={facebookIcon}
-                  alt="facebook icon"
-                  fill
-                  sizes="(max-width: 768px) 24px, (max-width: 1200px) 30px, 40px"
-                />
-              </div>
-            </Link>
-            <Link
-              href="https://muzikalnite-talanti.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <div className="social-icon-wrapper">
-                <Image
-                  className="social-icon-special"
-                  src={musicTalentsIcon}
-                  alt="music talents icon"
-                  fill
-                  sizes="(max-width: 768px) 24px, (max-width: 1200px) 30px, 40px"
-                />
-              </div>
-            </Link>
-          </div>
-          <div>
-            <Link
-              href="https://highlight-singing.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <div className="highlight-icon-wrapper">
-                <Image
-                  className="highlight-icon"
-                  src={highlightLogo}
-                  alt="highlight academy icon"
-                  fill
-                  sizes="(max-width: 768px) 150px, (max-width: 1200px) 200px, 300px"
-                />
-              </div>
-            </Link>
-          </div>
+          <MediaIcons />
           <div className="contact-button-wrapper">
             <button className="contact-button">Contact</button>
           </div>
