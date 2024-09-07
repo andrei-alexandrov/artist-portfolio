@@ -1,24 +1,15 @@
-"use client"
+"use client";
 
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import Image from "next/image";
-
-import a from "../../assets/people/kristian-kostov.jpg";
-import b from "../../assets/people/dara-yotova.jpg";
-import c from "../../assets/people/dara-yotova.jpg";
-import d from "../../assets/people/dara-yotova.jpg";
-import e from "../../assets/people/mihaela-fileva.jpg";
-import f from "../../assets/people/dara-yotova.jpg";
-import g from "../../assets/people/dara-yotova.jpg";
-import h from "../../assets/people/jaklin.jpg";
+import { images } from "./clientsData";
 
 import "./ClientCard.scss";
-
-const images = [a, b, c, d, e, f, g, h];
 
 const ClientCard = () => {
   const boxRef = useRef<HTMLDivElement>(null);
   const degrees = useRef<number>(0);
+  const [startX, setStartX] = useState<number | null>(null);
 
   const rotateBox = (direction: "prev" | "next") => {
     if (boxRef.current) {
@@ -27,8 +18,39 @@ const ClientCard = () => {
     }
   };
 
+  const handleTouchStart = (e: React.TouchEvent) => {
+    const touch = e.touches[0];
+    setStartX(touch.clientX);
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    if (!startX) return;
+
+    const touch = e.touches[0];
+    const diffX = touch.clientX - startX;
+
+    const sensitivity = 50;
+
+    if (diffX > sensitivity) {
+      rotateBox("prev");
+      setStartX(null);
+    } else if (diffX < -sensitivity) {
+      rotateBox("next");
+      setStartX(null);
+    }
+  };
+
+  const handleTouchEnd = () => {
+    setStartX(null);
+  };
+
   return (
-    <div className="carousel-container">
+    <div
+      className="carousel-container"
+      onTouchStart={handleTouchStart}
+      onTouchMove={handleTouchMove}
+      onTouchEnd={handleTouchEnd}
+    >
       <div
         className="box"
         style={{ "--total": images.length } as React.CSSProperties}
@@ -37,11 +59,13 @@ const ClientCard = () => {
         {images.map((image, index) => (
           <span key={index} style={{ "--i": index + 1 } as React.CSSProperties}>
             <Image
-              src={image}
+              className="carousel-image"
+              src={image.src}
               alt={`Image ${index + 1}`}
               fill
-              className="carousel-image"
+              sizes="(max-width: 768px) 24px, (max-width: 1200px) 30px, 40px"
             />
+            <div className="image-name">{image.name}</div>
           </span>
         ))}
       </div>

@@ -7,11 +7,6 @@ import Image from "next/image";
 import Link from "next/link";
 
 import artistPhoto from "../../assets/photos/iskra-photo.jpg";
-import facebookIcon from "../../assets/icons/facebook-icon.png";
-import instagramIcon from "../../assets/icons/instagram-icon.png";
-import linkedInIcon from "../../assets/icons/linkedin-icon.png";
-import musicTalentsIcon from "../../assets/icons/music-talents.png";
-import highlightLogo from "../../assets/icons/highlight-logo-dark.png";
 import musicDivider from "../../assets/icons/music-divider-2.png";
 
 import "./Intro.scss";

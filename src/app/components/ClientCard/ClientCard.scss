@@ -26,7 +26,7 @@
       transform: rotateY(calc(var(--i) * (360deg / var(--total))))
         translateZ(300px);
       // -webkit-box-reflect: below 0px linear-gradient(transparent, transparent #0004); Medium image reflection and below is full reflection
-      -webkit-box-reflect: below 0px linear-gradient(transparent, #0004);
+      // -webkit-box-reflect: below 0px linear-gradient(transparent, #0004);
 
       & .carousel-image {
         object-fit: cover;
@@ -34,14 +34,20 @@
         width: 100%;
         height: 100%;
       }
+      & .image-name {
+        position: relative;
+        text-align: center;
+        top: 13rem;
+        font-size: 14px;
+        color: $main-color;
+      }
     }
   }
   .btns {
     position: absolute;
-    bottom: 30px;
+    bottom: 0.2rem;
     display: flex;
     gap: 20px;
-    z-index: 10;
 
     .btn {
       position: relative;
@@ -59,6 +65,7 @@
       font-size: 1rem;
       text-align: center;
       border: 1px solid $main-color;
+      right: 3px;
 
       &:active {
         background-color: $main-color;
@@ -88,162 +95,13 @@
 
 // Responsive styles
 @media (max-width: 1200px) {
-  .containerA {
-    margin-bottom: 15rem; // Adjust as needed
-  }
 }
 
 @media (max-width: 992px) {
-  .containerA {
-    margin-bottom: 10rem;
-    .box {
-      width: 180px;
-      height: 180px;
-    }
-  }
-
-  .btns {
-    gap: 15px;
-    .btn {
-      width: 45px;
-      height: 45px;
-      font-size: 0.9rem;
-    }
-  }
 }
 
 @media (max-width: 768px) {
-  .containerA {
-    margin-bottom: 5rem;
-    .box {
-      width: 160px;
-      height: 160px;
-    }
-  }
-
-  .btns {
-    gap: 10px;
-    .btn {
-      width: 40px;
-      height: 40px;
-      font-size: 0.8rem;
-    }
-  }
 }
 
 @media (max-width: 576px) {
-  .containerA {
-    margin-bottom: 3rem;
-    .box {
-      width: 140px;
-      height: 140px;
-    }
-  }
-
-  .btns {
-    gap: 5px;
-    .btn {
-      width: 35px;
-      height: 35px;
-      font-size: 0.7rem;
-    }
-  }
 }
-
-// @import "../../../variables";
-
-// .card-container {
-//   display: flex;
-//   flex-wrap: wrap;
-//   gap: 1rem;
-//   padding: 1rem;
-//   justify-content: center;
-//   margin-top: 1rem;
-// }
-
-// .card-container > div {
-//   flex: 1 1 240px;
-//   max-width: 240px;
-//   border-radius: 12px;
-//   overflow: hidden;
-//   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-//   background-color: $black-color;
-//   transition: transform 0.3s, box-shadow 0.3s;
-// }
-
-// .card-container > div:hover {
-//   transform: scale(1.02);
-//   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-// }
-
-// .image-container {
-//   width: 100%;
-//   overflow: hidden;
-// }
-
-// .card-img {
-//   width: 100%;
-//   height: 200px;
-//   object-fit: cover;
-// }
-
-// .card-data {
-//   padding: 1rem;
-//   text-align: center;
-//   border-top-left-radius: 12px;
-//   border-top-right-radius: 12px;
-//   background-color: $black-color;
-// }
-
-// .card-name {
-//   font-size: 1.6rem;
-//   margin: 0.5rem 0;
-//   color: $main-color;
-// }
-
-// .card-description {
-//   margin-top: 1.8rem;
-//   font-size: 1rem;
-//   color: #d4d3d3;
-// }
-
-// @media (max-width: 527px) {
-//   .card-container > div {
-//     max-width: 150px;
-//     flex: 1 1 150px;
-//   }
-
-//   .card-img {
-//     height: 180px;
-//   }
-
-//   .card-data {
-//     padding: 0.8rem;
-//   }
-
-//   .card-name {
-//     font-size: 1.4rem;
-//   }
-
-//   .card-description {
-//     margin-top: 1rem;
-//     font-size: 0.9rem;
-//   }
-// }
-
-// @media (min-width: 600px) and (max-width: 764px) {
-//   .card-container {
-//     margin-bottom: 19rem;
-//   }
-// }
-
-// @media (max-width: 768px) {
-//   .card-container {
-//     gap: 0.5rem;
-//     padding: 0.5rem;
-//   }
-
-//   .card-container > div {
-//     max-width: 100%;
-//   }
-// }
