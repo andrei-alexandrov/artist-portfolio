@@ -15,6 +15,7 @@ const ScrollToTopBtn = dynamic(
 
 import connectMic from "../../assets/lottie-animations/connect-mic-2.json";
 import MediaIcons from "@/app/components/MediaIcons/MediaIcons";
+import { Container } from "react-bootstrap";
 
 const Contact = () => {
   const form = useRef<HTMLFormElement | null>(null);
@@ -49,77 +50,81 @@ const Contact = () => {
 
   return (
     <div id="contact">
-      <div className="title-container">
+      <Container fluid className="title-container">
         <div className="portfolio-section-title">Let&#39;s connect</div>
         <Lottie style={{ width: "110px" }} animationData={connectMic} />
-      </div>
-      <div className="contact-container">
-        <div className="contact-info">
-          <div className="contact-title">Get in touch</div>
-          <div className="contact-details">
-            <div className="contact-email">placeholder@gmail.com</div>
-            <div className="contact-location">Sofia, Bulgaria</div>
-            <div className="contact-icons">
-              <MediaIcons />
+      </Container>
+      <Container>
+        <div className="contact-container">
+          <div className="contact-info">
+            <div className="contact-title">Get in touch</div>
+            <div className="contact-details">
+              <div className="contact-email">placeholder@gmail.com</div>
+              <div className="contact-location">Sofia, Bulgaria</div>
+              <div className="contact-icons">
+                <MediaIcons />
+              </div>
+            </div>
+          </div>
+
+          <div className="contact-form">
+            <div className="form">
+              <form ref={form} onSubmit={sendEmail}>
+                <div className="input-group">
+                  <input
+                    type="text"
+                    name="user_name"
+                    className="user"
+                    placeholder="Name"
+                    title="Name must be at least 2 characters long"
+                    onClick={() => setInputClicked(true)}
+                    required
+                  />
+                  <input
+                    type="email"
+                    name="user_email"
+                    className="user"
+                    placeholder="Email"
+                    onClick={() => setInputClicked(true)}
+                    required
+                  />
+                </div>
+                <textarea
+                  name="message"
+                  className="user"
+                  placeholder="Message"
+                  required
+                  minLength={10}
+                  title="Message must be at least 10 characters long"
+                  onClick={() => setInputClicked(true)}
+                />
+                <Button>Send</Button>
+                {done && (
+                  <div className="sent-message-text">
+                    <span>Thanks for contacting me.</span>
+                    {/* Add any custom image for the thanks icon if needed */}
+                  </div>
+                )}
+              </form>
             </div>
           </div>
         </div>
-
-        <div className="contact-form">
-          <div className="form">
-            <form ref={form} onSubmit={sendEmail}>
-              <div className="input-group">
-                <input
-                  type="text"
-                  name="user_name"
-                  className="user"
-                  placeholder="Name"
-                  title="Name must be at least 2 characters long"
-                  onClick={() => setInputClicked(true)}
-                  required
-                />
-                <input
-                  type="email"
-                  name="user_email"
-                  className="user"
-                  placeholder="Email"
-                  onClick={() => setInputClicked(true)}
-                  required
-                />
-              </div>
-              <textarea
-                name="message"
-                className="user"
-                placeholder="Message"
-                required
-                minLength={10}
-                title="Message must be at least 10 characters long"
-                onClick={() => setInputClicked(true)}
-              />
-              <Button>Send</Button>
-              {done && (
-                <div className="sent-message-text">
-                  <span>Thanks for contacting me.</span>
-                  {/* Add any custom image for the thanks icon if needed */}
-                </div>
-              )}
-            </form>
-          </div>
+        <div>
+          <p className="author-message">
+            &quot;I want to empower singers to unlock their unique vocal
+            potential, transforming passion into powerful emotional expression.
+            At HighLight Singing Academy, I lead a dedicated team to cultivate
+            technical skills, artistic confidence, and industry readiness.
+            Through modern teaching methods and real-world insights, I help
+            students discover their true voice. Whether in the studio or on
+            stage, my goal is to inspire growth and a lifelong love for singing.
+            I am committed to nurturing talent and helping each student
+            shine.&quot; <br />
+            <br />
+            <span className="author">Iskra Milkova Angelova</span>
+          </p>
         </div>
-      </div>
-      <div>
-        <p className="author-message">
-          "I want to empower singers to unlock their unique vocal potential,
-          transforming passion into powerful emotional expression. At HighLight
-          Singing Academy, I lead a dedicated team to cultivate technical
-          skills, artistic confidence, and industry readiness. Through modern
-          teaching methods and real-world insights, I help students discover
-          their true voice. Whether in the studio or on stage, my goal is to
-          inspire growth and a lifelong love for singing. I am committed to
-          nurturing talent and helping each student shine." <br />
-          <br /> <span className="author">Iskra Milkova Angelova</span>
-        </p>
-      </div>
+      </Container>
       <ScrollToTopBtn />
     </div>
   );

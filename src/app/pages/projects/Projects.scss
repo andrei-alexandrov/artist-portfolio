@@ -2,6 +2,8 @@
 @import "../../../fonts";
 
 .projects-container {
+  position: relative;
+  bottom: 10rem;
   .portfolio-header {
     position: relative;
     z-index: 2;

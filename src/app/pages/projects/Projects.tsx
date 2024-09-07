@@ -37,7 +37,7 @@ const Projects = () => {
             <video
               className="project-video"
               src={item.video}
-              // controls
+              //controls
               autoPlay
               loop
               muted

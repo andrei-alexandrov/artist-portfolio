@@ -11,6 +11,9 @@ import Footer from "./components/Footer/Footer";
 export const metadata: Metadata = {
   title: "Iskra's Portfolio",
   description: "Vocal and artist coach",
+  icons: {
+    icon: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({

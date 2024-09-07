@@ -1,97 +1,249 @@
 @import "../../../variables";
 
-.card-container {
+.carousel-container {
+  margin-bottom: 20rem;
   display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  padding: 1rem;
   justify-content: center;
-  margin-top: 1rem;
+  align-items: center;
+  transform-style: preserve-3d;
+
+  .box {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    transform-style: preserve-3d;
+    transform: perspective(1000px) rotateY(0deg);
+    transition: transform 1.5s;
+
+    & span {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      transform-origin: center;
+      transform-style: preserve-3d;
+      transform: rotateY(calc(var(--i) * (360deg / var(--total))))
+        translateZ(300px);
+      // -webkit-box-reflect: below 0px linear-gradient(transparent, transparent #0004); Medium image reflection and below is full reflection
+      -webkit-box-reflect: below 0px linear-gradient(transparent, #0004);
+
+      & .carousel-image {
+        object-fit: cover;
+        user-select: none;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+  .btns {
+    position: absolute;
+    bottom: 30px;
+    display: flex;
+    gap: 20px;
+    z-index: 10;
+
+    .btn {
+      position: relative;
+      top: 10rem;
+      width: 50px;
+      height: 50px;
+      // border: 2px solid $main-color;
+      border-radius: 50%;
+      background-color: rgb(255, 255, 255);
+      // color: #b21717;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 1rem;
+      text-align: center;
+      border: 1px solid $main-color;
+
+      &:active {
+        background-color: $main-color;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        width: 13px;
+        height: 13px;
+        border-top: 3px solid $main-color;
+        border-right: 3px solid $main-color;
+        transform: rotate(45deg) translate(-2.5px, 2.5px); //Pay attention on the deg number, as it is used also in the addEventListener
+      }
+
+      &.prev::before {
+        transform: rotate(225deg) translate(-2.5px, 2.5px);
+      }
+
+      &:active::before {
+        border-top: 3px solid white;
+        border-right: 3px solid white;
+      }
+    }
+  }
 }
 
-.card-container > div {
-  flex: 1 1 240px;
-  max-width: 240px;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  background-color: $black-color;
-  transition: transform 0.3s, box-shadow 0.3s;
+// Responsive styles
+@media (max-width: 1200px) {
+  .containerA {
+    margin-bottom: 15rem; // Adjust as needed
+  }
 }
 
-.card-container > div:hover {
-  transform: scale(1.02);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-.image-container {
-  width: 100%;
-  overflow: hidden;
-}
-
-.card-img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-}
-
-.card-data {
-  padding: 1rem;
-  text-align: center;
-  border-top-left-radius: 12px;
-  border-top-right-radius: 12px;
-  background-color: $black-color;
-}
-
-.card-name {
-  font-size: 1.6rem;
-  margin: 0.5rem 0;
-  color: $main-color;
-}
-
-.card-description {
-  margin-top: 1.8rem;
-  font-size: 1rem;
-  color: #d4d3d3;
-}
-
-@media (max-width: 527px) {
-  .card-container > div {
-    max-width: 150px;
-    flex: 1 1 150px;
+@media (max-width: 992px) {
+  .containerA {
+    margin-bottom: 10rem;
+    .box {
+      width: 180px;
+      height: 180px;
+    }
   }
 
-  .card-img {
-    height: 180px;
-  }
-
-  .card-data {
-    padding: 0.8rem;
-  }
-
-  .card-name {
-    font-size: 1.4rem;
-  }
-
-  .card-description {
-    margin-top: 1rem;
-    font-size: 0.9rem;
-  }
-}
-
-@media (min-width: 600px) and (max-width: 764px) {
-  .card-container {
-    margin-bottom: 19rem;
+  .btns {
+    gap: 15px;
+    .btn {
+      width: 45px;
+      height: 45px;
+      font-size: 0.9rem;
+    }
   }
 }
 
 @media (max-width: 768px) {
-  .card-container {
-    gap: 0.5rem;
-    padding: 0.5rem;
+  .containerA {
+    margin-bottom: 5rem;
+    .box {
+      width: 160px;
+      height: 160px;
+    }
   }
 
-  .card-container > div {
-    max-width: 100%;
+  .btns {
+    gap: 10px;
+    .btn {
+      width: 40px;
+      height: 40px;
+      font-size: 0.8rem;
+    }
   }
 }
+
+@media (max-width: 576px) {
+  .containerA {
+    margin-bottom: 3rem;
+    .box {
+      width: 140px;
+      height: 140px;
+    }
+  }
+
+  .btns {
+    gap: 5px;
+    .btn {
+      width: 35px;
+      height: 35px;
+      font-size: 0.7rem;
+    }
+  }
+}
+
+// @import "../../../variables";
+
+// .card-container {
+//   display: flex;
+//   flex-wrap: wrap;
+//   gap: 1rem;
+//   padding: 1rem;
+//   justify-content: center;
+//   margin-top: 1rem;
+// }
+
+// .card-container > div {
+//   flex: 1 1 240px;
+//   max-width: 240px;
+//   border-radius: 12px;
+//   overflow: hidden;
+//   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+//   background-color: $black-color;
+//   transition: transform 0.3s, box-shadow 0.3s;
+// }
+
+// .card-container > div:hover {
+//   transform: scale(1.02);
+//   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+// }
+
+// .image-container {
+//   width: 100%;
+//   overflow: hidden;
+// }
+
+// .card-img {
+//   width: 100%;
+//   height: 200px;
+//   object-fit: cover;
+// }
+
+// .card-data {
+//   padding: 1rem;
+//   text-align: center;
+//   border-top-left-radius: 12px;
+//   border-top-right-radius: 12px;
+//   background-color: $black-color;
+// }
+
+// .card-name {
+//   font-size: 1.6rem;
+//   margin: 0.5rem 0;
+//   color: $main-color;
+// }
+
+// .card-description {
+//   margin-top: 1.8rem;
+//   font-size: 1rem;
+//   color: #d4d3d3;
+// }
+
+// @media (max-width: 527px) {
+//   .card-container > div {
+//     max-width: 150px;
+//     flex: 1 1 150px;
+//   }
+
+//   .card-img {
+//     height: 180px;
+//   }
+
+//   .card-data {
+//     padding: 0.8rem;
+//   }
+
+//   .card-name {
+//     font-size: 1.4rem;
+//   }
+
+//   .card-description {
+//     margin-top: 1rem;
+//     font-size: 0.9rem;
+//   }
+// }
+
+// @media (min-width: 600px) and (max-width: 764px) {
+//   .card-container {
+//     margin-bottom: 19rem;
+//   }
+// }
+
+// @media (max-width: 768px) {
+//   .card-container {
+//     gap: 0.5rem;
+//     padding: 0.5rem;
+//   }
+
+//   .card-container > div {
+//     max-width: 100%;
+//   }
+// }

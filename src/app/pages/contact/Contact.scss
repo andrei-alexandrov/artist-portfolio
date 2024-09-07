@@ -7,6 +7,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-image: url("../../assets/test.jpg"); /* Specify the path to your image */
+  background-size: cover; /* Ensures the image covers the entire navbar */
+  background-position: center; /* Centers the background image */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
 }
 
 .contact-container {
@@ -145,8 +149,8 @@
 
 @media (min-width: 565px) and (max-width: 682px) {
   .contact-container {
- padding-left: 15px;
- padding-right: 10px;
+    padding-left: 15px;
+    padding-right: 10px;
     .contact-info {
       .contact-details {
         .socials-container {

@@ -11,6 +11,8 @@
     overflow: hidden;
 
     .footer-content {
+        position: relative;
+        top: 8px;
         .footer-text {
             color: $main-color;
             font-size: 19px;
@@ -18,16 +20,16 @@
         }
     }
 
-    .footer-icons>a>svg {
-        transition: transform 1s;
-        margin-right: 3px;
-        margin-left: 3px;
+    // .footer-icons>a>svg {
+    //     transition: transform 1s;
+    //     margin-right: 3px;
+    //     margin-left: 3px;
 
-        &:hover {
-            cursor: pointer;
-            transform: scale(1.2);
-        }
-    }
+    //     &:hover {
+    //         cursor: pointer;
+    //         transform: scale(1.2);
+    //     }
+    // }
 
     // .screen-reader {
     //     position: absolute;

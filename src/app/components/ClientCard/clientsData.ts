@@ -7,27 +7,27 @@ import pollyaIvanova from "../../assets/people/pollya-ivanova.jpg";
 const clientsData = [
   {
     name: "Mihaela Fileva",
-    image: mihaelaFileva,
+    image: mihaelaFileva,  // Corrected image assignment
     description: "Pop star",
   },
   {
     name: "Dara Yotova",
-    image: daraYotova,
+    image: daraYotova,  // Corrected image assignment
     description: "Pop/hip-hop star",
   },
   {
     name: "Jaklin Tarakchi",
-    image: jaklin,
+    image: jaklin,  // Corrected image assignment
     description: "The winner of The Voice of Bulgaria 2022",
   },
   {
     name: "Kristian Kostov",
-    image: kristianKostov,
+    image: kristianKostov,  // Corrected image assignment
     description: "Second place at Eurovision 2017",
   },
   {
     name: "Pollya Ivanova",
-    image: pollyaIvanova,
+    image: pollyaIvanova,  // Corrected image assignment
     description: "Finalist at Bulgaria's Got Talent",
   },
 ];

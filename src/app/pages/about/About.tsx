@@ -68,7 +68,7 @@ const About = () => {
           </span>
         </p>
         <p style={{ marginTop: "6rem" }} className="portfolio-section-title">
-          Clients
+          
         </p>
         <ClientCard />
       </div>
