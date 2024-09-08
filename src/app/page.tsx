@@ -1,7 +1,7 @@
 import { Container, Row, Col } from "react-bootstrap";
 import Intro from "./pages/intro/Intro";
 import About from "./pages/about/About";
-import Projects from "./pages/activities/Activity";
+import Activities from "./pages/activities/Activities";
 import Inspirations from "./pages/inspirations/Inspirations";
 import Contact from "./pages/contact/Contact";
 import Certificates from "./pages/certificates/Certificates";
@@ -9,11 +9,10 @@ import Certificates from "./pages/certificates/Certificates";
 export default function Home() {
   return (
     <main>
+      <Intro />
       <Container>
         <Row>
-          <Col>
-            <Intro />
-          </Col>
+          <Col></Col>
         </Row>
 
         <Row>
@@ -24,7 +23,7 @@ export default function Home() {
 
         <Row>
           <Col>
-            <Projects />
+            <Activities />
           </Col>
         </Row>
 
