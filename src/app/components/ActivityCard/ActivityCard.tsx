@@ -1,15 +1,14 @@
+import activityData from "./activityData";
 import Image from "next/image";
-import Button from "../../components/Button/Button";
-
-import projectsData from "./projectsData";
-import "./Projects.scss";
 import Link from "next/link";
+import Button from "../Button/Button";
 
-const Projects = () => {
+import "./ActivityCard.scss";
+
+const ActivityCard = () => {
   return (
-    <div id="activities" className="projects-container">
-      <div className="portfolio-section-title">Activities</div>
-      {projectsData.map((item) => (
+    <>
+      {activityData.map((item: any) => (
         <div key={item.title} className="project-card">
           <div className="card-content-wrapper">
             <h3 className="project-title">{item.title}</h3>
@@ -54,8 +53,8 @@ const Projects = () => {
           )}
         </div>
       ))}
-    </div>
+    </>
   );
 };
 
-export default Projects;
+export default ActivityCard;

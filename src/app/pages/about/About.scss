@@ -3,7 +3,7 @@
 
 .about-container {
   position: relative;
-  bottom: 8rem;
+  bottom: 9rem;
 
   .about-description {
     margin-top: 1rem;
@@ -18,22 +18,17 @@
   }
 }
 
-@media (min-width: 200px) and (max-width: 380px) {
+@media (min-width: 200px) and (max-width: 375px) {
   .about-container {
     position: relative;
-    top: 26rem;
-
-    .about-description {
-      text-align: center;
-    }
+    top: 25rem;
   }
 }
 
-@media (min-width: 381px) and (max-width: 764px) {
+@media (min-width: 376px) and (max-width: 764px) {
   .about-container {
     position: relative;
-    top: 10rem;
-    text-align: center;
+    top: 14rem;
 
     .about-description {
       font-size: 18px;
@@ -41,15 +36,9 @@
   }
 }
 
-@media (min-width: 764px) and (max-width: 991px) {
+@media (min-width: 765px) and (max-width: 1800px) {
   .about-container {
     position: relative;
-  }
-}
-
-@media (min-width: 992px) and (max-width: 1200px) {
-  .about-container {
-    position: relative;
-    bottom: 4rem;
+    bottom: 3rem;
   }
 }

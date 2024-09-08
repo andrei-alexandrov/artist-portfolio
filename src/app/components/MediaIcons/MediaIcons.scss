@@ -37,16 +37,11 @@
   width: 15rem;
   height: 5rem;
   transition: transform 0.7s;
-
+  
   &:hover {
     cursor: pointer;
     transform: scale(1.03);
   }
-}
-
-.contact-button {
-  margin-top: 2.6rem;
-  @include portfolio-button();
 }
 
 @media (min-width: 200px) and (max-width: 445px) {

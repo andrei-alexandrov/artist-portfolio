@@ -4,13 +4,14 @@ import { useEffect } from "react";
 import { gsap } from "gsap";
 import Stars from "../../components/Stars/Stars";
 import Image from "next/image";
-import Link from "next/link";
 
 import artistPhoto from "../../assets/photos/iskra-photo.jpg";
 import musicDivider from "../../assets/icons/music-divider-2.png";
 
 import "./Intro.scss";
 import MediaIcons from "@/app/components/MediaIcons/MediaIcons";
+import Button from "@/app/components/Button/Button";
+import { Link } from "react-scroll";
 
 const Intro = () => {
   useEffect(() => {
@@ -45,7 +46,16 @@ const Intro = () => {
           </p>
           <MediaIcons />
           <div className="contact-button-wrapper">
-            <button className="contact-button">Contact</button>
+            <Link
+              activeClass="active"
+              to="contact"
+              spy={true}
+              smooth={true}
+              duration={50}
+              offset={-95}
+            >
+              <Button>Contact</Button>
+            </Link>
           </div>
         </div>
 

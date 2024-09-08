@@ -69,7 +69,7 @@ const Navbar = () => {
                     spy={true}
                     smooth={true}
                     duration={50}
-                    offset={-70}
+                    offset={-95}
                   >
                     About Me
                   </Link>
@@ -81,7 +81,7 @@ const Navbar = () => {
                     spy={true}
                     smooth={true}
                     duration={50}
-                    offset={-70}
+                    offset={-95}
                   >
                     Activities
                   </Link>
@@ -93,7 +93,7 @@ const Navbar = () => {
                     spy={true}
                     smooth={true}
                     duration={50}
-                    offset={-70}
+                    offset={-95}
                   >
                     Certificates
                   </Link>
@@ -105,7 +105,7 @@ const Navbar = () => {
                     spy={true}
                     smooth={true}
                     duration={50}
-                    offset={-70}
+                    offset={-95}
                   >
                     Inspirations
                   </Link>
@@ -117,7 +117,7 @@ const Navbar = () => {
                     spy={true}
                     smooth={true}
                     duration={50}
-                    offset={-86}
+                    offset={-95}
                   >
                     Contact
                   </Link>
@@ -146,7 +146,7 @@ const Navbar = () => {
                 spy={true}
                 smooth={true}
                 duration={50}
-                offset={-70}
+                offset={-95}
                 onClick={handleToggleSidebar}
               >
                 About Me
@@ -158,7 +158,7 @@ const Navbar = () => {
                 spy={true}
                 smooth={true}
                 duration={50}
-                offset={-70}
+                offset={-95}
                 onClick={handleToggleSidebar}
               >
                 Activities
@@ -170,7 +170,7 @@ const Navbar = () => {
                 spy={true}
                 smooth={true}
                 duration={50}
-                offset={-70}
+                offset={-95}
                 onClick={handleToggleSidebar}
               >
                 Certificates
@@ -182,7 +182,7 @@ const Navbar = () => {
                 spy={true}
                 smooth={true}
                 duration={50}
-                offset={-70}
+                offset={-95}
                 onClick={handleToggleSidebar}
               >
                 Inspirations
@@ -194,7 +194,7 @@ const Navbar = () => {
                 spy={true}
                 smooth={true}
                 duration={50}
-                offset={-70}
+                offset={-95}
                 onClick={handleToggleSidebar}
               >
                 Contact
@@ -202,6 +202,7 @@ const Navbar = () => {
             </li>
           </ul>
         </nav>
+        
         {/* Sidebar Icons */}
         <div className="sidebar-icons">
           <a

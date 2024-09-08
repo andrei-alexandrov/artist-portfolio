@@ -17,48 +17,49 @@ const Inspirations = () => {
   const { isOpen, imageSrc, openModal, closeModal } = useModal();
 
   return (
-    <div id="inspirations" className="inspirations-container">
-      <div className="section-title-wrapper">
+    <div className="inspirations-container">
+      <div id="inspirations">
         <h1 className="portfolio-section-title">Inspirations</h1>
-      </div>
-      <Swiper
-        effect={"coverflow"}
-        grabCursor={true}
-        centeredSlides={true}
-        loop={true}
-        slidesPerView={"auto"}
-        coverflowEffect={{
-          rotate: 0,
-          stretch: 0,
-          depth: 100,
-          modifier: 2.5,
-        }}
-        pagination={{ el: ".swiper-pagination", clickable: true }}
-        navigation={{
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        }}
-        modules={[EffectCoverflow, Pagination, Navigation]}
-        className="swiper_container"
-      >
-        {inspirationImages.map((img, index) => (
-          <SwiperSlide key={index} onClick={() => openModal(img)}>
-            <Image
-              src={img}
-              alt="image"
-              fill
-              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-            />
-          </SwiperSlide>
-        ))}
-        <div className="slider-container">
-          <div className="slider-controler">
-            <div className="swiper-pagination"></div>
-          </div>
-        </div>
-      </Swiper>
 
-      <Modal isOpen={isOpen} onClose={closeModal} imageSrc={imageSrc} />
+        <Swiper
+          effect={"coverflow"}
+          grabCursor={true}
+          centeredSlides={true}
+          loop={true}
+          slidesPerView={"auto"}
+          coverflowEffect={{
+            rotate: 0,
+            stretch: 0,
+            depth: 100,
+            modifier: 2.5,
+          }}
+          pagination={{ el: ".swiper-pagination", clickable: true }}
+          navigation={{
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          }}
+          modules={[EffectCoverflow, Pagination, Navigation]}
+          className="swiper_container"
+        >
+          {inspirationImages.map((img, index) => (
+            <SwiperSlide key={index} onClick={() => openModal(img)}>
+              <Image
+                src={img}
+                alt="image"
+                fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              />
+            </SwiperSlide>
+          ))}
+          <div className="slider-container">
+            <div className="slider-controler">
+              <div className="swiper-pagination"></div>
+            </div>
+          </div>
+        </Swiper>
+
+        <Modal isOpen={isOpen} onClose={closeModal} imageSrc={imageSrc} />
+      </div>
     </div>
   );
 };

@@ -1,41 +1,46 @@
 @import "../../../variables";
 
-.swiper_container {
-  height: 36rem;
-  padding: 1rem 0;
+.inspirations-container {
   position: relative;
-}
+  bottom: 6rem;
 
-.swiper-slide {
-  width: 25rem;
-  height: 30rem;
-  position: relative;
-}
-
-.swiper-slide img {
-  width: 25rem;
-  height: 30rem;
-  border-radius: 1rem;
-  object-fit: cover;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-
-  &:hover {
-    transform: scale(1) rotate(1deg);
-    box-shadow: 0 0 10px 4px $main-color;
-  }
-}
-
-@media (max-width: 400px) {
   .swiper_container {
-    height: 28rem;
+    height: 36rem;
+    padding: 1rem 0;
+    position: relative;
   }
+
   .swiper-slide {
-    width: 18rem;
-    height: 22rem;
+    width: 25rem;
+    height: 30rem;
+    position: relative;
   }
+
   .swiper-slide img {
-    width: 18rem;
-    height: 22rem;
+    width: 25rem;
+    height: 30rem;
+    border-radius: 1rem;
+    object-fit: cover;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+      transform: scale(1) rotate(1deg);
+      box-shadow: 0 0 10px 4px $main-color;
+    }
+  }
+
+  @media (max-width: 400px) {
+    .swiper_container {
+      height: 28rem;
+    }
+    .swiper-slide {
+      width: 18rem;
+      height: 22rem;
+    }
+    .swiper-slide img {
+      width: 18rem;
+      height: 22rem;
+    }
   }
 }
 
@@ -66,34 +71,6 @@
   transform: translateX(-58%) !important;
 }
 
-@media (max-width: 990px) {
-  .slider-controler .swiper-button-next {
-    left: 70% !important;
-    transform: translateX(-70%) !important;
-  }
-}
-
-@media (max-width: 450px) {
-  .slider-controler .swiper-button-next {
-    left: 80% !important;
-    transform: translateX(-80%) !important;
-  }
-}
-
-@media (max-width: 990px) {
-  .slider-controler .swiper-button-prev {
-    left: 30% !important;
-    transform: translateX(-30%) !important;
-  }
-}
-
-@media (max-width: 450px) {
-  .slider-controler .swiper-button-prev {
-    left: 20% !important;
-    transform: translateX(-20%) !important;
-  }
-}
-
 .slider-controler .slider-arrow {
   background: transparent;
   left: 42%;
@@ -122,4 +99,25 @@
 
 .swiper-pagination .swiper-pagination-bullet-active {
   background: $main-color;
+}
+
+@media (min-width: 200px) and (max-width: 380px) {
+  .inspirations-container {
+  position: relative;
+  top: 24rem;
+  }
+}
+
+@media (min-width: 381px) and (max-width: 599px) {
+  .inspirations-container {
+    position: relative;
+    margin-top: 22rem;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 991px) {
+  .inspirations-container {
+    position: relative;
+    bottom: 8rem;
+  }
 }

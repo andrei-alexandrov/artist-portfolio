@@ -22,7 +22,7 @@ const MediaIcons = () => {
             <Image
               className="social-icon"
               src={linkedInIcon}
-              alt="LinkedIn icon"
+              alt="linkedIn-icon"
               fill
               sizes="(max-width: 768px) 24px, (max-width: 1200px) 30px, 40px"
             />
@@ -37,7 +37,7 @@ const MediaIcons = () => {
             <Image
               className="social-icon"
               src={instagramIcon}
-              alt="Instagram icon"
+              alt="instagram-icon"
               fill
               sizes="(max-width: 768px) 24px, (max-width: 1200px) 30px, 40px"
             />
@@ -52,7 +52,7 @@ const MediaIcons = () => {
             <Image
               className="social-icon"
               src={facebookIcon}
-              alt="Facebook icon"
+              alt="facebook-icon"
               fill
               sizes="(max-width: 768px) 24px, (max-width: 1200px) 30px, 40px"
             />
@@ -67,7 +67,7 @@ const MediaIcons = () => {
             <Image
               className="social-icon-special"
               src={musicTalentsIcon}
-              alt="Music talents icon"
+              alt="music-talents-icon"
               fill
               sizes="(max-width: 768px) 24px, (max-width: 1200px) 30px, 40px"
             />
@@ -84,7 +84,7 @@ const MediaIcons = () => {
             <Image
               className="highlight-icon"
               src={highlightLogo}
-              alt="Highlight Academy icon"
+              alt="highlight-academy-icon"
               fill
               sizes="(max-width: 768px) 150px, (max-width: 1200px) 200px, 300px"
             />
