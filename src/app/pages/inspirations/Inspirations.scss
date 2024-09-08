@@ -29,7 +29,8 @@
     }
   }
 
-  @media (max-width: 400px) {
+  /* Small Devices (Tablets) */
+  @media (min-width: 600px) and (max-width: 1024px) {
     .swiper_container {
       height: 28rem;
     }
@@ -41,23 +42,83 @@
       width: 18rem;
       height: 22rem;
     }
+
+    .inspirations-container {
+      position: relative;
+      bottom: 4rem;
+      margin-top: 10rem;
+    }
+  }
+
+  /* Medium Devices (Laptops) */
+  @media (min-width: 1025px) and (max-width: 1440px) {
+    .swiper_container {
+      height: 34rem;
+    }
+    .swiper-slide {
+      width: 22rem;
+      height: 28rem;
+    }
+    .swiper-slide img {
+      width: 22rem;
+      height: 28rem;
+    }
+
+    .inspirations-container {
+      position: relative;
+      bottom: 6rem;
+      margin-top: 5rem;
+    }
+  }
+
+  /* Large Devices */
+  @media (min-width: 1441px) {
+    .swiper_container {
+      height: 40rem;
+    }
+    .swiper-slide {
+      width: 26rem;
+      height: 32rem;
+    }
+    .swiper-slide img {
+      width: 26rem;
+      height: 32rem;
+    }
+
+    .inspirations-container {
+      position: relative;
+      bottom: 8rem;
+    }
   }
 }
 
-@media (max-width: 600px) {
-  .swiper_container {
-    height: 32rem;
-  }
-  .swiper-slide {
-    width: 20rem;
-    height: 26rem;
-  }
-  .swiper-slide img {
-    width: 20rem;
-    height: 26rem;
+@media (min-width: 100px) and (max-width: 380px) {
+  .inspirations-container {
+    position: relative;
+    top: 4rem;
   }
 }
 
+@media (max-width: 599px) {
+  .inspirations-container {
+    position: relative;
+    margin-top: -2rem;
+
+    .swiper_container {
+      height: 25rem;
+    }
+    .swiper-slide {
+      width: 14rem;
+      height: 18rem;
+    }
+    .swiper-slide img {
+      width: 14rem;
+      height: 18rem;
+    }
+  }
+}
+
+/* Slider Controller Styling */
 .slider-controler {
   position: relative;
   bottom: 2rem;
@@ -99,25 +160,4 @@
 
 .swiper-pagination .swiper-pagination-bullet-active {
   background: $main-color;
-}
-
-@media (min-width: 200px) and (max-width: 380px) {
-  .inspirations-container {
-  position: relative;
-  top: 24rem;
-  }
-}
-
-@media (min-width: 381px) and (max-width: 599px) {
-  .inspirations-container {
-    position: relative;
-    margin-top: 22rem;
-  }
-}
-
-@media (min-width: 600px) and (max-width: 991px) {
-  .inspirations-container {
-    position: relative;
-    bottom: 8rem;
-  }
 }

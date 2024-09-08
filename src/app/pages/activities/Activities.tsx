@@ -1,8 +1,8 @@
 import ActivityCard from "@/app/components/ActivityCard/ActivityCard";
 
-import "./Activity.scss";
+import "./Activities.scss";
 
-const Projects = () => {
+const Activities = () => {
   return (
     <div id="activities" className="projects-container">
       <div className="portfolio-section-title">Activities</div>
@@ -11,4 +11,4 @@ const Projects = () => {
   );
 };
 
-export default Projects;
+export default Activities;

@@ -2,14 +2,18 @@ import activityData from "./activityData";
 import Image from "next/image";
 import Link from "next/link";
 import Button from "../Button/Button";
-
 import "./ActivityCard.scss";
 
 const ActivityCard = () => {
   return (
     <>
-      {activityData.map((item: any) => (
-        <div key={item.title} className="project-card">
+      {activityData.map((item: any, index: number) => (
+        <div
+          key={item.title}
+          className={`project-card ${
+            index === 0 ? "first-activity" : index === 1 ? "second-activity" : ""
+          }`}
+        >
           <div className="card-content-wrapper">
             <h3 className="project-title">{item.title}</h3>
             <p className="project-desc">{item.description}</p>
@@ -24,7 +28,7 @@ const ActivityCard = () => {
             <div>
               <Link
                 href={item.webAddress}
-                target="_black"
+                target="_blank"
                 rel="noopener noreferrer"
               >
                 <Button>Visit</Button>
@@ -36,7 +40,6 @@ const ActivityCard = () => {
             <video
               className="project-video"
               src={item.video}
-              //controls
               autoPlay
               loop
               muted

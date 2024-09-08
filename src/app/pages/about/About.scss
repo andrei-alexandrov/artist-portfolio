@@ -6,7 +6,7 @@
   bottom: 9rem;
 
   .about-description {
-    margin-top: 1rem;
+    margin-top: 2rem;
     text-align: center;
     font-size: $small-font;
 
@@ -21,14 +21,14 @@
 @media (min-width: 200px) and (max-width: 375px) {
   .about-container {
     position: relative;
-    top: 25rem;
+    top: 24rem;
   }
 }
 
 @media (min-width: 376px) and (max-width: 764px) {
   .about-container {
     position: relative;
-    top: 14rem;
+    top: 18rem;
 
     .about-description {
       font-size: 18px;
@@ -39,6 +39,6 @@
 @media (min-width: 765px) and (max-width: 1800px) {
   .about-container {
     position: relative;
-    bottom: 3rem;
+    bottom: 8rem;
   }
 }

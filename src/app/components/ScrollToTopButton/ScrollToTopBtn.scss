@@ -16,9 +16,12 @@
     cursor: pointer;
     transform: scale(1.1);
   }
+}
 
-  //Temporary
-  @media (max-width: 764px) {
-    display: none;
+@media (max-width: 764px) {
+  .scroll-to-top-btn {
+    right: 9px;
+    height: 52px;
+    width: 52px;
   }
 }

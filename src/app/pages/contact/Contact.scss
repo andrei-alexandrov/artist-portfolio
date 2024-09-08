@@ -2,136 +2,147 @@
 @import "../../../mixins";
 @import "../../../fonts";
 
-.title-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  // background-image: url("../../assets/test.jpg");
-  // background-size: cover;
-  // background-position: center;
-  // background-repeat: no-repeat;
-}
+.test-container {
+  background-image: url("../../assets/9.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 
-.contact-container {
-  margin-top: 4rem;
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 6rem;
-
-  @media (max-width: 564px) {
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-  }
-
-  .contact-info {
-    position: relative;
-    bottom: 10px;
-    max-width: 45%;
-
-    @media (max-width: 564px) {
-      max-width: 100%;
-      text-align: center;
-    }
-
-    .contact-title {
-      color: $main-color;
-      font-weight: bold;
-      font-size: 2rem;
-      margin-bottom: 1rem;
-    }
-
-    .contact-details {
-      position: relative;
-      top: 7px;
-
-      .contact-email,
-      .contact-location {
-        margin-bottom: 0.5rem;
-        font-size: 20px;
-        color: $main-color;
-      }
-    }
-  }
-
-  .contact-form {
-    flex: 1;
-    max-width: 45%;
+  .title-container {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+  }
+
+  .contact-container {
+    margin-top: 3rem;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 6rem;
 
     @media (max-width: 564px) {
-      margin-top: 2rem;
-      max-width: 100%;
+      flex-direction: column;
       align-items: center;
-      padding-left: 45px;
-      padding-right: 45px;
+      gap: 1rem;
     }
 
-    .form {
-      > form {
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
-        align-items: center;
-        width: 100%;
+    .contact-info {
+      position: relative;
+      bottom: 9px;
+      max-width: 45%;
+
+      @media (max-width: 564px) {
+        max-width: 100%;
+        text-align: center;
+      }
+
+      .contact-title {
+        color: $main-color;
+        font-weight: bold;
+        font-size: 2rem;
+        margin-bottom: 1rem;
+      }
+
+      .contact-details {
+        position: relative;
+        top: 7px;
+
+        .contact-email,
+        .contact-location {
+          margin-bottom: 0.5rem;
+          font-size: 20px;
+          color: $main-color;
+        }
       }
     }
 
-    .form .input-group {
+    .contact-form {
+      flex: 1;
+      max-width: 45%;
       display: flex;
-      gap: 1rem;
-      width: 100%;
+      flex-direction: column;
+      align-items: center;
 
-      .user {
-        flex: 1;
-        height: 2rem;
+      @media (max-width: 564px) {
+        margin-top: 2rem;
+        max-width: 100%;
+        align-items: center;
+        padding-left: 45px;
+        padding-right: 45px;
+      }
+
+      .form {
+        > form {
+          display: flex;
+          flex-direction: column;
+          gap: 1rem;
+          align-items: center;
+          width: 100%;
+        }
+      }
+
+      .form .input-group {
+        display: flex;
+        gap: 1rem;
+        width: 100%;
+
+        .user {
+          flex: 1;
+          height: 2rem;
+          padding: 0.3em;
+          outline: none;
+          border: 2px solid $main-color;
+          //border-radius: 8px;
+          font-size: 1rem;
+          padding-left: 8px;
+          box-sizing: border-box;
+        }
+      }
+
+      textarea {
+        width: 100%;
+        height: 11rem !important;
+        border: 2px solid $main-color;
+        // border-radius: 8px;
         padding: 0.3em;
         outline: none;
-        border: 2px solid $main-color;
-        //border-radius: 8px;
         font-size: 1rem;
-        padding-left: 8px;
-        box-sizing: border-box;
-      }
-    }
-
-    textarea {
-      width: 100%;
-      height: 11rem !important;
-      border: 2px solid $main-color;
-      // border-radius: 8px;
-      padding: 0.3em;
-      outline: none;
-      font-size: 1rem;
-      margin-top: 1rem;
-    }
-
-    .sent-message-text {
-      position: relative;
-      bottom: 14rem;
-
-      span {
-        color: #fba61e;
-        font-size: 1.2rem;
+        margin-top: 1rem;
       }
 
-      img {
-        width: 60px;
-        height: 70px;
-      }
-    }
+      .sent-message-text {
+        position: relative;
+        bottom: 14rem;
 
-    Button {
-      width: 50%;
-      margin-top: 1rem;
+        span {
+          color: #fba61e;
+          font-size: 1.2rem;
+        }
+
+        img {
+          width: 60px;
+          height: 70px;
+        }
+      }
+
+      Button {
+        width: 50%;
+        margin-top: 1rem;
+        background-color: $main-color;
+        color: white;
+
+        &:hover {
+          background-color: white;
+          color: black;
+        }
+      }
     }
   }
 }
-
 .author-message {
+  position: relative;
+  bottom: 8px;
   text-align: center;
   font-size: $small-font;
 
@@ -141,7 +152,7 @@
   }
 }
 
-@media (min-width: 200px) and (max-width: 375px) {
+@media (min-width: 200px) and (max-width: 379px) {
   .title-container {
     margin-top: 4rem;
   }
@@ -156,27 +167,11 @@
 }
 
 //Temporary manual adjustments
-@media (min-width: 376px) and (max-width: 445px) {
+@media (min-width: 380px) and (max-width: 564px) {
   .test-container {
-    .contact-container {
-      .contact-info {
-        position: relative;
-        bottom: 2rem;
+    position: relative;
+    margin-top: -4rem;
 
-        .socials-container {
-          position: relative;
-        }
-        .highlight-icon-wrapper {
-          position: relative;
-          left: 6px;
-        }
-      }
-    }
-  }
-}
-
-@media (min-width: 447px) and (max-width: 564px) {
-  .test-container {
     .contact-container {
       .contact-info {
         position: relative;
@@ -197,6 +192,8 @@
 
 @media (min-width: 565px) and (max-width: 575px) {
   .test-container {
+    position: relative;
+    margin-top: -2rem;
     .contact-container {
       padding-left: 5px;
       padding-right: 5px;
@@ -212,6 +209,8 @@
 
 @media (min-width: 576px) and (max-width: 764px) {
   .test-container {
+    position: relative;
+    margin-top: -4rem;
     .contact-container {
       padding-left: 10px;
       padding-right: 10px;

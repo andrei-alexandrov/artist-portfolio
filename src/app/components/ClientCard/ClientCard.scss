@@ -1,11 +1,13 @@
 @import "../../../variables";
 
 .carousel-container {
-  margin-bottom: 20rem;
+  margin-bottom: 17rem;
   display: flex;
   justify-content: center;
   align-items: center;
   transform-style: preserve-3d;
+  top: 1.2rem;
+  position: relative;
 
   .box {
     position: relative;

@@ -1,15 +1,20 @@
 import React from "react";
 import Image from "next/image";
-import Link from "next/link";
+
 import "./MediaIcons.scss";
 
 import linkedInIcon from "../../assets/icons/linkedin-icon.png";
 import instagramIcon from "../../assets/icons/instagram-icon.png";
 import facebookIcon from "../../assets/icons/facebook-icon.png";
 import musicTalentsIcon from "../../assets/icons/music-talents.png";
-import highlightLogo from "../../assets/icons/highlight-logo-dark.png";
+import highlightLogoBlack from "../../assets/icons/highlight-logo-dark.png";
+import highlightLogoWhite from "../../assets/icons/highlight-logo-light.png";
 
-const MediaIcons = () => {
+type MediaProps = {
+  isBlackBackground?: boolean;
+};
+
+const MediaIcons = ({ isBlackBackground }: MediaProps) => {
   return (
     <>
       <div className="socials-container">
@@ -83,7 +88,7 @@ const MediaIcons = () => {
           <div className="highlight-icon-wrapper">
             <Image
               className="highlight-icon"
-              src={highlightLogo}
+              src={isBlackBackground ? highlightLogoWhite : highlightLogoBlack}
               alt="highlight-academy-icon"
               fill
               sizes="(max-width: 768px) 150px, (max-width: 1200px) 200px, 300px"

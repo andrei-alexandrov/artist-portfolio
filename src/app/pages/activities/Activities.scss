@@ -13,24 +13,16 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-
-    .portfolio-section-title {
-      font-size: $medium-font;
-    }
   }
 }
 
 @media (min-width: 381px) and (max-width: 599px) {
   .projects-container {
     position: relative;
-    top: 9rem;
+    margin-top: 27rem;
     display: flex;
     align-items: center;
     flex-direction: column;
-
-    .portfolio-section-title {
-      font-size: $medium-font;
-    }
   }
 }
 

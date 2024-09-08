@@ -17,7 +17,7 @@ const ScrollToTopBtn = () => {
     if (!isClient) return;
 
     const handleScroll = () => {
-      if (window.scrollY > 1001) {
+      if (window.scrollY > 901) {
         setBackToTop(true);
       } else {
         setBackToTop(false);
@@ -48,6 +48,7 @@ const ScrollToTopBtn = () => {
           className={`scroll-to-top-btn ${backToTop ? "visible" : ""}`}
         >
           <Lottie
+            className="scrollToTop-icon"
             role="img"
             aria-label="backToTop Icon"
             animationData={backToTop1}

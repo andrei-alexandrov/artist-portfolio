@@ -65,6 +65,18 @@ const Navbar = () => {
                 <li>
                   <Link
                     activeClass="active"
+                    to="intro"
+                    spy={true}
+                    smooth={true}
+                    duration={50}
+                    offset={-95}
+                  >
+                    Home
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    activeClass="active"
                     to="about"
                     spy={true}
                     smooth={true}
@@ -142,6 +154,18 @@ const Navbar = () => {
           <ul>
             <li>
               <Link
+                to="intro"
+                spy={true}
+                smooth={true}
+                duration={50}
+                offset={-95}
+                onClick={handleToggleSidebar}
+              >
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link
                 to="about"
                 spy={true}
                 smooth={true}
@@ -202,7 +226,7 @@ const Navbar = () => {
             </li>
           </ul>
         </nav>
-        
+
         {/* Sidebar Icons */}
         <div className="sidebar-icons">
           <a

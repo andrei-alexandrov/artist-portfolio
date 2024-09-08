@@ -33,52 +33,55 @@ const Intro = () => {
 
   return (
     <section id="intro">
-      <div className="stars-container">
-        <Stars />
-      </div>
-      <div className="starting-content-wrapper">
-        <div className="starting-content">
-          <p className="artist-name">Iskra Milkova Angelova</p>
-          <p className="slogan">&quot;Highlight the way!&quot;</p>
-          <p className="artist-short-info">
-            Vocal and artist coach, founder of &quot;Highlight Singing
-            Academy&quot;
-          </p>
-          <MediaIcons />
-          <div className="contact-button-wrapper">
-            <Link
-              activeClass="active"
-              to="contact"
-              spy={true}
-              smooth={true}
-              duration={50}
-              offset={-95}
-            >
-              <Button>Contact</Button>
-            </Link>
-          </div>
+      <div className="intro-background">
+        <div className="stars-container">
+          <Stars />
         </div>
+        <div className="starting-content-wrapper">
+          <div className="starting-content">
+            <br />
+            <p className="artist-name">Iskra Milkova Angelova</p>
+            <p className="slogan">&quot;Highlight the way!&quot;</p>
+            <p className="artist-short-info">
+              Vocal and artist coach, founder of &quot;Highlight Singing
+              Academy&quot;
+            </p>
+            <MediaIcons isBlackBackground={false} />
+            <div className="contact-button-wrapper">
+              <Link
+                activeClass="active"
+                to="contact"
+                spy={true}
+                smooth={true}
+                duration={50}
+                offset={-95}
+              >
+                <Button>Contact</Button>
+              </Link>
+            </div>
+          </div>
 
-        <div className="artist-photo-wrapper">
-          <div className="artist-image-wrapper">
-            <Image
-              className="artist-image"
-              src={artistPhoto}
-              alt="artist photo"
-              fill
-              sizes="(max-width: 768px) 150px, (max-width: 1200px) 200px, 300px"
-            />
+          <div className="artist-photo-wrapper">
+            <div className="artist-image-wrapper">
+              <Image
+                className="artist-image"
+                src={artistPhoto}
+                alt="artist photo"
+                fill
+                sizes="(max-width: 768px) 150px, (max-width: 1200px) 200px, 300px"
+              />
+            </div>
           </div>
         </div>
-      </div>
-      <div className="music-divider-container">
-        <Image
-          className="music-divider"
-          src={musicDivider}
-          alt="piano-note"
-          fill
-          sizes="(max-width: 768px) 150px, (max-width: 1200px) 200px, 300px"
-        />
+        <div className="music-divider-container">
+          <Image
+            className="music-divider"
+            src={musicDivider}
+            alt="piano-note"
+            fill
+            sizes="(max-width: 768px) 150px, (max-width: 1200px) 200px, 300px"
+          />
+        </div>
       </div>
     </section>
   );

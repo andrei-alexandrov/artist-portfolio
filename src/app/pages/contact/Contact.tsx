@@ -52,6 +52,7 @@ const Contact = () => {
     <div id="contact">
       <div className="test-container">
         <Container fluid className="title-container">
+          <br />
           <div className="portfolio-section-title">Contact me</div>
           <Lottie style={{ width: "110px" }} animationData={connectMic} />
         </Container>
@@ -62,7 +63,7 @@ const Contact = () => {
                 <div className="contact-email">placeholder@gmail.com</div>
                 <div className="contact-location">Sofia, Bulgaria</div>
                 <div className="contact-icons">
-                  <MediaIcons />
+                  <MediaIcons isBlackBackground={true} />
                 </div>
               </div>
             </div>
@@ -106,6 +107,7 @@ const Contact = () => {
                     </div>
                   )}
                 </form>
+                <br />
               </div>
             </div>
           </div>
