@@ -16,16 +16,15 @@ type MediaProps = {
 
 const MediaIcons = ({ isBlackBackground }: MediaProps) => {
   return (
-    <>
-      <div className="socials-container">
+    <div className="media-icons-container">
+      <div className="media-icons-first-row">
         <a
           href="https://www.linkedin.com/in/iskra-milkova-228991ab/"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <div className="social-icon-wrapper">
+          <div className="media-icons-wrapper">
             <Image
-              className="social-icon"
               src={linkedInIcon}
               alt="linkedIn-icon"
               fill
@@ -38,9 +37,8 @@ const MediaIcons = ({ isBlackBackground }: MediaProps) => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <div className="social-icon-wrapper">
+          <div className="media-icons-wrapper">
             <Image
-              className="social-icon"
               src={instagramIcon}
               alt="instagram-icon"
               fill
@@ -53,9 +51,8 @@ const MediaIcons = ({ isBlackBackground }: MediaProps) => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <div className="social-icon-wrapper">
+          <div className="media-icons-wrapper">
             <Image
-              className="social-icon"
               src={facebookIcon}
               alt="facebook-icon"
               fill
@@ -68,9 +65,9 @@ const MediaIcons = ({ isBlackBackground }: MediaProps) => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <div className="social-icon-wrapper">
+          <div className="media-icons-wrapper">
             <Image
-              className="social-icon-special"
+              className="music-talents-icon"
               src={musicTalentsIcon}
               alt="music-talents-icon"
               fill
@@ -79,24 +76,23 @@ const MediaIcons = ({ isBlackBackground }: MediaProps) => {
           </div>
         </a>
       </div>
-      <div>
+
+      <div className="highlight-icon-wrapper">
         <a
           href="https://highlight-singing.com/"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <div className="highlight-icon-wrapper">
-            <Image
-              className="highlight-icon"
-              src={isBlackBackground ? highlightLogoWhite : highlightLogoBlack}
-              alt="highlight-academy-icon"
-              fill
-              sizes="(max-width: 768px) 150px, (max-width: 1200px) 200px, 300px"
-            />
-          </div>
+          <Image
+            className="highlight-icon"
+            src={isBlackBackground ? highlightLogoWhite : highlightLogoBlack}
+            alt="highlight-academy-icon"
+            fill
+            sizes="(max-width: 768px) 150px, (max-width: 1200px) 200px, 300px"
+          />
         </a>
       </div>
-    </>
+    </div>
   );
 };
 

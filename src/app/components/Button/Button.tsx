@@ -1,7 +1,7 @@
 import "./Button.scss";
 
 const Button = ({ children }: { children: React.ReactNode }) => {
-  return <button className="portfolio-button">{children}</button>;
+  return <button className="contact-button">{children}</button>;
 };
 
 export default Button;

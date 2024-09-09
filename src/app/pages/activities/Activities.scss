@@ -1,9 +1,13 @@
 @import "../../../variables";
 @import "../../../fonts";
+@import "../../../mixins";
 
 .projects-container {
   position: relative;
   bottom: 12rem;
+  .portfolio-section-title {
+    @include portfolio-section-title();
+  }
 }
 
 @media (min-width: 100px) and (max-width: 380px) {
@@ -19,7 +23,7 @@
 @media (min-width: 381px) and (max-width: 599px) {
   .projects-container {
     position: relative;
-    margin-top: 27rem;
+    margin-top: 1rem;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -29,7 +33,7 @@
 @media (min-width: 600px) and (max-width: 765px) {
   .projects-container {
     position: relative;
-    margin-top: 21rem;
+    margin-top: 1rem;
     display: flex;
     align-items: center;
     flex-direction: column;

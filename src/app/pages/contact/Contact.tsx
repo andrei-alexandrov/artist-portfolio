@@ -93,7 +93,7 @@ const Contact = () => {
                   <textarea
                     name="message"
                     className="user"
-                    placeholder="Message"
+                    placeholder="Не изпращай никакви съобщения в момента, защото трябва да се конфигурира email-ът ти в emailjs.com"
                     required
                     minLength={10}
                     title="Message must be at least 10 characters long"
@@ -102,7 +102,7 @@ const Contact = () => {
                   <Button>Send</Button>
                   {done && (
                     <div className="sent-message-text">
-                      <span>Thanks for contacting me.</span>
+                      <span>Thanks for contacting me!</span>
                       {/* Add any custom image for the thanks icon if needed */}
                     </div>
                   )}

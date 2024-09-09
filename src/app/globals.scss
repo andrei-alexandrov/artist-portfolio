@@ -24,20 +24,9 @@ body {
   background-color: rgb(255, 255, 255);
   font-family: "Gumela", sans-serif;
   scroll-behavior: smooth;
-  // background: linear-gradient(18deg, #e37682, #a58fe9);
   // background-image: linear-gradient(to top, #080815, #010f1f, #011231, rgb(180, 175, 175));
   // background: linear-gradient(360deg, hsla(206, 91%, 66%, 1) 0%, hsla(240, 45%, 6%, 1) 52%);
   // background: linear-gradient(360deg, hsla(206, 91%, 66%, 1) 0%, hsla(240, 45%, 6%, 1) 40%);
-
-  .portfolio-section-title {
-    color: $main-color;
-    font-size: $section-title-font;
-    margin-top: 0;
-    margin-bottom: 0.5rem;
-    font-weight: 500;
-    line-height: 1.2;
-    text-align: center;
-  }
 }
 
 ::-webkit-scrollbar {

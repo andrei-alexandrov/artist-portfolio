@@ -52,7 +52,7 @@ const ClientCard = () => {
       onTouchEnd={handleTouchEnd}
     >
       <div
-        className="box"
+        className="clients-container"
         style={{ "--total": images.length } as React.CSSProperties}
         ref={boxRef}
       >
@@ -69,7 +69,7 @@ const ClientCard = () => {
           </span>
         ))}
       </div>
-      <div className="btns">
+      <div className="buttons">
         <div className="btn prev" onClick={() => rotateBox("prev")}></div>
         <div className="btn next" onClick={() => rotateBox("next")}></div>
       </div>

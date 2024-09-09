@@ -1,8 +1,15 @@
 @import "../../../variables";
+@import "../../../mixins";
+@import "../../../fonts";
 
+//Needs rework
 .inspirations-container {
   position: relative;
-  bottom: 6rem;
+  margin-top: -9rem;
+
+  .portfolio-section-title {
+    @include portfolio-section-title();
+  }
 
   .swiper_container {
     height: 36rem;
@@ -29,8 +36,10 @@
     }
   }
 
-  /* Small Devices (Tablets) */
   @media (min-width: 600px) and (max-width: 1024px) {
+    .inspirations-container {
+      position: relative;
+    }
     .swiper_container {
       height: 28rem;
     }
@@ -42,15 +51,8 @@
       width: 18rem;
       height: 22rem;
     }
-
-    .inspirations-container {
-      position: relative;
-      bottom: 4rem;
-      margin-top: 10rem;
-    }
   }
 
-  /* Medium Devices (Laptops) */
   @media (min-width: 1025px) and (max-width: 1440px) {
     .swiper_container {
       height: 34rem;
@@ -71,7 +73,6 @@
     }
   }
 
-  /* Large Devices */
   @media (min-width: 1441px) {
     .swiper_container {
       height: 40rem;
@@ -101,9 +102,6 @@
 
 @media (max-width: 599px) {
   .inspirations-container {
-    position: relative;
-    margin-top: -2rem;
-
     .swiper_container {
       height: 25rem;
     }

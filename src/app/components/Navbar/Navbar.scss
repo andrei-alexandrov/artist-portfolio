@@ -7,9 +7,8 @@
   left: 0;
   right: 0;
   padding: 10px 20px;
-  // background-color: white; // Discuss the color, or make the color transparent so that the stars animation gets on top of it too.
-  // background-color: $black-color;
   background-color: rgb(255, 255, 255);
+  background-color: $black-color;
   height: 70px;
   display: flex;
   align-items: center;

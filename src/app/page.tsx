@@ -9,10 +9,11 @@ import Certificates from "./pages/certificates/Certificates";
 export default function Home() {
   return (
     <main>
-      <Intro />
       <Container>
         <Row>
-          <Col></Col>
+          <Col>
+            <Intro />
+          </Col>
         </Row>
 
         <Row>

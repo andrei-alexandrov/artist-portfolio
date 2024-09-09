@@ -1,67 +1,69 @@
 @import "../../../mixins";
 
-.socials-container {
+.media-icons-container {
   display: flex;
-  gap: 1rem;
-  margin-top: 2rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 
-  .social-icon-wrapper {
-    position: relative;
-    width: 2.4rem;
-    height: 2.4rem;
-    transition: transform 0.4s;
-
-    &:hover {
-      cursor: pointer;
-      transform: scale(1.1);
-    }
-  }
-
-  .social-icon-special {
-    position: relative;
-    width: 2.4rem;
-    height: 2.4rem;
-    transition: transform 0.4s;
-    left: -6px;
-
-    &:hover {
-      cursor: pointer;
-      transform: scale(1.1);
-    }
-  }
-}
-
-.highlight-icon-wrapper {
-  position: relative;
-  margin-top: 2.5rem;
-  width: 15rem;
-  height: 5rem;
-  transition: transform 0.7s;
-  
-  &:hover {
-    cursor: pointer;
-    transform: scale(1.03);
-  }
-}
-
-@media (min-width: 200px) and (max-width: 445px) {
-  .socials-container {
+  .media-icons-first-row {
     display: flex;
-    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
 
-    /*Temporary fix */
-    & a {
-      display: flex;
-      justify-content: center;
-      align-items: center;
+    .media-icons-wrapper {
       position: relative;
-      left: 8px;
+      width: 2.4rem;
+      height: 2.4rem;
+      transition: transform 0.4s;
+
+      &:hover {
+        cursor: pointer;
+        transform: scale(1.1);
+      }
+
+      .music-talents-icon {
+        position: relative !important;
+        left: -5px !important;
+        height: 98% !important;
+      }
+    }
+  }
+
+  .highlight-icon-wrapper {
+    position: relative;
+    margin-top: 2.3rem;
+    width: 15rem;
+    height: 5rem;
+    transition: transform 0.7s;
+
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.02);
     }
   }
 }
 
-@media (min-width: 446px) and (max-width: 764px) {
-  .socials-container {
-    justify-content: center;
+@media (min-width: 576px) {
+}
+
+@media (min-width: 768px) {
+  .media-icons-container {
+    justify-content: flex-start;
+    align-items: flex-start;
+    .media-icons-first-row {
+      flex-direction: row;
+    }
+    .highlight-icon-wrapper {
+      flex-direction: row;
+    }
   }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
 }

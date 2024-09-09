@@ -2,16 +2,15 @@
 
 import { useEffect } from "react";
 import { gsap } from "gsap";
+import { Link } from "react-scroll";
 import Stars from "../../components/Stars/Stars";
 import Image from "next/image";
 
 import artistPhoto from "../../assets/photos/iskra-photo.jpg";
 import musicDivider from "../../assets/icons/music-divider-2.png";
-
-import "./Intro.scss";
 import MediaIcons from "@/app/components/MediaIcons/MediaIcons";
 import Button from "@/app/components/Button/Button";
-import { Link } from "react-scroll";
+import "./Intro.scss";
 
 const Intro = () => {
   useEffect(() => {
@@ -33,55 +32,51 @@ const Intro = () => {
 
   return (
     <section id="intro">
-      <div className="intro-background">
-        <div className="stars-container">
-          <Stars />
-        </div>
-        <div className="starting-content-wrapper">
-          <div className="starting-content">
-            <br />
-            <p className="artist-name">Iskra Milkova Angelova</p>
-            <p className="slogan">&quot;Highlight the way!&quot;</p>
-            <p className="artist-short-info">
-              Vocal and artist coach, founder of &quot;Highlight Singing
-              Academy&quot;
-            </p>
-            <MediaIcons isBlackBackground={false} />
-            <div className="contact-button-wrapper">
-              <Link
-                activeClass="active"
-                to="contact"
-                spy={true}
-                smooth={true}
-                duration={50}
-                offset={-95}
-              >
-                <Button>Contact</Button>
-              </Link>
-            </div>
+      <div className="stars-container">
+        <Stars />
+      </div>
+      <div className="intro-content-wrapper">
+        <div className="starting-content">
+          <br />
+          <p className="artist-name">Iskra Milkova Angelova</p>
+          <p className="artist-slogan">&quot;Highlight the way!&quot;</p>
+          <p className="artist-short-info">
+            Vocal and artist coach <br />
+            Founder of &quot;Highlight Singing Academy&quot;
+          </p>
+          <MediaIcons isBlackBackground={false} />
+          <div className="contact-button-wrapper">
+            <Link
+              activeClass="active"
+              to="contact"
+              spy={true}
+              smooth={true}
+              duration={50}
+              offset={-70}
+            >
+              <Button>Contact</Button>
+            </Link>
           </div>
+        </div>
 
-          <div className="artist-photo-wrapper">
-            <div className="artist-image-wrapper">
-              <Image
-                className="artist-image"
-                src={artistPhoto}
-                alt="artist photo"
-                fill
-                sizes="(max-width: 768px) 150px, (max-width: 1200px) 200px, 300px"
-              />
-            </div>
-          </div>
-        </div>
-        <div className="music-divider-container">
+        <div className="artist-photo-wrapper">
           <Image
-            className="music-divider"
-            src={musicDivider}
-            alt="piano-note"
+            className="artist-image"
+            src={artistPhoto}
+            alt="artist photo"
             fill
             sizes="(max-width: 768px) 150px, (max-width: 1200px) 200px, 300px"
           />
         </div>
+      </div>
+      <div className="music-divider-container">
+        <Image
+          className="music-divider"
+          src={musicDivider}
+          alt="piano-note"
+          fill
+          sizes="(max-width: 768px) 150px, (max-width: 1200px) 200px, (min-width: 1400px) 400px, 300px"
+        />
       </div>
     </section>
   );

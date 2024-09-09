@@ -1,9 +1,16 @@
+@import "../../../mixins";
+@import "../../../variables";
+@import "../../../fonts";
+
 .c-container {
-  margin-top: 3rem;
+  margin-top: 10rem;
   // background-image: url("../../assets/xz.png");
   // background-size: cover;
   // background-position: center;
   // background-repeat: no-repeat;
+  .portfolio-section-title {
+    @include portfolio-section-title();
+  }
 
   .certificates-container {
     margin-top: 1rem;

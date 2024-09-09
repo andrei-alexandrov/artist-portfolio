@@ -1,9 +1,14 @@
 @import "../../../variables";
 @import "../../../fonts";
+@import "../../../mixins";
 
 .about-container {
   position: relative;
   bottom: 9rem;
+
+  .portfolio-section-title {
+    @include portfolio-section-title();
+  }
 
   .about-description {
     margin-top: 2rem;
@@ -18,27 +23,27 @@
   }
 }
 
-@media (min-width: 200px) and (max-width: 375px) {
-  .about-container {
-    position: relative;
-    top: 24rem;
-  }
-}
+// @media (min-width: 200px) and (max-width: 375px) {
+//   .about-container {
+//     position: relative;
+//     top: 24rem;
+//   }
+// }
 
-@media (min-width: 376px) and (max-width: 764px) {
-  .about-container {
-    position: relative;
-    top: 18rem;
+// @media (min-width: 376px) and (max-width: 764px) {
+//   .about-container {
+//     position: relative;
+//     margin-top: 30rem;
 
-    .about-description {
-      font-size: 18px;
-    }
-  }
-}
+//     .about-description {
+//       font-size: 18px;
+//     }
+//   }
+// }
 
-@media (min-width: 765px) and (max-width: 1800px) {
-  .about-container {
-    position: relative;
-    bottom: 8rem;
-  }
-}
+// @media (min-width: 765px) and (max-width: 1800px) {
+//   .about-container {
+//     position: relative;
+//     bottom: 6rem;
+//   }
+// }

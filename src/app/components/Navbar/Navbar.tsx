@@ -7,7 +7,7 @@ import Image from "next/image";
 
 import { FaLinkedin } from "react-icons/fa";
 import { FaInstagram, FaSquareFacebook } from "react-icons/fa6";
-import navbarLogo from "../../assets/icons/music-mic.png";
+import navbarLogo from "../../assets/icons/no-bg-logo.png";
 import "./Navbar.scss";
 
 const Navbar = () => {
@@ -52,8 +52,8 @@ const Navbar = () => {
           className="logo"
           src={navbarLogo}
           alt="logo"
-          width={71}
-          height={71}
+          width={60}
+          height={60}
         />
       </Link>
 
@@ -129,7 +129,7 @@ const Navbar = () => {
                     spy={true}
                     smooth={true}
                     duration={50}
-                    offset={-95}
+                    offset={-70}
                   >
                     Contact
                   </Link>
@@ -218,7 +218,7 @@ const Navbar = () => {
                 spy={true}
                 smooth={true}
                 duration={50}
-                offset={-95}
+                offset={-70}
                 onClick={handleToggleSidebar}
               >
                 Contact
