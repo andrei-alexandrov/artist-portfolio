@@ -4,9 +4,6 @@
 
 //Needs rework
 .inspirations-container {
-  position: relative;
-  margin-top: -9rem;
-
   .portfolio-section-title {
     @include portfolio-section-title();
   }

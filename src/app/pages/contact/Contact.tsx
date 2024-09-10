@@ -17,10 +17,10 @@ import connectMic from "../../assets/lottie-animations/connect-mic-2.json";
 import MediaIcons from "@/app/components/MediaIcons/MediaIcons";
 import { Container } from "react-bootstrap";
 
+// TODO (Not ready)
 const Contact = () => {
   const form = useRef<HTMLFormElement | null>(null);
   const [done, setDone] = useState(false);
-  const [isInputClicked, setInputClicked] = useState(false);
 
   const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -31,12 +31,11 @@ const Contact = () => {
           "service_pn3oa7b",
           "template_v26dk7m",
           form.current,
-          "UPcddvsUqVlOgA_We"
+          "bqrB8XkJapv1svIZy"
         )
         .then((result) => {
           console.log("Email sent:", result.text);
           setDone(true);
-          setInputClicked(false);
           form.current?.reset();
           setTimeout(() => {
             setDone(false);
@@ -78,7 +77,6 @@ const Contact = () => {
                       className="user"
                       placeholder="Name"
                       title="Name must be at least 2 characters long"
-                      onClick={() => setInputClicked(true)}
                       required
                     />
                     <input
@@ -86,7 +84,6 @@ const Contact = () => {
                       name="user_email"
                       className="user"
                       placeholder="Email"
-                      onClick={() => setInputClicked(true)}
                       required
                     />
                   </div>
@@ -97,13 +94,13 @@ const Contact = () => {
                     required
                     minLength={10}
                     title="Message must be at least 10 characters long"
-                    onClick={() => setInputClicked(true)}
                   />
                   <Button>Send</Button>
                   {done && (
                     <div className="sent-message-text">
-                      <span>Thanks for contacting me!</span>
-                      {/* Add any custom image for the thanks icon if needed */}
+                      <span className="thanks-message">
+                        Thanks for contacting me!
+                      </span>
                     </div>
                   )}
                 </form>

@@ -73,13 +73,13 @@
 }
 
 .first-activity {
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  // box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
   border: 2px solid darken($main-color, 10%);
   // transition: all 0.4s ease;
 
   &:hover {
     // transform: scale(1.01);
-    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.3);
+    // box-shadow: 0 6px 30px rgba(0, 0, 0, 0.3);
   }
 }
 
@@ -89,7 +89,7 @@
   // background-color: lighten($main-color, 40%);
   &:hover {
     // transform: scale(1.01);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    // box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   }
 }
 

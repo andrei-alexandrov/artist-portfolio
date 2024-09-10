@@ -3,6 +3,8 @@
 @import "../../../fonts";
 
 .test-container {
+  position: relative;
+
   background-image: url("../../assets/test3.jpg");
   background-size: cover;
   background-position: center;
@@ -115,21 +117,6 @@
         margin-top: 1rem;
       }
 
-      .sent-message-text {
-        position: relative;
-        bottom: 14rem;
-
-        span {
-          color: #fba61e;
-          font-size: 1.2rem;
-        }
-
-        img {
-          width: 60px;
-          height: 70px;
-        }
-      }
-
       Button {
         width: 50%;
         margin-top: 1rem;
@@ -138,12 +125,34 @@
 
         &:hover {
           background-color: white;
-          color: black;
+          color: $main-color;
         }
       }
     }
   }
 }
+.thanks-message {
+  position: relative;
+  top: 1.5rem;
+  color: $main-color;
+  font-size: $large-font;
+}
+
+.custom-modal .modal-content {
+  padding: 10px;
+  max-height: 200px;
+  overflow: hidden;
+}
+
+.custom-modal .modal-body {
+  padding: 10px;
+}
+
+.custom-modal .modal-header, 
+.custom-modal .modal-footer {
+  padding: 10px;
+}
+
 .author-message {
   position: relative;
   bottom: 8px;
@@ -151,8 +160,10 @@
   font-size: $small-font;
 
   .author {
+    position: relative;
+    top: 1rem;
     color: $main-color;
-    font-size: $medium-font;
+    font-size: $large-font;
   }
 }
 

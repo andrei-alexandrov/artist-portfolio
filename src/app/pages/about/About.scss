@@ -3,9 +3,7 @@
 @import "../../../mixins";
 
 .about-container {
-  position: relative;
-  bottom: 9rem;
-
+  
   .portfolio-section-title {
     @include portfolio-section-title();
   }
@@ -20,6 +18,15 @@
       display: block;
       opacity: 0;
     }
+  }
+}
+
+@media (min-width: 576px) {}
+@media (min-width: 768px) {}
+@media (min-width: 992px) {}
+@media (min-width: 1200px) {
+  .about-container{
+    margin-top: 5rem;
   }
 }
 

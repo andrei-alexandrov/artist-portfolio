@@ -4,8 +4,7 @@
 
 section {
   margin-top: 5rem;
-  width: 100%;
-  height: 100vh;
+  // width: 100%;
 
   .stars-container {
     overflow: hidden;
@@ -92,16 +91,13 @@ section {
     .music-divider {
       object-fit: contain;
       left: 6px !important;
-      display: none;
     }
   }
 }
 
-// Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) {
 }
 
-// Medium devices (tablets, 768px and up)
 @media (min-width: 768px) {
   section {
     .intro-content-wrapper {
@@ -133,13 +129,12 @@ section {
     .music-divider-container {
       aspect-ratio: 1 / 0.21;
       .music-divider {
-        display: block;
+        // display: block;
       }
     }
   }
 }
 
-// Large devices (desktops, 992px and up)
 @media (min-width: 992px) {
   section {
     .intro-content-wrapper {
@@ -152,19 +147,6 @@ section {
   }
 }
 
-// Extra large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) {
-  section {
-    .intro-content-wrapper {
-      padding-left: 80px;
-      padding-right: 80px;
-    }
-    .music-divider-container {
-      aspect-ratio: 1 / 0.15;
-    }
-  }
-}
-
 @media (min-width: 1400px) {
   section {
     .intro-content-wrapper {
@@ -173,6 +155,20 @@ section {
     }
     .music-divider-container {
       aspect-ratio: 1 / 0.13;
+    }
+  }
+}
+
+@media (min-width: 1920px) {
+  section {
+    margin-top: 7rem;
+    .intro-content-wrapper {
+      padding-left: 85px;
+      padding-right: 85px;
+    }
+    .music-divider-container {
+      aspect-ratio: 1 / 0.15;
+      margin-top: 4rem;
     }
   }
 }
