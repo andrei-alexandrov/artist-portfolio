@@ -1,10 +1,26 @@
+'use client'
+import { useState } from "react";
 import activityData from "./activityData";
 import Image from "next/image";
 import Link from "next/link";
 import Button from "../Button/Button";
+import Modal from "../Modal/Modal";
 import "./ActivityCard.scss";
 
 const ActivityCard = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+
+  const handleImageClick = (imgSrc: string) => {
+    setSelectedImage(imgSrc);
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+    setSelectedImage(null);
+  };
+
   return (
     <>
       {activityData.map((item: any, index: number) => (
@@ -52,10 +68,14 @@ const ActivityCard = () => {
               alt={`${item.title}`}
               fill
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              onClick={() => handleImageClick(item.img)}
+              style={{ cursor: "pointer" }}
             />
           )}
         </div>
       ))}
+
+      <Modal isOpen={isModalOpen} onClose={closeModal} imageSrc={selectedImage} />
     </>
   );
 };

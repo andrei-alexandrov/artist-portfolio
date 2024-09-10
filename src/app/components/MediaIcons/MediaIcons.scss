@@ -5,6 +5,8 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  position: relative;
+  left: 6px;
 
   .media-icons-first-row {
     display: flex;
@@ -44,18 +46,35 @@
   }
 }
 
-@media (min-width: 576px) {
+@media (min-width: 564px) {
+  .media-icons-container {
+    .media-icons-first-row {
+      flex-direction: row;
+      position: relative;
+      right: 1.4rem;
+    }
+    .highlight-icon-wrapper {
+      flex-direction: row;
+      position: relative;
+      right: 0.2rem;
+    }
+  }
 }
 
 @media (min-width: 768px) {
   .media-icons-container {
     justify-content: flex-start;
     align-items: flex-start;
+
     .media-icons-first-row {
       flex-direction: row;
+      position: relative;
+      right: 0.4rem;
     }
     .highlight-icon-wrapper {
       flex-direction: row;
+      position: relative;
+      right: 0.3rem;
     }
   }
 }

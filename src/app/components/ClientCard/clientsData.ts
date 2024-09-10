@@ -5,12 +5,12 @@ import kristianKostov from "../../assets/people/kristian-kostov.jpg";
 import pollyaIvanova from "../../assets/people/pollya-ivanova.jpg";
 
 export const images = [
-  { src: mihaelaFileva, name: "Mihaela Fileva" },
-  { src: daraYotova, name: "Dara Yotova" },
   { src: jaklinTarakci, name: "Jaklin Tarakci" },
+  { src: mihaelaFileva, name: "Mihaela Fileva" },
   { src: kristianKostov, name: "Kristian Kostov" },
+  { src: daraYotova, name: "Dara Yotova" },
   { src: pollyaIvanova, name: "Pollya-ivanova" },
   { src: mihaelaFileva, name: "Mihaela Fileva" },
   { src: daraYotova, name: "Dara Yotova" },
-  { src: kristianKostov, name: "Kristian Kostov" },
+  { src: mihaelaFileva, name: "Mihaela Fileva" },
 ];

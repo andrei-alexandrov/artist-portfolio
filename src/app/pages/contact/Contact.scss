@@ -3,8 +3,6 @@
 @import "../../../fonts";
 
 .test-container {
-  position: relative;
-
   background-image: url("../../assets/test3.jpg");
   background-size: cover;
   background-position: center;
@@ -148,7 +146,7 @@
   padding: 10px;
 }
 
-.custom-modal .modal-header, 
+.custom-modal .modal-header,
 .custom-modal .modal-footer {
   padding: 10px;
 }
