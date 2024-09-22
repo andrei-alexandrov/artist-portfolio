@@ -3,6 +3,8 @@ import highlightLogo from "../../assets/icons/highlight-logo-dark.png";
 import musicTalentsPhoto from "../../assets/projects/music-talents/home-banner.jpg";
 import musicTalentsLogo from "../../assets/icons/music-talents-text.png";
 import nextArtistPhoto from "../../assets/projects/next-artist/header-nextartist.jpg";
+import lastSongMusicalPhoto from "../../assets/projects/last-song/last-song-musical.jpg";
+import whitePartyPhoto from "../../assets/projects/white-party/white-party-event.jpg";
 
 const projectsData = [
   {
@@ -40,11 +42,22 @@ const projectsData = [
   },
 
   {
+    title: "Мюзикъл „Последната песен“ 2024",
+    description:
+      "На 13 септември 2024г. , сцената на ЧСУ “Свети Георги” засия с талантите на Хайлайт Сингинг Академи, които представиха мюзикъла “Последната песен”. Това изключително събитие е част от инициативите на сдружение “Музикалните таланти на България”, което подкрепя и развива младите творци.",
+    logo: musicTalentsLogo,
+    img: lastSongMusicalPhoto,
+    logoWidth: 160,
+    logoHeight: 125,
+    webAddress: "https://muzikalnite-talanti.com/proekt/myuzikal-poslednata-pesen-2024/",
+  },
+
+  {
     title: "White Party",
     description:
       "На 23 юни 2024 г. квартал Бояна в София бе домакин на едно от най-големите и вълнуващи детски събития в България – White Party, организирано от HighLight Singing Academy. Голяма открита сцена събра млади таланти и техните семейства за вечер, изпълнена с музика, танци и забавления.",
     logo: musicTalentsLogo,
-    img: highlightPhoto,
+    img: whitePartyPhoto,
     logoWidth: 160,
     logoHeight: 125,
     webAddress: "https://muzikalnite-talanti.com/proekt/white-party-2024/",

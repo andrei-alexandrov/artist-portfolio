@@ -3,7 +3,6 @@
 .footer {
     margin-top: 4rem;
     text-align: center;
-    // background: linear-gradient(to right, #1b1b61, #e6b6a4);
     background-color: $black-color;
     box-shadow: 0 4px 38px rgba(0, 0, 0, 0.1);
     padding: 20px;
@@ -12,10 +11,10 @@
 
     .footer-content {
         position: relative;
-        top: 8px;
+        top: 7px;
         .footer-text {
             color: $main-color;
-            font-size: 19px;
+            font-size: 17px;
             line-height: 30px;
         }
     }
@@ -58,14 +57,4 @@
 
 .footer:hover::before {
     transform: translateX(100%);
-}
-
-@media screen and (max-width: 480px) {
-    .footer {
-        .footer-content {
-            .footer-text {
-                font-size: 18px;
-            }
-        }
-    }
 }

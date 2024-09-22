@@ -4,7 +4,10 @@
 
 section {
   margin-top: 5rem;
-  // width: 100%;
+  // background-image: url("../../assets/n.png");
+  // background-size: contain;
+  // background-position: left;
+  // background-repeat: no-repeat;
 
   .stars-container {
     overflow: hidden;
@@ -17,6 +20,7 @@ section {
   }
 
   .intro-content-wrapper {
+    margin-top: 5rem;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -76,7 +80,7 @@ section {
         border-radius: 25px;
 
         &:hover {
-          box-shadow: 0 0 10px 4px $main-color;
+          box-shadow: 0 0 10px 3px $main-color;
           filter: brightness(1.1);
         }
       }
@@ -157,6 +161,19 @@ section {
     .intro-content-wrapper {
       padding-left: 120px;
       padding-right: 120px;
+
+      .starting-content {
+        .artist-name {
+          font-size: 2.3rem;
+        }
+
+        .artist-slogan {
+          font-size: 1.8rem;
+        }
+        .artist-short-info {
+          font-size: 1.3rem;
+        }
+      }
     }
     .music-divider-container {
       aspect-ratio: 1 / 0.13;

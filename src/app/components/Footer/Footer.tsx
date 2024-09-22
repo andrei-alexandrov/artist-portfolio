@@ -7,8 +7,8 @@ function Footer() {
     <footer className="footer">
       <div className="footer-content">
         <div className="footer-text">
-          <span>Created by Andrei Alexandrov 2024 ©</span>
-          <p>andrei.alxv@gmail.com</p>
+          <span>Iskra Milkova Angelova 2024 ©</span>
+          <p>Created by andrei.alxv@gmail.com</p>
           <div className="footer-icons">
             <a
               href="https://www.github.com/andrei-alexandrov"

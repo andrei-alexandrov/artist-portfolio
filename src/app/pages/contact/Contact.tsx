@@ -61,6 +61,7 @@ const Contact = () => {
               <div className="contact-details">
                 <div className="contact-email">placeholder@gmail.com</div>
                 <div className="contact-location">Sofia, Bulgaria</div>
+                <div className="contact-location">+359 88888888</div>
                 <div className="contact-icons">
                   <MediaIcons isBlackBackground={true} />
                 </div>
@@ -90,7 +91,7 @@ const Contact = () => {
                   <textarea
                     name="message"
                     className="user"
-                    placeholder="Не изпращай никакви съобщения в момента, защото трябва да се конфигурира email-ът ти в emailjs.com"
+                    placeholder="Не изпращай съобщения в момента, защото трябва да се конфигурира email-ът ти в emailjs.com"
                     required
                     minLength={10}
                     title="Message must be at least 10 characters long"

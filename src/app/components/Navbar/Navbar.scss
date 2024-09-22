@@ -7,8 +7,9 @@
   left: 0;
   right: 0;
   padding: 10px 20px;
-  background-color: rgb(255, 255, 255);
+  //Delete to make it transparent to fit with the video content if it will be choosen
   background-color: $black-color;
+  background-color: rgb(255, 255, 255);
   height: 70px;
   display: flex;
   align-items: center;
@@ -41,11 +42,11 @@
 
         a {
           text-decoration: none;
-          font-size: $small-font;
+          font-size: 19px;
           color: $main-color;
 
           &:hover {
-            color: $main-hover-color;
+            filter: brightness(1.1);
             cursor: pointer;
           }
         }
@@ -57,7 +58,7 @@
           left: 0;
           right: 0;
           height: 2px;
-          background-color: $main-hover-color;
+          background-color: $main-color;
           transform: scaleX(0);
           transform-origin: right;
           transition: transform 0.3s ease;

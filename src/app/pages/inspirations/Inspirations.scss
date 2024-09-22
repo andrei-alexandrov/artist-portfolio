@@ -9,15 +9,15 @@
   }
 
   .swiper_container {
-    height: 36rem;
-    padding: 1rem 0;
     position: relative;
+    height: 36rem;
+    margin-top: 2rem;
   }
 
   .swiper-slide {
+    position: relative;
     width: 25rem;
     height: 30rem;
-    position: relative;
   }
 
   .swiper-slide img {
@@ -141,12 +141,6 @@
 
 .slider-controler .slider-arrow::after {
   content: "";
-}
-
-.swiper-pagination {
-  position: relative;
-  width: 15rem !important;
-  bottom: 1rem;
 }
 
 .swiper-pagination .swiper-pagination-bullet {

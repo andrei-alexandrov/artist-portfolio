@@ -31,7 +31,6 @@ const About = () => {
         duration: 1,
         stagger: 0.3,
         ease: "power2.out",
-      
       }
     );
   }, []);
@@ -43,7 +42,7 @@ const About = () => {
         Some info about you as a short tale... then we can add the following:
         <br />
         <br />
-        <p className="" ref={aboutMeRef}>
+        <div className="" ref={aboutMeRef}>
           <span className="animate-from-left">
             Founder of Highlight Singing Academy
           </span>
@@ -66,11 +65,13 @@ const About = () => {
             Вокален педагог за българската делегация на конкурса Европвизия 2017
             г.
           </span>
-        </p>
-        <p style={{ marginTop: "6rem" }} className="portfolio-section-title">
-          
-        </p>
-        <ClientCard />
+          <div style={{ marginTop: "1.5rem", fontSize: "1.5rem", color: "#cca752" }}>Students/Clients or something else? Или една галерия с ученици и 
+            друга точно до нея отделна с други хора?
+          </div>
+        </div>
+        <div style={{ marginTop: "3rem" }} className="portfolio-section-title">
+          <ClientCard />
+        </div>
       </div>
     </div>
   );

@@ -6,16 +6,18 @@
   background: none;
   border-radius: 50px;
   border: 1px solid $main-color;
-  color: $main-color;
+  background-color: $main-color;
+  color: white;
   cursor: pointer;
   text-align: center;
   transition: transform 0.7s, background-color 0.3s, box-shadow 0.3s, color 0.3s;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 
   &:hover {
-    background-color: $main-color;
-    color: white;
+    // background-color: $black-color;
+    filter: brightness(1.1);
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.18);
+    border: none;
   }
 
   &:active {
@@ -27,7 +29,6 @@
 @mixin portfolio-section-title() {
   color: $main-color;
   font-size: $section-title-font;
-  margin-top: 0;
   margin-bottom: 0.5rem;
   font-weight: 500;
   line-height: 1.2;
