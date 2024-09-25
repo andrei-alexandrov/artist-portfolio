@@ -1,8 +1,13 @@
 @import "../../../mixins";
 
-.button-container {
-  margin-top: 1rem;
+.contact-button {
+  @include portfolio-button();
+  margin: 3rem 0
+}
+
+@media (min-width: 768px) {
   .contact-button {
-    @include portfolio-button();
+    position: relative;
+    right: 4px;
   }
 }

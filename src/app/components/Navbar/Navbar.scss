@@ -10,8 +10,11 @@
   z-index: 99;
   display: flex;
   justify-content: center;
+  background-color: $black-color;
 
   .artist-special-name {
+    position: relative;
+    top: 3px;
     font-family: "EyeSome", sans-serif;
     font-size: 19px;
     color: $main-color;
@@ -76,7 +79,7 @@
     .close-btn {
       background: none;
       border: none;
-      color: $main-color;
+      color: gray;
       font-size: 30px;
       cursor: pointer;
       margin-bottom: 20px;
@@ -85,6 +88,7 @@
       &:hover {
         transform: rotate(-90deg);
         filter: brightness(1.2);
+        color: $main-color;
       }
     }
 
@@ -118,10 +122,10 @@
   }
 }
 
-@media (min-width: 414px) {
+@media (min-width: 392px) {
   .navbar-container {
     .artist-special-name {
-      font-size: 22px;
+      font-size: 21px;
     }
   }
 }

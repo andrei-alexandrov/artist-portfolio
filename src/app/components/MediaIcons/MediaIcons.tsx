@@ -64,7 +64,7 @@ const MediaIcons = ({ isBlackBackground }: MediaProps) => {
         </a>
 
         <a
-          href="https://www.facebook.com/iskra.milkova1"
+          href="https://highlight-singing.com/en/"
           target="_blank"
           rel="noopener noreferrer"
         >

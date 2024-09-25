@@ -59,18 +59,16 @@ const Intro = () => {
             Founder of &quot;Highlight Singing Academy&quot;
           </p>
           <MediaIcons isBlackBackground={true} />
-          <div className="contact-button-wrapper">
-            <Link
-              activeClass="active"
-              to="contact"
-              spy={true}
-              smooth={true}
-              duration={50}
-              offset={-70}
-            >
-              <Button>Contact</Button>
-            </Link>
-          </div>
+          <Link
+            activeClass="active"
+            to="contact"
+            spy={true}
+            smooth={true}
+            duration={50}
+            offset={-70}
+          >
+            <Button>Contact</Button>
+          </Link>
         </div>
 
         <div className="artist-photo-wrapper">
