@@ -4,7 +4,7 @@ import "./Activities.scss";
 
 const Activities = () => {
   return (
-    <div id="activities" className="projects-container">
+    <div id="activities" className="activity-container">
       <div className="portfolio-section-title">Activities</div>
       <ActivityCard />
     </div>

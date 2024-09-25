@@ -2,48 +2,30 @@
 @import "../../../fonts";
 @import "../../../mixins";
 
-.projects-container {
-  position: relative;
-  bottom: 3rem;
+.activity-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  
   .portfolio-section-title {
     @include portfolio-section-title();
   }
 }
 
 @media (min-width: 100px) and (max-width: 380px) {
-  .projects-container {
-    position: relative;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+  .activity-container {
+    margin-top: 2rem;
   }
 }
 
-@media (min-width: 381px) and (max-width: 599px) {
-  .projects-container {
-    position: relative;
+@media (min-width: 381px) and (max-width: 765px) {
+  .activity-container {
     margin-top: 1rem;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-  }
-}
-
-@media (min-width: 600px) and (max-width: 765px) {
-  .projects-container {
-    position: relative;
-    margin-top: 1rem;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
   }
 }
 
 @media (min-width: 766px) and (max-width: 3500px) {
-  .projects-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  .activity-container {
     margin-top: 3rem;
   }
 }

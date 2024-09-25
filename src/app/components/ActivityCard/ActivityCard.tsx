@@ -1,10 +1,11 @@
-'use client'
+"use client";
 import { useState } from "react";
 import activityData from "./activityData";
 import Image from "next/image";
 import Link from "next/link";
 import Button from "../Button/Button";
 import Modal from "../Modal/Modal";
+
 import "./ActivityCard.scss";
 
 const ActivityCard = () => {
@@ -24,16 +25,11 @@ const ActivityCard = () => {
   return (
     <>
       {activityData.map((item: any, index: number) => (
-        <div
-          key={item.title}
-          className={`project-card ${
-            index === 0 ? "first-activity" : index === 1 ? "second-activity" : ""
-          }`}
-        >
+        <div key={item.title} className="activity-card">
           <div className="card-content-wrapper">
-            <h3 className="project-title">{item.title}</h3>
-            <p className="project-desc">{item.description}</p>
-            <div className="project-logo">
+            <h3 className="activity-title">{item.title}</h3>
+            <p className="activity-desc">{item.description}</p>
+            <div className="activity-logo">
               <img
                 src={typeof item.logo === "string" ? item.logo : item.logo.src}
                 alt={"highlight-logo"}
@@ -41,7 +37,7 @@ const ActivityCard = () => {
                 height={item.logoHeight}
               />
             </div>
-            <div>
+            <div className="activity-card-btn-wrapper">
               <Link
                 href={item.webAddress}
                 target="_blank"
@@ -54,7 +50,7 @@ const ActivityCard = () => {
 
           {item.video ? (
             <video
-              className="project-video"
+              className="activity-video"
               src={item.video}
               autoPlay
               loop
@@ -63,7 +59,7 @@ const ActivityCard = () => {
             ></video>
           ) : (
             <Image
-              className="project-image"
+              className="activity-image"
               src={item.img}
               alt={`${item.title}`}
               fill
@@ -75,7 +71,11 @@ const ActivityCard = () => {
         </div>
       ))}
 
-      <Modal isOpen={isModalOpen} onClose={closeModal} imageSrc={selectedImage} />
+      <Modal
+        isOpen={isModalOpen}
+        onClose={closeModal}
+        imageSrc={selectedImage}
+      />
     </>
   );
 };

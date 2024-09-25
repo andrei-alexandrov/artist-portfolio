@@ -13,13 +13,16 @@
 }
 
 .carousel-container {
-  margin-bottom: 15rem;
+  position: relative;
+  margin-top: 2rem;
+  margin-bottom: 8rem;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   transform-style: preserve-3d;
-  position: relative;
   top: 1.2rem;
+  gap: 5rem;
 
   .clients-container {
     position: relative;

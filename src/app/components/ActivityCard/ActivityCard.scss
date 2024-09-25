@@ -1,220 +1,180 @@
 @import "../../../variables";
 
-.project-card {
+.activity-card {
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  margin-top: 2rem;
-  padding: 2rem;
-  border-radius: 10px;
-  border: 1px solid $main-color;
-  gap: 3rem;
+  flex-direction: column;
+  border-radius: 25px;
+  border: 1px solid darken($main-color, 30%);
+  padding: 0.5rem;
+  gap: 1rem;
   position: relative;
-  width: 100%;
-  height: 100%;
-
-  .project-desc {
-    text-align: justify;
-    max-height: 200px;
-    overflow: auto;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-line-clamp: 10;
-    -webkit-box-orient: vertical;
-  }
-
-  .project-image {
-    position: relative !important;
-    border-radius: 35px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-
-    &:hover {
-      transform: scale(1) rotate(1deg);
-      box-shadow: 0 0 10px 4px $main-color;
-    }
-  }
-
-  .project-video {
-    width: 47%;
-    height: auto;
-    border-radius: 20px;
-  }
+  margin: 18px;
 
   .card-content-wrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
+    order: 2;
+    padding: 0.5rem;
     text-align: center;
-  }
 
-  .card-content-wrapper,
-  .project-image {
-    padding: 1rem;
-  }
-
-  &:nth-child(odd) {
-    .card-content-wrapper {
-      order: 2;
+    .activity-title {
+      color: $main-color;
     }
-    .project-image {
-      order: 1;
+
+    .activity-desc {
+      text-align: justify;
+      max-height: 250px;
+      color: $description-color;
+      margin-top: 2rem;
+      font-size: 15px;
+    }
+
+    .activity-logo img {
+      margin-top: 3rem;
+      position: relative;
+      left: 8px;
+      max-width: 190px;
+      height: auto;
+
+      img {
+        object-fit: contain;
+      }
+    }
+
+    .activity-card-btn-wrapper {
+      & button {
+        border: 1px solid darken($main-color, 30%);
+      }
     }
   }
 
-  .project-logo {
+  .activity-image {
+    position: relative !important;
+    border-radius: 25px;
+    padding: 0.8rem;
+  }
+
+  .activity-video {
     height: auto;
-
-    img {
-      object-fit: contain;
-    }
+    max-width: 100%;
+    border-radius: 25px;
+    padding: 10px;
   }
 }
 
-.first-activity {
-  // box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-  border: 2px solid darken($main-color, 10%);
-  // transition: all 0.4s ease;
-
-  &:hover {
-    // transform: scale(1.01);
-    // box-shadow: 0 6px 30px rgba(0, 0, 0, 0.3);
-  }
-}
-
-.second-activity {
-  border: 1px solid darken($main-color, 10%);
-  // transition: all 0.4s ease;
-  // background-color: lighten($main-color, 40%);
-  &:hover {
-    // transform: scale(1.01);
-    // box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-  }
-}
-
-@media (min-width: 100px) and (max-width: 380px) {
-  .project-card {
+@media (min-width: 392px) and (max-width: 767px) {
+  .activity-card {
     width: 90%;
     max-width: 400px;
     height: auto;
-    flex-direction: column;
     padding: 1rem;
     gap: 1rem;
-    position: relative;
-    margin: 22px;
-
-    .project-video {
-      width: 100%;
-      height: auto;
-      max-width: 100%;
-      border-radius: 15px;
-    }
 
     .card-content-wrapper {
-      order: 2;
-      padding: 0.5rem;
-      text-align: center;
-
-      .project-title {
+      .activity-title {
         font-size: 1.5rem;
       }
 
-      .project-desc {
-        font-size: 14px;
+      .activity-desc {
+        font-size: 15px;
       }
 
-      .project-logo img {
+      .activity-logo img {
         max-width: 200px;
       }
+    }
+
+    .activity-video {
+      padding: 5px;
+    }
+
+    .activity-image {
+      padding: 0.6rem;
     }
   }
 }
 
-@media (min-width: 380px) and (max-width: 599px) {
-  .project-card {
-    width: 90%;
-    max-width: 400px;
-    height: auto;
-    flex-direction: column;
-    padding: 1rem;
-    gap: 1rem;
-    position: relative;
-    margin: 22px;
-
-    .project-video {
-      width: 100%;
-      height: auto;
-      max-width: 100%;
-      border-radius: 15px;
-    }
-
-    .card-content-wrapper {
-      order: 2;
-      padding: 0.5rem;
-      text-align: center;
-
-      .project-title {
-        font-size: 1.5rem;
-      }
-
-      .project-desc {
-        font-size: 14px;
-      }
-
-      .project-logo img {
-        max-width: 200px;
-      }
-    }
-  }
-}
-
-@media (min-width: 600px) and (max-width: 991px) {
-  .project-card {
-    width: 90%;
+@media (min-width: 768px) and (max-width: 1199px) {
+  .activity-card {
     max-width: 550px;
     height: auto;
-    flex-direction: column;
     padding: 1.5rem;
     gap: 1.5rem;
     margin: 20px;
 
     .card-content-wrapper {
-      order: 2;
-      text-align: center;
-      padding: 0.5rem;
-
-      .project-title {
-        font-size: 1.4rem;
+      .activity-title {
+        font-size: 1.9rem;
       }
 
-      .project-desc {
-        font-size: 1rem;
+      .activity-desc {
+        font-size: 16px;
       }
-
-      .project-logo img {
-        max-width: 200px;
-      }
-    }
-
-    .project-video {
-      width: 100%;
-      max-width: 100%;
-      height: auto;
-      border-radius: 20px;
     }
   }
 }
 
-@media (min-width: 992px) and (max-width: 3500px) {
-  .project-card {
-    .project-image {
-      max-width: 35rem;
+@media (min-width: 1200px) {
+  .activity-card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 2rem;
+    padding: 2rem;
+    border-radius: 25px;
+    gap: 3rem;
+    border: 1px solid darken($main-color, 35%);
+
+    .card-content-wrapper {
+      order: 1 !important;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+      text-align: center;
+
+      .activity-title {
+        font-size: 1.9rem;
+      }
+
+      .activity-desc {
+        text-align: justify;
+        max-height: 200px;
+        color: $description-color;
+        font-size: 17px;
+      }
     }
-    .project-video {
-      width: 52%;
+
+    .card-content-wrapper,
+    .activity-image {
+      padding: 1rem;
+    }
+
+    &:nth-child(odd) {
+      .card-content-wrapper {
+        order: 2;
+      }
+      .activity-image {
+        order: 1;
+      }
+    }
+
+    .activity-image {
+      border-radius: 35px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      max-width: 35rem;
+      border: 1px solid darken($main-color, 40%);
+
+      &:hover {
+        transform: scale(1) rotate(1deg);
+        box-shadow: 0 0 10px 1px $main-color;
+      }
+    }
+
+    .activity-video {
+      width: 47%;
       height: auto;
-      border-radius: 20px;
+      border-radius: 25px;
+      padding: 0;
     }
   }
 }
