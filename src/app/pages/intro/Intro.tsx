@@ -3,13 +3,13 @@
 import { useEffect } from "react";
 import { gsap } from "gsap";
 import { Link } from "react-scroll";
-import Stars from "../../components/Stars/Stars";
+import Stars from "../../components/Stars/Stars"; //Temporary disabled
 import Image from "next/image";
-
-import artistPhoto from "../../assets/photos/iskra-photo.jpg";
-import musicDivider from "../../assets/icons/music-divider-2.png";
 import MediaIcons from "@/app/components/MediaIcons/MediaIcons";
 import Button from "@/app/components/Button/Button";
+
+import highlightLogoWhite from "../../assets/icons/highlight-logo-light.png";
+import artistPhoto from "../../assets/photos/iskra-photo.jpg";
 import "./Intro.scss";
 
 const Intro = () => {
@@ -32,9 +32,9 @@ const Intro = () => {
 
   return (
     <section id="intro">
-      <div className="stars-container">
-        {/* <Stars /> */}
-        {/* <video
+      {/* <div className="stars-container"> */}
+      {/* <Stars /> */}
+      {/* <video
           style={{
             objectFit: "cover",
             width: "100%",
@@ -48,7 +48,7 @@ const Intro = () => {
           muted
           playsInline
         ></video> */}
-      </div>
+      {/* </div> */}
       <div className="intro-content-wrapper">
         <div className="starting-content">
           <br />
@@ -58,7 +58,7 @@ const Intro = () => {
             Vocal and artist coach <br />
             Founder of &quot;Highlight Singing Academy&quot;
           </p>
-          <MediaIcons isBlackBackground={false} />
+          <MediaIcons isBlackBackground={true} />
           <div className="contact-button-wrapper">
             <Link
               activeClass="active"
@@ -84,14 +84,16 @@ const Intro = () => {
           />
         </div>
       </div>
-      <div className="music-divider-container">
-        <Image
-          className="music-divider"
-          src={musicDivider}
-          alt="piano-note"
-          fill
-          sizes="(max-width: 768px) 150px, (max-width: 1200px) 200px, (min-width: 1400px) 400px, 300px"
-        />
+      <div className="divider-container">
+        <div className="highlight-icon-wrapper">
+          <Image
+            className="highlight-icon"
+            src={highlightLogoWhite}
+            alt="highlight-academy-icon"
+            fill
+            sizes="(max-width: 768px) 150px, (max-width: 1200px) 200px, 300px"
+          />
+        </div>
       </div>
     </section>
   );

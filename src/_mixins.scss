@@ -6,18 +6,20 @@
   background: none;
   border-radius: 50px;
   border: 1px solid $main-color;
-  background-color: $main-color;
-  color: white;
+  background-color: black;
+  color: $description-color;
   cursor: pointer;
   text-align: center;
   transition: transform 0.7s, background-color 0.3s, box-shadow 0.3s, color 0.3s;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  font-size: 17px;
 
   &:hover {
-    // background-color: $black-color;
-    filter: brightness(1.1);
+    // filter: brightness(1.1);
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.18);
     border: none;
+    background-color: $main-color;
+    color: white;
   }
 
   &:active {

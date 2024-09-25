@@ -24,7 +24,13 @@
         transform: scale(1.1);
       }
 
-      .music-talents-icon {
+      .highlight-logo {
+        position: relative;
+        bottom: 6px;
+        right: 6px;
+      }
+
+      .music-talents-logo {
         position: relative !important;
         left: -5px !important;
         height: 98% !important;
@@ -32,18 +38,7 @@
     }
   }
 
-  .highlight-icon-wrapper {
-    position: relative;
-    margin-top: 2.3rem;
-    width: 15rem;
-    height: 5rem;
-    transition: transform 0.7s;
 
-    &:hover {
-      cursor: pointer;
-      transform: scale(1.02);
-    }
-  }
 }
 
 @media (min-width: 564px) {
@@ -52,11 +47,6 @@
       flex-direction: row;
       position: relative;
       right: 1.4rem;
-    }
-    .highlight-icon-wrapper {
-      flex-direction: row;
-      position: relative;
-      right: 0.2rem;
     }
   }
 }
@@ -70,11 +60,6 @@
       flex-direction: row;
       position: relative;
       right: 0.4rem;
-    }
-    .highlight-icon-wrapper {
-      flex-direction: row;
-      position: relative;
-      right: 0.3rem;
     }
   }
 }

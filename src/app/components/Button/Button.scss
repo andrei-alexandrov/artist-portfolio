@@ -1,5 +1,8 @@
 @import "../../../mixins";
 
-.contact-button {
-  @include portfolio-button();
+.button-container {
+  margin-top: 1rem;
+  .contact-button {
+    @include portfolio-button();
+  }
 }
