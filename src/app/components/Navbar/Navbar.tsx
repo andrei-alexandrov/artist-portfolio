@@ -87,17 +87,7 @@ const Navbar = () => {
                     Activities
                   </Link>
                 </li>
-                <li>
-                  <Link
-                    to="certificates"
-                    spy={true}
-                    smooth={true}
-                    duration={50}
-                    offset={-95}
-                  >
-                    Certificates
-                  </Link>
-                </li>
+
                 <li>
                   <Link
                     to="inspirations"
@@ -107,6 +97,17 @@ const Navbar = () => {
                     offset={-95}
                   >
                     Inspirations
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="certificates"
+                    spy={true}
+                    smooth={true}
+                    duration={50}
+                    offset={-95}
+                  >
+                    Certificates
                   </Link>
                 </li>
                 <li>
@@ -174,18 +175,7 @@ const Navbar = () => {
                 Activities
               </Link>
             </li>
-            <li>
-              <Link
-                to="certificates"
-                spy={true}
-                smooth={true}
-                duration={50}
-                offset={-95}
-                onClick={handleToggleSidebar}
-              >
-                Certificates
-              </Link>
-            </li>
+
             <li>
               <Link
                 to="inspirations"
@@ -196,6 +186,18 @@ const Navbar = () => {
                 onClick={handleToggleSidebar}
               >
                 Inspirations
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="certificates"
+                spy={true}
+                smooth={true}
+                duration={50}
+                offset={-95}
+                onClick={handleToggleSidebar}
+              >
+                Certificates
               </Link>
             </li>
             <li>

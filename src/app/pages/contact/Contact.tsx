@@ -49,26 +49,23 @@ const Contact = () => {
 
   return (
     <div id="contact">
-      <div className="test-container">
+      <div className="contact-container">
         <Container fluid className="title-container">
           <br />
           <div className="portfolio-section-title">Contact me</div>
           <Lottie style={{ width: "110px" }} animationData={connectMic} />
         </Container>
         <Container>
-          <div className="contact-container">
-            <div className="contact-info">
-              <div className="contact-details">
-                <div className="contact-email">placeholder@gmail.com</div>
-                <div className="contact-location">Sofia, Bulgaria</div>
-                <div className="contact-location">+359 88888888</div>
-                <div className="contact-icons">
-                  <MediaIcons isBlackBackground={true} />
-                </div>
+          <div className="contact-info">
+            <div className="contact-details">
+              <div className="contact-email">placeholder@gmail.com</div>
+              <div className="contact-location">Sofia, Bulgaria</div>
+              <div className="contact-icons">
+                <MediaIcons isBlackBackground={true} />
               </div>
             </div>
-
-            <div className="contact-form">
+          </div>
+          {/* <div className="contact-form">
               <div className="form">
                 <form ref={form} onSubmit={sendEmail}>
                   <div className="input-group">
@@ -107,8 +104,7 @@ const Contact = () => {
                 </form>
                 <br />
               </div>
-            </div>
-          </div>
+            </div> */}
         </Container>
       </div>
       <Container>

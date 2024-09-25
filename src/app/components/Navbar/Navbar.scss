@@ -2,15 +2,15 @@
 @import "../../../fonts";
 
 .navbar-container {
+  display: flex;
+  justify-content: center;
+  padding: 15px 25px;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  padding: 15px 25px;
-  z-index: 99;
-  display: flex;
-  justify-content: center;
   background-color: $black-color;
+  z-index: 99;
 
   .artist-special-name {
     position: relative;
@@ -210,7 +210,9 @@
 
 @media (min-width: 1300px) {
   .navbar-container {
+
     .artist-special-name {
+      width: auto;
       position: absolute;
       left: 2rem;
       top: 50%;

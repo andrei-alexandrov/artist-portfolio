@@ -4,6 +4,7 @@
 
 //Needs rework
 .inspirations-container {
+  margin-top: 5rem;
   .portfolio-section-title {
     @include portfolio-section-title();
   }
@@ -11,7 +12,7 @@
   .swiper_container {
     position: relative;
     height: 36rem;
-    margin-top: 2rem;
+    margin-top: 2.5rem;
   }
 
   .swiper-slide {
@@ -70,6 +71,23 @@
     }
   }
 
+  @media (min-width: 100px) and (max-width: 599px) {
+    .inspirations-container {
+      margin-top: 4rem;
+      .swiper_container {
+        height: 25rem;
+      }
+      .swiper-slide {
+        width: 14rem;
+        height: 18rem;
+      }
+      .swiper-slide img {
+        width: 14rem;
+        height: 18rem;
+      }
+    }
+  }
+
   @media (min-width: 1441px) {
     .swiper_container {
       height: 40rem;
@@ -90,15 +108,9 @@
   }
 }
 
-@media (min-width: 100px) and (max-width: 380px) {
+@media (min-width: 100px) and (max-width: 599px) {
   .inspirations-container {
-    position: relative;
-    top: 4rem;
-  }
-}
-
-@media (max-width: 599px) {
-  .inspirations-container {
+    margin-top: 4rem;
     .swiper_container {
       height: 25rem;
     }
@@ -145,8 +157,9 @@
 
 .swiper-pagination .swiper-pagination-bullet {
   filter: drop-shadow(0px 8px 24px rgba(18, 28, 53, 0.1));
+  background-color: white !important;
 }
 
 .swiper-pagination .swiper-pagination-bullet-active {
-  background: $main-color;
+  background: $main-color !important;
 }
