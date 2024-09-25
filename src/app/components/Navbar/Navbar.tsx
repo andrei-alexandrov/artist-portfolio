@@ -60,7 +60,7 @@ const Navbar = () => {
                     spy={true}
                     smooth={true}
                     duration={50}
-                    offset={-95}
+                    offset={-120}
                   >
                     Home
                   </Link>

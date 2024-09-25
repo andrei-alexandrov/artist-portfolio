@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   title: "Iskra's Portfolio",
   description: "Vocal and artist coach",
   icons: {
-    icon: "/favicon.ico",
+    icon: "/favicon.png",
   },
 };
 

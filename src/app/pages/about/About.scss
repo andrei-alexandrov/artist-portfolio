@@ -3,7 +3,7 @@
 @import "../../../mixins";
 
 .about-container {
-  margin-top: 2rem;
+  margin-top: 3rem;
   .portfolio-section-title {
     @include portfolio-section-title();
   }
@@ -12,21 +12,38 @@
     margin-top: 2rem;
     text-align: center;
     font-size: $small-font;
+    color: rgb(182, 182, 182);
 
-    .animate-from-left,
-    .animate-from-right {
-      display: block;
-      opacity: 0;
+    .about-info div:nth-child(odd) {
+      color: $main-color;
+    }
+
+    .about-info div:nth-child(even) {
+      color: $description-color;
+    }
+
+    .carousel-container {
+      display: flex;
+      margin-top: 3rem;
+      flex-direction: column;
     }
   }
 }
 
-@media (min-width: 576px) {}
-@media (min-width: 768px) {}
-@media (min-width: 992px) {}
 @media (min-width: 1200px) {
-  .about-container{
+  .about-container {
     margin-top: 5rem;
   }
 }
 
+@media (min-width: 1600px) {
+  .about-container {
+    .about-description {
+      .carousel-container {
+        flex-direction: row;
+        gap: 40rem;
+        justify-content: center;
+      }
+    }
+  }
+}

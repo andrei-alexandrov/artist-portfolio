@@ -1,13 +1,25 @@
 @import "../../../variables";
 
+.client-card-section {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .carousel-title {
+    font-size: 26px;
+    color: $main-color;
+  }
+}
+
 .carousel-container {
-  margin-bottom: 17rem;
+  margin-bottom: 15rem;
   display: flex;
   justify-content: center;
   align-items: center;
   transform-style: preserve-3d;
-  top: 1.2rem;
   position: relative;
+  top: 1.2rem;
 
   .clients-container {
     position: relative;
@@ -27,8 +39,6 @@
       transform-style: preserve-3d;
       transform: rotateY(calc(var(--i) * (360deg / var(--total))))
         translateZ(300px);
-      // -webkit-box-reflect: below 0px linear-gradient(transparent, transparent #0004); Medium image reflection and below is full reflection
-      // -webkit-box-reflect: below 0px linear-gradient(transparent, #0004);
 
       & .carousel-image {
         object-fit: cover;
@@ -45,6 +55,7 @@
       }
     }
   }
+
   .buttons {
     position: absolute;
     bottom: 0.2rem;
@@ -57,7 +68,7 @@
       width: 50px;
       height: 50px;
       border-radius: 50%;
-      background-color: rgb(255, 255, 255);
+      background-color: black;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -70,8 +81,8 @@
         position: absolute;
         width: 13px;
         height: 13px;
-        border-top: 3px solid $main-color;
-        border-right: 3px solid $main-color;
+        border-top: 3px solid rgb(182, 182, 182);
+        border-right: 3px solid $description-color;
         transform: rotate(45deg) translate(-2.5px, 2.5px);
         transition: border-color 0.3s ease;
       }

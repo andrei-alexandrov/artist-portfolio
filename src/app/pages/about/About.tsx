@@ -1,39 +1,50 @@
 "use client";
-
-import React, { useEffect, useRef } from "react";
+import React, { useLayoutEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
-// import { ScrollTrigger } from "gsap/ScrollTrigger";
-import "./About.scss";
-import ClientCard from "@/app/components/ClientCard/ClientCard";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { images } from "../../components/ClientCard/clientsData";
+import { inspirationPeople } from "../../components/ClientCard/inspirationsData";
+import ClientCardCarousel from "@/app/components/ClientCard/ClientCardCarousel";
 
-// gsap.registerPlugin(ScrollTrigger);
+import "./About.scss";
 
 const About = () => {
   const aboutMeRef = useRef<HTMLDivElement>(null);
+  const [isClient, setIsClient] = useState(false);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+    setIsClient(true);
+  }, []);
+
+  useLayoutEffect(() => {
+    if (!isClient) return;
+
     const element = aboutMeRef.current;
     if (!element) return;
 
     gsap.fromTo(
-      element.querySelectorAll(".animate-from-left, .animate-from-right"),
+      element.children,
       {
         opacity: 0,
-        x: (i, target) => {
-          return (target as HTMLElement).classList.contains("animate-from-left")
-            ? -100
-            : 100;
-        },
+        x: (index) => (index % 2 === 0 ? -100 : 100),
       },
       {
         opacity: 1,
         x: 0,
         duration: 1,
-        stagger: 0.3,
         ease: "power2.out",
+        stagger: 0.3,
+        scrollTrigger: {
+          trigger: element,
+          start: "top 80%",
+          end: "bottom 60%",
+          toggleActions: "play none none reverse",
+          markers: false,
+        },
       }
     );
-  }, []);
+  }, [isClient]);
 
   return (
     <div id="about" className="about-container">
@@ -42,35 +53,23 @@ const About = () => {
         Some info about you as a short tale... then we can add the following:
         <br />
         <br />
-        <div className="" ref={aboutMeRef}>
-          <span className="animate-from-left">
-            Founder of Highlight Singing Academy
-          </span>
-
-          <span className="animate-from-right">Founder of Music Talents</span>
-
-          <span className="animate-from-left">
-            Creative director of NEXT ARTIST singing competition
-          </span>
-
-          <span className="animate-from-right">
-            Вокален педагог в X-factor сезони ...
-          </span>
-
-          <span className="animate-from-left">
-            Certified vocal coach in IVA-USA
-          </span>
-
-          <span className="animate-from-right">
-            Вокален педагог за българската делегация на конкурса Европвизия 2017
-            г.
-          </span>
-          <div style={{ marginTop: "1.5rem", fontSize: "1.5rem", color: "#cca752" }}>Students/Clients or something else? Или една галерия с ученици и 
-            друга точно до нея отделна с други хора?
+        <div className="about-info" ref={aboutMeRef}>
+          <div>Founder of Highlight Singing Academy</div>
+          <div>Founder of Music Talents</div>
+          <div>Creative director of NEXT ARTIST singing competition</div>
+          <div>Вокален педагог в X-factor сезони ...</div>
+          <div>Certified vocal coach in IVA-USA</div>
+          <div>
+            Вокален педагог за българската делегация на конкурса Европвизия
+            2017 г.
           </div>
         </div>
-        <div style={{ marginTop: "3rem" }} className="portfolio-section-title">
-          <ClientCard />
+        <div className="carousel-container">
+          <ClientCardCarousel people={images} title="Клиенти" />
+          <ClientCardCarousel
+            people={inspirationPeople}
+            title="Вдъхновения"
+          />
         </div>
       </div>
     </div>
