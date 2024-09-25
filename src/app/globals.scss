@@ -9,6 +9,11 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "eyeSome";
+  src: url("../../public/fonts/Eyesome\ Script.otf") format("truetype");
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -19,14 +24,9 @@ html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
-  // background-color: $black-color;
-  // background-color: #030303;
-  background-color: rgb(255, 255, 255);
+  background-color: black;
   font-family: "Gumela", sans-serif;
   scroll-behavior: smooth;
-  // background-image: linear-gradient(to top, #080815, #010f1f, #011231, rgb(180, 175, 175));
-  // background: linear-gradient(360deg, hsla(206, 91%, 66%, 1) 0%, hsla(240, 45%, 6%, 1) 52%);
-  // background: linear-gradient(360deg, hsla(206, 91%, 66%, 1) 0%, hsla(240, 45%, 6%, 1) 40%);
 }
 
 ::-webkit-scrollbar {

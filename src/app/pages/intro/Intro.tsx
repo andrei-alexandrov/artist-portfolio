@@ -33,7 +33,7 @@ const Intro = () => {
   return (
     <section id="intro">
       <div className="stars-container">
-        <Stars />
+        {/* <Stars /> */}
         {/* <video
           style={{
             objectFit: "cover",

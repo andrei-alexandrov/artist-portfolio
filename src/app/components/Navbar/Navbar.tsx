@@ -3,11 +3,9 @@
 import { useState, useRef, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import { Link } from "react-scroll";
-import Image from "next/image";
-
 import { FaLinkedin } from "react-icons/fa";
 import { FaInstagram, FaSquareFacebook } from "react-icons/fa6";
-import navbarLogo from "../../assets/icons/no-bg-logo.png";
+
 import "./Navbar.scss";
 
 const Navbar = () => {
@@ -41,30 +39,23 @@ const Navbar = () => {
   return (
     <div className="navbar-container">
       <Link
-        activeClass="active"
+        className="artist-special-name"
         to="intro"
         spy={true}
         smooth={true}
         duration={50}
         offset={-160}
       >
-        <Image
-          className="logo"
-          src={navbarLogo}
-          alt="logo"
-          width={60}
-          height={60}
-        />
+        Iskra M. Angelova
       </Link>
 
       <Container className="navbar-content">
         <Row>
-          <Col className="d-none d-md-flex justify-content-end">
+          <Col className="d-none d-lg-flex justify-content-end">
             <nav>
               <ul className="navbar-menu">
                 <li>
                   <Link
-                    activeClass="active"
                     to="intro"
                     spy={true}
                     smooth={true}
@@ -76,19 +67,17 @@ const Navbar = () => {
                 </li>
                 <li>
                   <Link
-                    activeClass="active"
                     to="about"
                     spy={true}
                     smooth={true}
                     duration={50}
                     offset={-95}
                   >
-                    About Me
+                    About&nbsp;Me
                   </Link>
                 </li>
                 <li>
                   <Link
-                    activeClass="active"
                     to="activities"
                     spy={true}
                     smooth={true}
@@ -100,7 +89,6 @@ const Navbar = () => {
                 </li>
                 <li>
                   <Link
-                    activeClass="active"
                     to="certificates"
                     spy={true}
                     smooth={true}
@@ -112,7 +100,6 @@ const Navbar = () => {
                 </li>
                 <li>
                   <Link
-                    activeClass="active"
                     to="inspirations"
                     spy={true}
                     smooth={true}
@@ -124,7 +111,6 @@ const Navbar = () => {
                 </li>
                 <li>
                   <Link
-                    activeClass="active"
                     to="contact"
                     spy={true}
                     smooth={true}
@@ -137,7 +123,7 @@ const Navbar = () => {
               </ul>
             </nav>
           </Col>
-          <Col className="d-flex d-md-none justify-content-end">
+          <Col className="d-flex d-lg-none justify-content-end">
             <button className="hamburger-menu" onClick={handleToggleSidebar}>
               &#9776;
             </button>

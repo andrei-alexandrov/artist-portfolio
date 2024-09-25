@@ -6,70 +6,17 @@
   top: 0;
   left: 0;
   right: 0;
-  padding: 10px 20px;
-  //Delete to make it transparent to fit with the video content if it will be choosen
-  background-color: $black-color;
-  background-color: rgb(255, 255, 255);
-  height: 70px;
-  display: flex;
-  align-items: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 15px 25px;
   z-index: 99;
+  display: flex;
+  justify-content: center;
 
-  .logo {
-    position: relative;
-    right: 8px;
-    
-    &:hover {
-      cursor: pointer;
-    }
-  }
-
-  .navbar-content {
-    flex-grow: 1;
-    display: flex;
-    justify-content: center;
-
-    .navbar-menu {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      gap: 30px;
-
-      li {
-        position: relative;
-
-        a {
-          text-decoration: none;
-          font-size: 19px;
-          color: $main-color;
-
-          &:hover {
-            filter: brightness(1.1);
-            cursor: pointer;
-          }
-        }
-
-        &:after {
-          content: "";
-          position: absolute;
-          bottom: 0;
-          left: 0;
-          right: 0;
-          height: 2px;
-          background-color: $main-color;
-          transform: scaleX(0);
-          transform-origin: right;
-          transition: transform 0.3s ease;
-        }
-
-        &:hover:after {
-          transform: scaleX(1);
-          transform-origin: left;
-        }
-      }
-    }
+  .artist-special-name {
+    font-family: "EyeSome", sans-serif;
+    font-size: 20px;
+    color: $main-color;
+    text-decoration: none;
+    width: 100%;
   }
 
   .hamburger-menu {
@@ -122,30 +69,6 @@
       }
     }
 
-    nav {
-      ul {
-        list-style: none;
-        padding: 0;
-
-        li {
-          margin: 25px 0;
-
-          a {
-            color: $main-color;
-            text-decoration: none;
-            font-size: 18px;
-            font-weight: 500;
-            transition: color 0.3s ease, transform 0.3s ease;
-
-            &:hover {
-              color: $main-hover-color;
-              transform: translateX(5px);
-            }
-          }
-        }
-      }
-    }
-
     .sidebar-icons {
       position: absolute;
       bottom: 30px;
@@ -176,11 +99,105 @@
   }
 }
 
-@media (max-width: 564px) {
+@media (min-width: 414px) {
   .navbar-container {
-    .logo {
-      height: 56px;
-      width: 56px;
+    .artist-special-name {
+      font-size: 23px;
+    }
+  }
+}
+
+@media (min-width: 576px) {
+  .navbar-container {
+    .artist-special-name {
+      font-size: 26px;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .navbar-container {
+    .artist-special-name {
+      font-size: 28px;
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .navbar-container {
+    height: 70px;
+    display: flex;
+    align-items: center;
+    background-color: black;
+
+    .artist-special-name {
+      &:hover {
+        filter: brightness(1.1);
+        cursor: pointer;
+      }
+    }
+
+    .navbar-content {
+      .navbar-menu {
+        list-style: none;
+        display: flex;
+        padding: 0;
+        margin: 0;
+        gap: 30px;
+
+        li {
+          position: relative;
+
+          a {
+            font-size: 19px;
+            color: $main-color;
+
+            &:hover {
+              filter: brightness(1.1);
+              cursor: pointer;
+            }
+
+            &.active {
+              text-decoration: none;
+            }
+          }
+
+          &:after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background-color: $main-color;
+            transform: scaleX(0);
+            transform-origin: right;
+            transition: transform 0.3s ease;
+          }
+
+          &:hover:after {
+            transform: scaleX(1);
+            transform-origin: left;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1300px) {
+  .navbar-container {
+    .artist-special-name {
+      position: absolute;
+      left: 2rem;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .navbar-content {
+      flex-grow: 1;
+      display: flex;
+      justify-content: center;
     }
   }
 }

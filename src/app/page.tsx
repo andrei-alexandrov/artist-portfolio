@@ -3,8 +3,8 @@ import Intro from "./pages/intro/Intro";
 import About from "./pages/about/About";
 import Activities from "./pages/activities/Activities";
 import Inspirations from "./pages/inspirations/Inspirations";
-import Contact from "./pages/contact/Contact";
 import Certificates from "./pages/certificates/Certificates";
+import Contact from "./pages/contact/Contact";
 
 export default function Home() {
   return (
