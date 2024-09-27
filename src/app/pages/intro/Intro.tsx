@@ -52,11 +52,11 @@ const Intro = () => {
       <div className="intro-content-wrapper">
         <div className="starting-content">
           <br />
-          <p className="artist-name">Iskra Milkova Angelova</p>
-          <p className="artist-slogan">&quot;Highlight the way!&quot;</p>
+          <p className="artist-name">Искра Милкова Ангелова</p>
+          <p className="artist-slogan">&quot;Озаряваме пътя!&quot;</p>
           <p className="artist-short-info">
-            Vocal and artist coach <br />
-            Founder of &quot;Highlight Singing Academy&quot;
+            Вокален педагог <br />
+            Основател на &quot;Вокална Академия Highlight&quot;
           </p>
           <MediaIcons isBlackBackground={true} />
           <Link
@@ -67,7 +67,7 @@ const Intro = () => {
             duration={50}
             offset={-70}
           >
-            <Button>Contact</Button>
+            <Button>Контакт</Button>
           </Link>
         </div>
 

@@ -1,0 +1,8 @@
+@import "../../../mixins";
+
+.teachings-container {
+  .teachings-title {
+    margin-top: 1rem;
+    @include portfolio-section-title();
+  }
+}

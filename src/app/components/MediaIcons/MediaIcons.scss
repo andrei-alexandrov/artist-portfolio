@@ -40,14 +40,5 @@
 }
 
 @media (min-width: 768px) {
-  .media-icons-container {
-    justify-content: flex-start;
-    align-items: flex-start;
-
-    .media-icons-first-row {
-      flex-direction: row;
-      position: relative;
-      right: 0.5rem;
-    }
-  }
+ 
 }

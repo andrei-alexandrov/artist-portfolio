@@ -14,7 +14,7 @@ const Certificates = () => {
 
   return (
     <div className="c-container" id="certificates">
-      <div className="portfolio-section-title">Certificates</div>
+      <div className="portfolio-section-title">Сертификати</div>
       <div className="certificates-container">
         <Image
           src={certificateOne}

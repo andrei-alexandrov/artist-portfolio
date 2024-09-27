@@ -3,12 +3,15 @@
 .activity-card {
   display: flex;
   flex-direction: column;
+  gap: 1.5rem;
   border-radius: 25px;
-  border: 1px solid darken($main-color, 30%);
-  padding: 0.5rem;
-  gap: 1rem;
-  position: relative;
-  margin: 18px;
+  margin: 40px 15px;
+  background: #0f0f0f;
+  background: #0d0d0d;
+
+  &:hover {
+    // box-shadow: 0 0 1px 1px $main-color;
+  }
 
   .card-content-wrapper {
     order: 2;
@@ -20,15 +23,16 @@
     }
 
     .activity-desc {
+      margin-top: 2rem;
       text-align: justify;
       max-height: 250px;
       color: $description-color;
-      margin-top: 2rem;
       font-size: 15px;
+      padding: 10px;
     }
 
     .activity-logo img {
-      margin-top: 3rem;
+      margin-top: 2rem;
       position: relative;
       left: 8px;
       max-width: 190px;
@@ -40,23 +44,30 @@
     }
 
     .activity-card-btn-wrapper {
-      & button {
-        border: 1px solid darken($main-color, 30%);
-      }
+      // & button {
+      //   background-color: transparent;
+      //   color: $description-color;
+
+      //   &:hover {
+      //     background-color: $main-color;
+      //     color: black;
+      //   }
+      // }
     }
   }
 
   .activity-image {
     position: relative !important;
-    border-radius: 25px;
-    padding: 0.8rem;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    padding: 0;
   }
 
   .activity-video {
     height: auto;
     max-width: 100%;
-    border-radius: 25px;
-    padding: 10px;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
   }
 }
 
@@ -65,8 +76,9 @@
     width: 90%;
     max-width: 400px;
     height: auto;
-    padding: 1rem;
-    gap: 1rem;
+    // gap: 1rem;
+    // padding-left: 15px;
+    // padding-right: 15px;
 
     .card-content-wrapper {
       .activity-title {
@@ -87,7 +99,7 @@
     }
 
     .activity-image {
-      padding: 0.6rem;
+      padding: 0;
     }
   }
 }
@@ -96,10 +108,8 @@
   .activity-card {
     max-width: 550px;
     height: auto;
-    padding: 1.5rem;
     gap: 1.5rem;
-    margin: 20px;
-
+ 
     .card-content-wrapper {
       .activity-title {
         font-size: 1.9rem;
@@ -121,7 +131,7 @@
     padding: 2rem;
     border-radius: 25px;
     gap: 3rem;
-    border: 1px solid darken($main-color, 35%);
+    // border: 1px solid darken($main-color, 35%);
 
     .card-content-wrapper {
       order: 1 !important;
@@ -162,7 +172,7 @@
       border-radius: 35px;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
       max-width: 35rem;
-      border: 1px solid darken($main-color, 40%);
+      // border: 1px solid darken($main-color, 40%);
 
       &:hover {
         transform: scale(1) rotate(1deg);

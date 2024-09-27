@@ -3,7 +3,6 @@
 @import "../../../fonts";
 
 .contact-container {
-  margin-top: 2rem;
   margin-bottom: 2.5rem;
   background-image: url("../../assets/test3.jpg");
   background-size: cover;
@@ -138,7 +137,7 @@
 
 .author-message {
   text-align: center;
-  font-size: 17px;
+  font-size: 18px;
   color: $description-color;
 
   .author {
@@ -152,15 +151,5 @@
 @media (min-width: 200px) and (max-width: 379px) {
   .title-container {
     margin-top: 4rem;
-  }
-}
-
-@media (min-width: 1400px) {
-  .contact-container {
-    padding-left: 10px;
-    padding-right: 10px;
-    position: relative;
-    left: 3rem;
-    bottom: 3rem;
   }
 }

@@ -125,6 +125,17 @@ section {
           margin-top: 1.5rem;
           font-size: $small-font-below-576;
         }
+
+        .media-icons-container {
+          justify-content: flex-start;
+          align-items: flex-start;
+
+          .media-icons-first-row {
+            flex-direction: row;
+            position: relative;
+            right: 0.5rem;
+          }
+        }
       }
 
       .artist-photo-wrapper {

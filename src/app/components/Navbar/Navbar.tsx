@@ -62,9 +62,10 @@ const Navbar = () => {
                     duration={50}
                     offset={-120}
                   >
-                    Home
+                    Начало
                   </Link>
                 </li>
+
                 <li>
                   <Link
                     to="about"
@@ -73,9 +74,10 @@ const Navbar = () => {
                     duration={50}
                     offset={-95}
                   >
-                    About&nbsp;Me
+                    За&nbsp;мен
                   </Link>
                 </li>
+
                 <li>
                   <Link
                     to="activities"
@@ -84,7 +86,19 @@ const Navbar = () => {
                     duration={50}
                     offset={-95}
                   >
-                    Activities
+                    Дейности
+                  </Link>
+                </li>
+
+                <li>
+                  <Link
+                    to="teachings"
+                    spy={true}
+                    smooth={true}
+                    duration={50}
+                    offset={-95}
+                  >
+                    Обучения
                   </Link>
                 </li>
 
@@ -96,9 +110,10 @@ const Navbar = () => {
                     duration={50}
                     offset={-95}
                   >
-                    Inspirations
+                    Галерия
                   </Link>
                 </li>
+
                 <li>
                   <Link
                     to="certificates"
@@ -107,9 +122,10 @@ const Navbar = () => {
                     duration={50}
                     offset={-95}
                   >
-                    Certificates
+                    Сертификати
                   </Link>
                 </li>
+
                 <li>
                   <Link
                     to="contact"
@@ -118,7 +134,7 @@ const Navbar = () => {
                     duration={50}
                     offset={-70}
                   >
-                    Contact
+                    Контакт
                   </Link>
                 </li>
               </ul>
@@ -148,9 +164,10 @@ const Navbar = () => {
                 offset={-95}
                 onClick={handleToggleSidebar}
               >
-                Home
+                Начало
               </Link>
             </li>
+
             <li>
               <Link
                 to="about"
@@ -160,9 +177,10 @@ const Navbar = () => {
                 offset={-95}
                 onClick={handleToggleSidebar}
               >
-                About Me
+                За мен
               </Link>
             </li>
+
             <li>
               <Link
                 to="activities"
@@ -172,7 +190,19 @@ const Navbar = () => {
                 offset={-95}
                 onClick={handleToggleSidebar}
               >
-                Activities
+                Дейности
+              </Link>
+            </li>
+
+            <li>
+              <Link
+                to="teachings"
+                spy={true}
+                smooth={true}
+                duration={50}
+                offset={-95}
+              >
+                Обучения
               </Link>
             </li>
 
@@ -185,9 +215,10 @@ const Navbar = () => {
                 offset={-95}
                 onClick={handleToggleSidebar}
               >
-                Inspirations
+                Галерия
               </Link>
             </li>
+
             <li>
               <Link
                 to="certificates"
@@ -197,9 +228,10 @@ const Navbar = () => {
                 offset={-95}
                 onClick={handleToggleSidebar}
               >
-                Certificates
+                Сертификати
               </Link>
             </li>
+
             <li>
               <Link
                 to="contact"
@@ -209,7 +241,7 @@ const Navbar = () => {
                 offset={-70}
                 onClick={handleToggleSidebar}
               >
-                Contact
+                Контакт
               </Link>
             </li>
           </ul>
@@ -226,6 +258,7 @@ const Navbar = () => {
               <FaLinkedin />
             </div>
           </a>
+
           <a
             href="https://www.facebook.com/iskra.milkova1"
             target="_blank"
@@ -235,6 +268,7 @@ const Navbar = () => {
               <FaSquareFacebook />
             </div>
           </a>
+
           <a
             href="https://www.instagram.com/iskra_milkova_vocal_coach/"
             target="_blank"

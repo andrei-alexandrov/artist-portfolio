@@ -19,7 +19,7 @@ const Inspirations = () => {
   return (
     <div className="inspirations-container">
       <div id="inspirations">
-        <h1 className="portfolio-section-title">Inspirations</h1>
+        <h1 className="portfolio-section-title">Галерия</h1>
 
         <Swiper
           effect={"coverflow"}
