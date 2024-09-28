@@ -1,18 +1,11 @@
 "use client";
-
 import React, { useLayoutEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { images } from "../../components/ClientCard/clientsData";
 import { inspirationPeople } from "../../components/ClientCard/inspirationsData";
 import ClientCardCarousel from "@/app/components/ClientCard/ClientCardCarousel";
-import AboutInfo from "./AboutInfo";
 
-import highLightLogoLight from "../../assets/icons/highlight-logo-light.png";
-import musicTalentsLogoLight from "../../assets/icons/music-talents.png"
-import xFactorLogoLight from "../../assets/icons/x-factor-logo-light.png"
-import ivaUsa from "../../assets/icons/iva.png"
-import ivaUsaTwo from "../../assets/icons/iva-2.png"
 import "./About.scss";
 
 const About = () => {
@@ -55,43 +48,28 @@ const About = () => {
 
   return (
     <div id="about" className="about-container">
-      <h1 className="portfolio-section-title">За мен</h1>
+      <h1 className="portfolio-section-title">About me</h1>
       <div className="about-description">
-        Информация за теб като житейски път +
+        Some info about you as a short tale... then we can add the following:
         <br />
         <br />
         <div className="about-info" ref={aboutMeRef}>
-          <AboutInfo
-            info="Основател на Вокална Академия Highlight"
-            image={highLightLogoLight}
-          />
-          <AboutInfo
-            info='Основател на Сдружение "Музикалните таланти на България"'
-            image={musicTalentsLogoLight}
-          />
-          <AboutInfo
-            info="Креативен директор на певчески конкурс NEXT ARTIST"
-            image={musicTalentsLogoLight}
-          />
-
-          <AboutInfo
-            info="Вокален педагог в X-factor сезони ..."
-            image={xFactorLogoLight}
-          />
-
-          <AboutInfo
-            info="Сертифициран вокален педагог за IVA-USA"
-            image={ivaUsa}
-          />
-          <AboutInfo
-            info=" Вокален педагог за българската делегация на конкурса Евровизия
-              2017 г."
-            image={ivaUsaTwo}
-          />
+          <div>Founder of Highlight Singing Academy</div>
+          <div>Founder of Music Talents</div>
+          <div>Creative director of NEXT ARTIST singing competition</div>
+          <div>Вокален педагог в X-factor сезони ...</div>
+          <div>Certified vocal coach in IVA-USA</div>
+          <div>
+            Вокален педагог за българската делегация на конкурса Европвизия
+            2017 г.
+          </div>
         </div>
         <div className="carousel-container">
           <ClientCardCarousel people={images} title="Клиенти" />
-          <ClientCardCarousel people={inspirationPeople} title="Вдъхновения" />
+          <ClientCardCarousel
+            people={inspirationPeople}
+            title="Вдъхновения"
+          />
         </div>
       </div>
     </div>

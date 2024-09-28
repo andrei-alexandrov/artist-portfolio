@@ -3,7 +3,13 @@
 @import "../../../fonts";
 
 .c-container {
+  background-image: url("../../assets/sparkles.png");
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-position: calc(50% + 20px) calc(50% - 20px);
   margin-top: 10rem;
+
   .portfolio-section-title {
     @include portfolio-section-title();
   }

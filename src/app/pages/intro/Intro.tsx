@@ -32,23 +32,7 @@ const Intro = () => {
 
   return (
     <section id="intro">
-      {/* <div className="stars-container"> */}
-      {/* <Stars /> */}
-      {/* <video
-          style={{
-            objectFit: "cover",
-            width: "100%",
-            height: "100vh",
-            top: 0,
-            left: 0,
-          }}
-          src="/public-assets/next-video-1.mp4"
-          autoPlay
-          loop
-          muted
-          playsInline
-        ></video> */}
-      {/* </div> */}
+      <div className="background-image"></div>
       <div className="intro-content-wrapper">
         <div className="starting-content">
           <br />

@@ -151,7 +151,6 @@
     height: 70px;
     display: flex;
     align-items: center;
-    background-color: black;
 
     .artist-special-name {
       &:hover {
@@ -210,7 +209,6 @@
 
 @media (min-width: 1300px) {
   .navbar-container {
-
     .artist-special-name {
       width: auto;
       position: absolute;
