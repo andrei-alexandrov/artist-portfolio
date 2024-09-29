@@ -48,28 +48,27 @@ const About = () => {
 
   return (
     <div id="about" className="about-container">
-      <h1 className="portfolio-section-title">About me</h1>
+      <h1 className="portfolio-section-title">За мен</h1>
       <div className="about-description">
-        Some info about you as a short tale... then we can add the following:
+        Малко информация за теб като история + съдържанието долу
         <br />
         <br />
         <div className="about-info" ref={aboutMeRef}>
-          <div>Founder of Highlight Singing Academy</div>
-          <div>Founder of Music Talents</div>
-          <div>Creative director of NEXT ARTIST singing competition</div>
-          <div>Вокален педагог в X-factor сезони ...</div>
-          <div>Certified vocal coach in IVA-USA</div>
+          <div>Основател на &quot;Вокална Академия Хайлайт&quot;</div>
           <div>
-            Вокален педагог за българската делегация на конкурса Европвизия
-            2017 г.
+            Основател на &quot;Сдружение Музикалните Таланти на България&quot;
+          </div>
+          <div>Творчески директор на певчески конкурс NEXT ARTIST</div>
+          <div>Вокален педагог в X-factor сезони ... кои?</div>
+          <div>Сертифициран вокален педагог за IVA-USA</div>
+          <div>
+            Вокален педагог за българската делегация на конкурса Европвизия 2017
+            г.
           </div>
         </div>
         <div className="carousel-container">
           <ClientCardCarousel people={images} title="Клиенти" />
-          <ClientCardCarousel
-            people={inspirationPeople}
-            title="Вдъхновения"
-          />
+          <ClientCardCarousel people={inspirationPeople} title="Вдъхновения" />
         </div>
       </div>
     </div>

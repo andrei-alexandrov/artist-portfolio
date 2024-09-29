@@ -15,11 +15,15 @@
     // // background-position: calc(50% + 20px) calc(50% - 10px); /* 20px right and 10px up from the center */
     // // background-position: calc(50% + 20px) calc(50% - 20px);
     // background-repeat: no-repeat;
-
     margin-top: 2rem;
     text-align: center;
-    font-size: $small-font;
     color: $description-color;
+    font-size: 19px;
+
+    & div {
+    line-height: 1.5;
+      font-size: 18px;
+    }
 
     .about-info div:nth-child(odd) {
       color: $main-color;

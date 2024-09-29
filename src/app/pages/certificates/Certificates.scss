@@ -8,7 +8,8 @@
   background-position: bottom;
   background-repeat: no-repeat;
   background-position: calc(50% + 20px) calc(50% - 20px);
-  margin-top: 10rem;
+  margin-top: 2rem;
+  margin-bottom: 4rem;
 
   .portfolio-section-title {
     @include portfolio-section-title();
@@ -39,26 +40,5 @@
       width: 300px;
       height: 200px;
     }
-  }
-}
-
-@media (min-width: 200px) and (max-width: 379px) {
-  .c-container {
-    position: relative;
-    margin-top: 6rem;
-  }
-}
-
-@media (min-width: 380px) and (max-width: 564px) {
-  .c-container {
-    position: relative;
-    bottom: 8rem;
-  }
-}
-
-@media (min-width: 565px) and (max-width: 3200px) {
-  .c-container {
-    position: relative;
-    bottom: 7rem;
   }
 }
