@@ -65,7 +65,7 @@ const About = () => {
         who cultivate and share their passion for voice, singing, and teaching.
         In 2014, Iskra was invited to become a vocal coach of the popular TV
         SHOW &quot;X Factor of Bulgaria&quot;. Here, she collaborated with some of the
-        country's finest producers and artists over four exciting seasons. This
+        country&apos;s finest producers and artists over four exciting seasons. This
         experience not only expanded her professional network but also sharpened
         her vision of the qualities singers must develop to thrive in the
         competitive music industry. In parallel to her role as a vocal
