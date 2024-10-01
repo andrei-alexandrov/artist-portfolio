@@ -9,28 +9,36 @@
   }
 
   .about-description {
-    // background-image: url("../../assets/23.svg");
-    // background-size: contain;
-    // // background-position: 40% 40%; /* 40% from the left, 40% from the top */
-    // // background-position: calc(50% + 20px) calc(50% - 10px); /* 20px right and 10px up from the center */
-    // // background-position: calc(50% + 20px) calc(50% - 20px);
-    // background-repeat: no-repeat;
     margin-top: 2rem;
-    text-align: center;
+    padding-left: 24px;
+    padding-right: 24px;
     color: $description-color;
-    font-size: 19px;
+    font-size: 18px;
+    line-height: 1.6;
+    letter-spacing: 0.5px;
+    text-align: justify;
 
-    & div {
-    line-height: 1.5;
+    %common-text-styles {
       font-size: 18px;
+      line-height: 1.6;
+      letter-spacing: 0.5px;
     }
 
-    .about-info div:nth-child(odd) {
-      color: $main-color;
-    }
+    .about-info {
+      margin-top: 3rem;
 
-    .about-info div:nth-child(even) {
-      color: $description-color;
+      & div {
+        @extend %common-text-styles;
+        text-align: center;
+      }
+
+      div:nth-child(odd) {
+        color: $main-color;
+      }
+
+      div:nth-child(even) {
+        color: $description-color;
+      }
     }
   }
 }

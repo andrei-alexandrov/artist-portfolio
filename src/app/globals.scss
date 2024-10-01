@@ -3,8 +3,8 @@
 @import "../fonts";
 
 @font-face {
-  font-family: "Jost";
-  src: url("../../public/fonts/Jost-VariableFont_wght.ttf") format("truetype");
+  font-family: "Gumela";
+  src: url("../../public/fonts/Gumela.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
@@ -27,7 +27,7 @@ body {
   // background-color: #0D1114; //2nd place
   // background-color: #0c1015; //3rd place
   background-color: #080a0c; //1st place
-  font-family: "Jost", sans-serif;
+  font-family: "Gumela", sans-serif;
   scroll-behavior: smooth;
 }
 

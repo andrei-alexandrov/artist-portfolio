@@ -8,9 +8,9 @@ import whitePartyPhoto from "../../assets/projects/white-party/white-party-event
 
 const projectsData = [
   {
-    title: "Вокална Академия Хайлайт",
+    title: "Highlight Singing Academy",
     description:
-      "Вокална Академия Хайлайт е моят личен проект, моят начин да споделя всичко, което съм научила през годините, с по-младите певци.",
+      "Vocal Academy Highlight is my personal project, my way of sharing everything I have learned over the years with younger singers.",
     logo: highlightLogo,
     img: highlightPhoto,
     logoWidth: 240,
@@ -19,9 +19,9 @@ const projectsData = [
   },
 
   {
-    title: `Сдружение "Музикалните Таланти на България"`,
+    title: `Association "The Musical Talents of Bulgaria"`,
     description:
-      "Ние сме посветили усилията и ресурсите си на откриването, развитието и подпомагането на съвременната музика и новото поколение музикални артисти в България, предлагайки им възможности, в които техният потенциал да бъде разпознат, цялостно развит и представен, както на национално, така и на международно ниво.",
+      "We have dedicated our efforts and resources to discover, develop, and support contemporary music and the new generation of musical artists in Bulgaria, offering them opportunities where their potential can be recognized, fully developed, and presented both nationally and internationally.",
     logo: musicTalentsLogo,
     img: musicTalentsPhoto,
     logoWidth: 100,
@@ -32,7 +32,7 @@ const projectsData = [
   {
     title: "Next Artist",
     description:
-      "Иновативен певчески конкурс за деца и младежи, който предоставя възможност за достигане до модерна и професионална сцена, без такса за участие",
+      "Innovative singing competition for children and youth, offering the opportunity to perform on a modern and professional stage without a participation fee.",
     logo: musicTalentsLogo,
     img: nextArtistPhoto,
     logoWidth: 100,

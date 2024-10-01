@@ -43,7 +43,7 @@ const ActivityCard = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Button>Към сайта</Button>
+                <Button>Visit</Button>
               </Link>
             </div>
           </div>

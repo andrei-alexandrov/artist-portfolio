@@ -2,7 +2,7 @@
 import React, { useLayoutEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { images } from "../../components/ClientCard/clientsData";
+import { clientImages } from "../../components/ClientCard/clientsData";
 import { inspirationPeople } from "../../components/ClientCard/inspirationsData";
 import ClientCardCarousel from "@/app/components/ClientCard/ClientCardCarousel";
 
@@ -48,27 +48,51 @@ const About = () => {
 
   return (
     <div id="about" className="about-container">
-      <h1 className="portfolio-section-title">За мен</h1>
+      <h1 className="portfolio-section-title">About me</h1>
       <div className="about-description">
-        Малко информация за теб като история + съдържанието долу
+        Iskra Milkova has been immersed in the world of music since early
+        childhood. Graduating Art high school with a concentration in piano, she
+        soon discovered that her true passion lay within the power of the human
+        voice, with its unique ability to move people's hearts. This passion led
+        her to the National Academy of Music “Pancho Vladigerov”, where she
+        earned her master's degree in pop and jazz singing. Driven by her desire
+        to grow and explore modern teaching methods, she pursued further
+        education at the Institute for Vocal Advancement (IVA) in the USA and
+        Modern Vocal Training (MVT) in Spain, where she deeply immersed herself
+        in the Speech Level Singing (SLS) teaching method. Inspired by newfound
+        knowledge and vocal approaches, Iskra established HighLight Singing
+        Academy. Today, the academy is home to a team of 20 exceptional teachers
+        who cultivate and share their passion for voice, singing, and teaching.
+        In 2014, Iskra was invited to become a vocal coach of the popular TV
+        SHOW “X Factor of Bulgaria”. Here, she collaborated with some of the
+        country's finest producers and artists over four exciting seasons. This
+        experience not only expanded her professional network but also sharpened
+        her vision of the qualities singers must develop to thrive in the
+        competitive music industry. In parallel to her role as a vocal
+        pedagogue, Iskra continues to feed her soul as an active performer with
+        various bands and engages in diverse musical projects. One of
+        Iskra&apos;s most recent success story as a vocal coach is: her student
+        Jaklin Tarakchi, won The Voice of Bulgaria 2022. Her rich experience as
+        both a teacher and a performer allows her to infuse her instruction with
+        practical insights and real-world expertise.
         <br />
         <br />
         <div className="about-info" ref={aboutMeRef}>
-          <div>Основател на &quot;Вокална Академия Хайлайт&quot;</div>
+          <div>Owner of Highlight Singing Academy</div>
+          <div>Owner of Association "The Musical Talents of Bulgaria"</div>
+          <div>Creative director of NEXT ARTIST singing competition</div>
+          <div>Vocal coach at X-factor seasons ... ?</div>
           <div>
-            Основател на &quot;Сдружение Музикалните Таланти на България&quot;
+            Certified vocal coach in IVA (Institute for Vocal Advancement) - USA
           </div>
-          <div>Творчески директор на певчески конкурс NEXT ARTIST</div>
-          <div>Вокален педагог в X-factor сезони ... кои?</div>
-          <div>Сертифициран вокален педагог за IVA-USA</div>
           <div>
-            Вокален педагог за българската делегация на конкурса Европвизия 2017
-            г.
+            Vocal coach for the Bulgarian delegation at the Eurovision Song
+            Contest 2017
           </div>
         </div>
         <div className="carousel-container">
-          <ClientCardCarousel people={images} title="Клиенти" />
-          <ClientCardCarousel people={inspirationPeople} title="Вдъхновения" />
+          <ClientCardCarousel people={clientImages} title="Clients" />
+          <ClientCardCarousel people={inspirationPeople} title="Inspirations" />
         </div>
       </div>
     </div>

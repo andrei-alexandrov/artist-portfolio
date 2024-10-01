@@ -63,7 +63,6 @@ const ClientCardCarousel = ({people, title}: any) => {
                 src={image.src}
                 alt={`Image ${index + 1}`}
                 fill
-                sizes="(max-width: 768px) 200px, (max-width: 1200px) 350px, 370px"
               />
               <div className="image-name">{image.name}</div>
             </span>
