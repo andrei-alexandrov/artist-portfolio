@@ -53,9 +53,9 @@ const About = () => {
         Iskra Milkova has been immersed in the world of music since early
         childhood. Graduating Art high school with a concentration in piano, she
         soon discovered that her true passion lay within the power of the human
-        voice, with its unique ability to move people's hearts. This passion led
+        voice, with its unique ability to move people&apos;s hearts. This passion led
         her to the National Academy of Music “Pancho Vladigerov”, where she
-        earned her master's degree in pop and jazz singing. Driven by her desire
+        earned her master&apos;s degree in pop and jazz singing. Driven by her desire
         to grow and explore modern teaching methods, she pursued further
         education at the Institute for Vocal Advancement (IVA) in the USA and
         Modern Vocal Training (MVT) in Spain, where she deeply immersed herself
@@ -64,7 +64,7 @@ const About = () => {
         Academy. Today, the academy is home to a team of 20 exceptional teachers
         who cultivate and share their passion for voice, singing, and teaching.
         In 2014, Iskra was invited to become a vocal coach of the popular TV
-        SHOW “X Factor of Bulgaria”. Here, she collaborated with some of the
+        SHOW &quot;X Factor of Bulgaria&quot;. Here, she collaborated with some of the
         country's finest producers and artists over four exciting seasons. This
         experience not only expanded her professional network but also sharpened
         her vision of the qualities singers must develop to thrive in the
@@ -79,7 +79,7 @@ const About = () => {
         <br />
         <div className="about-info" ref={aboutMeRef}>
           <div>Owner of Highlight Singing Academy</div>
-          <div>Owner of Association "The Musical Talents of Bulgaria"</div>
+          <div>Owner of Association &quot;The Musical Talents of Bulgaria&quot;</div>
           <div>Creative director of NEXT ARTIST singing competition</div>
           <div>Vocal coach at X-factor seasons ... ?</div>
           <div>
