@@ -1,6 +1,5 @@
 import { useRef, useState } from "react";
 import Image from "next/image";
-// import { images } from "./clientsData";
 
 import "./ClientCardCarousel.scss";
 

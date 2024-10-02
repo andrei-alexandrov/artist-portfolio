@@ -53,13 +53,13 @@ const About = () => {
         Iskra Milkova has been immersed in the world of music since early
         childhood. Graduating Art high school with a concentration in piano, she
         soon discovered that her true passion lay within the power of the human
-        voice, with its unique ability to move people&apos;s hearts. This passion led
+        voice, with its unique ability to move people&apos;s hearts.<br /><br />This passion led
         her to the National Academy of Music “Pancho Vladigerov”, where she
         earned her master&apos;s degree in pop and jazz singing. Driven by her desire
         to grow and explore modern teaching methods, she pursued further
         education at the Institute for Vocal Advancement (IVA) in the USA and
         Modern Vocal Training (MVT) in Spain, where she deeply immersed herself
-        in the Speech Level Singing (SLS) teaching method. Inspired by newfound
+        in the Speech Level Singing (SLS) teaching method.<br /><br />Inspired by newfound
         knowledge and vocal approaches, Iskra established HighLight Singing
         Academy. Today, the academy is home to a team of 20 exceptional teachers
         who cultivate and share their passion for voice, singing, and teaching.
@@ -68,14 +68,13 @@ const About = () => {
         country&apos;s finest producers and artists over four exciting seasons. This
         experience not only expanded her professional network but also sharpened
         her vision of the qualities singers must develop to thrive in the
-        competitive music industry. In parallel to her role as a vocal
+        competitive music industry.<br /><br />In parallel to her role as a vocal
         pedagogue, Iskra continues to feed her soul as an active performer with
         various bands and engages in diverse musical projects. One of
         Iskra&apos;s most recent success story as a vocal coach is: her student
-        Jaklin Tarakchi, won The Voice of Bulgaria 2022. Her rich experience as
+        Jaklin Tarakchi, won The Voice of Bulgaria 2022.<br /><br />Her rich experience as
         both a teacher and a performer allows her to infuse her instruction with
         practical insights and real-world expertise.
-        <br />
         <br />
         <div className="about-info" ref={aboutMeRef}>
           <div>Owner of Highlight Singing Academy</div>
