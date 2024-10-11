@@ -12,15 +12,9 @@
   }
 }
 
-@media (min-width: 100px) and (max-width: 380px) {
+@media (min-width: 100px) and (max-width: 765px) {
   .activity-container {
     margin-top: 2rem;
-  }
-}
-
-@media (min-width: 381px) and (max-width: 765px) {
-  .activity-container {
-    margin-top: 1rem;
   }
 }
 

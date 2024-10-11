@@ -10,13 +10,15 @@
   }
 
   .about-description {
+    background-color: #0d1114;
+    color: $description-color;
+    border-radius: 15px;
     margin-top: 2rem;
-    padding-left: 24px;
-    padding-right: 24px;
+    padding: 1.1rem 24px;
     color: $description-color;
     font-size: 19px;
     line-height: 1.6;
-    text-align: center;
+    text-align: left;
 
     %common-text-styles {
       font-size: 19px;

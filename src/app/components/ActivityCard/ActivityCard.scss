@@ -20,7 +20,6 @@
     .activity-desc {
       margin-top: 2rem;
       text-align: left;
-      max-height: 250px;
       color: $description-color;
       font-size: 15px;
       padding: 10px;
@@ -28,7 +27,7 @@
     }
 
     .activity-logo img {
-      margin-top: 1rem;
+      margin-top: 1.5rem;
       position: relative;
       left: 8px;
       max-width: 190px;
@@ -74,7 +73,7 @@
       }
 
       .activity-logo img {
-        margin-top: 4rem;
+        margin-top: 2rem;
         max-width: 200px;
       }
     }

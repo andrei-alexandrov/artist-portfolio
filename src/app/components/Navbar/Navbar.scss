@@ -9,8 +9,9 @@
   top: 0;
   left: 0;
   right: 0;
-  background-color: $black-color;
   z-index: 99;
+  font-family: "Cormorant", sans-serif;
+  background-color: $navbar-background-color;
 
   .artist-special-name {
     position: relative;
@@ -45,7 +46,7 @@
     right: -300px;
     width: 250px;
     height: 100%;
-    background-color: $black-color;
+    background-color: $navbar-background-color;
     color: $main-color;
     padding: 30px;
     transition: right 0.4s ease-in-out;
@@ -64,7 +65,7 @@
           a {
             color: $main-color;
             text-decoration: none;
-            font-size: 18px;
+            font-size: 26px;
             font-weight: 500;
             transition: color 0.3s ease, transform 0.3s ease;
           }
@@ -80,13 +81,12 @@
       background: none;
       border: none;
       color: gray;
-      font-size: 30px;
+      font-size: 40px;
       cursor: pointer;
       margin-bottom: 20px;
       transition: transform 0.3s ease;
 
       &:hover {
-        transform: rotate(-90deg);
         filter: brightness(1.2);
         color: $main-color;
       }
@@ -171,7 +171,7 @@
           position: relative;
 
           a {
-            font-size: 19px;
+            font-size: 22px;
             color: $main-color;
 
             &:hover {
