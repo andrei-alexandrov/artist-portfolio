@@ -15,30 +15,12 @@
     color: $description-color;
     font-size: 19px;
     line-height: 1.6;
-    letter-spacing: 0.5px;
-    text-align: justify;
+    text-align: center;
 
     %common-text-styles {
       font-size: 19px;
       line-height: 1.6;
       letter-spacing: 0.5px;
-    }
-
-    .about-info {
-      margin-top: 3rem;
-
-      & div {
-        @extend %common-text-styles;
-        text-align: center;
-      }
-
-      div:nth-child(odd) {
-        color: $main-color;
-      }
-
-      div:nth-child(even) {
-        color: $description-color;
-      }
     }
   }
 }

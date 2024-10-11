@@ -11,7 +11,7 @@ import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import "./Inspirations.scss";
+import "./Gallery.scss";
 
 const Inspirations = () => {
   const { isOpen, imageSrc, openModal, closeModal } = useModal();
@@ -19,7 +19,7 @@ const Inspirations = () => {
   return (
     <div className="inspirations-container">
       <div id="inspirations">
-        <h1 className="portfolio-section-title">Gallery</h1>
+        <h1 className="portfolio-section-title">Галерия</h1>
 
         <Swiper
           effect={"coverflow"}

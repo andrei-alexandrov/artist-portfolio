@@ -19,11 +19,12 @@
 
     .activity-desc {
       margin-top: 2rem;
-      text-align: justify;
+      text-align: left;
       max-height: 250px;
       color: $description-color;
       font-size: 15px;
       padding: 10px;
+      text-align: center;
     }
 
     .activity-logo img {

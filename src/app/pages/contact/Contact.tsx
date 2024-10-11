@@ -49,14 +49,14 @@ const Contact = () => {
       <div className="contact-container">
         <Container fluid className="title-container">
           <br />
-          <div className="portfolio-section-title">Contact</div>
+          <div className="portfolio-section-title">Контакт</div>
           <Lottie style={{ width: "110px" }} animationData={connectMic} />
         </Container>
         <Container>
           <div className="contact-info">
             <div className="contact-details">
               <div className="contact-email">academy@highlight-singing.com</div>
-              <div className="contact-location">Sofia, Bulgaria</div>
+              <div className="contact-location">София, България</div>
               <div className="contact-icons">
                 <MediaIcons isBlackBackground={true} />
               </div>
@@ -66,17 +66,18 @@ const Contact = () => {
       </div>
       <Container>
         <p className="author-message">
-          &quot;I want to empower singers to unlock their unique vocal
-          potential, transforming passion into powerful emotional expression. At
-          HighLight Singing Academy, I lead a dedicated team to cultivate
-          technical skills, artistic confidence, and industry readiness. Through
-          modern teaching methods and real-world insights, I help students
-          discover their true voice. Whether in the studio or on stage, my goal
-          is to inspire growth and a lifelong love for singing. I am committed
-          to nurturing talent and helping each student shine.&quot; <br />
+          &quot;Искам да вдъхновя певците да разгърнат своя вокален потенциал,
+          като превърнат страстта си в силно емоционално изразяване. Във
+          &quot;Вокална Академия Хайлайт&quot; ръководя отдаден екип, който
+          развива технически умения, артистично самочувствие и готовност за
+          музикалната индустрия. Чрез съвременни методи на обучение и real-world
+          insights, помагам на учениците да открият истинския си глас.
+          Независимо дали в студиото или на сцената, моята цел е да вдъхновявам
+          развитие и дълготрайна любов към пеенето. Аз съм отдаденa на това да
+          развивам таланти и да помагам на всеки ученик да блести.&quot; <br />
           <br />
           <img src={contactMic.src} height={80} />
-          <span className="author">Iskra Milkova Angelova</span>
+          <span className="author">Искра Милкова Ангелова</span>
         </p>
       </Container>
       <ScrollToTopBtn />

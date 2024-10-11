@@ -4,7 +4,7 @@
 
 @font-face {
   font-family: "Gumela";
-  src: url("../../public/fonts/Gumela.ttf") format("truetype");
+  src: url("../../public/fonts/Jost-VariableFont_wght.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
@@ -26,7 +26,11 @@ body {
   overflow-x: hidden;
   // background-color: #0D1114; //2nd place
   // background-color: #0c1015; //3rd place
-  background-color: #080a0c; //1st place
+  // background-color: $background-color;
+  // background-color: #0e0e0e; //1st place
+  // background-color: #080b0d; //1st place
+  background-color: #080a0c;
+
   font-family: "Gumela", sans-serif;
   scroll-behavior: smooth;
 }

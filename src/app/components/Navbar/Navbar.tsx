@@ -62,7 +62,7 @@ const Navbar = () => {
                     duration={50}
                     offset={-120}
                   >
-                    Home
+                    Начало
                   </Link>
                 </li>
 
@@ -74,7 +74,7 @@ const Navbar = () => {
                     duration={50}
                     offset={-95}
                   >
-                    About me
+                    За мен
                   </Link>
                 </li>
 
@@ -86,7 +86,7 @@ const Navbar = () => {
                     duration={50}
                     offset={-95}
                   >
-                    Activities
+                    Активности
                   </Link>
                 </li>
 
@@ -98,7 +98,7 @@ const Navbar = () => {
                     duration={50}
                     offset={-95}
                   >
-                    Courses
+                    Курсове
                   </Link>
                 </li>
 
@@ -110,7 +110,7 @@ const Navbar = () => {
                     duration={50}
                     offset={-95}
                   >
-                    Gallery
+                    Галерия
                   </Link>
                 </li>
 
@@ -122,7 +122,7 @@ const Navbar = () => {
                     duration={50}
                     offset={-95}
                   >
-                    Certificates
+                    Сертификати
                   </Link>
                 </li>
 
@@ -134,7 +134,7 @@ const Navbar = () => {
                     duration={50}
                     offset={-70}
                   >
-                    Contact
+                    Контакт
                   </Link>
                 </li>
               </ul>
@@ -164,7 +164,7 @@ const Navbar = () => {
                 offset={-95}
                 onClick={handleToggleSidebar}
               >
-                Home
+                Начало
               </Link>
             </li>
 
@@ -177,7 +177,7 @@ const Navbar = () => {
                 offset={-95}
                 onClick={handleToggleSidebar}
               >
-                About me
+                За мен
               </Link>
             </li>
 
@@ -190,7 +190,7 @@ const Navbar = () => {
                 offset={-95}
                 onClick={handleToggleSidebar}
               >
-                Activities
+                Активности
               </Link>
             </li>
 
@@ -202,7 +202,7 @@ const Navbar = () => {
                 duration={50}
                 offset={-95}
               >
-                Courses
+                Курсове
               </Link>
             </li>
 
@@ -215,7 +215,7 @@ const Navbar = () => {
                 offset={-95}
                 onClick={handleToggleSidebar}
               >
-                Gallery
+                Галерия
               </Link>
             </li>
 
@@ -228,7 +228,7 @@ const Navbar = () => {
                 offset={-95}
                 onClick={handleToggleSidebar}
               >
-                Certificates
+                Сертификати
               </Link>
             </li>
 
@@ -241,7 +241,7 @@ const Navbar = () => {
                 offset={-70}
                 onClick={handleToggleSidebar}
               >
-                Contact
+                Контакт
               </Link>
             </li>
           </ul>

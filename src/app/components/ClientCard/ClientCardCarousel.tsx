@@ -1,16 +1,17 @@
 import { useRef, useState } from "react";
 import Image from "next/image";
-
 import "./ClientCardCarousel.scss";
 
-const ClientCardCarousel = ({people, title}: any) => {
+const ClientCardCarousel = ({ data, title }: any) => {
   const boxRef = useRef<HTMLDivElement>(null);
   const degrees = useRef<number>(0);
   const [startX, setStartX] = useState<number | null>(null);
 
+  const rotationStep = 360 / data.length;
+
   const rotateBox = (direction: "prev" | "next") => {
     if (boxRef.current) {
-      degrees.current += direction === "prev" ? 45 : -45;
+      degrees.current += direction === "prev" ? rotationStep : -rotationStep;
       boxRef.current.style.transform = `perspective(1000px) rotateY(${degrees.current}deg)`;
     }
   };
@@ -52,18 +53,18 @@ const ClientCardCarousel = ({people, title}: any) => {
       >
         <div
           className="clients-container"
-          style={{ "--total": people.length } as React.CSSProperties}
+          style={{ "--total": data.length } as React.CSSProperties}
           ref={boxRef}
         >
-          {people.map((image: any, index : any) => (
+          {data.map((userData: any, index: any) => (
             <span key={index} style={{ "--i": index + 1 } as React.CSSProperties}>
               <Image
                 className="carousel-image"
-                src={image.src}
+                src={userData.src}
                 alt={`Image ${index + 1}`}
                 fill
               />
-              <div className="image-name">{image.name}</div>
+              <div className="image-name">{userData.name}</div>
             </span>
           ))}
         </div>
