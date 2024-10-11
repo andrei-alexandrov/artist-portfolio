@@ -4,6 +4,7 @@
 
 .about-container {
   margin-top: 3rem;
+
   .portfolio-section-title {
     @include portfolio-section-title();
   }
@@ -25,9 +26,21 @@
   }
 }
 
+@media (min-width: 492px) {
+  .about-container {
+    .about-description {
+      text-align: justify;
+    }
+  }
+}
+
 @media (min-width: 1200px) {
   .about-container {
     margin-top: 5rem;
+
+    .about-description {
+      text-align: justify;
+    }
   }
 }
 
