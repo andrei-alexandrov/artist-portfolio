@@ -2,28 +2,32 @@
 @import "../../../fonts";
 @import "../../../mixins";
 
-.about-container {
-  margin-top: 3rem;
+.container {
+  padding-left: 0;
+  padding-right: 0;
 
-  .portfolio-section-title {
-    @include portfolio-section-title();
-  }
+  .about-container {
+    margin-top: 3rem;
 
-  .about-description {
-    background-color: #0d1114;
-    color: $description-color;
-    border-radius: 15px;
-    margin-top: 2rem;
-    padding: 1.1rem 24px;
-    color: $description-color;
-    font-size: 19px;
-    line-height: 1.6;
-    text-align: left;
+    .portfolio-section-title {
+      @include portfolio-section-title();
+    }
 
-    %common-text-styles {
-      font-size: 19px;
+    .about-description {
+      background-color: #0d1114;
+      color: $description-color;
+      border-radius: 15px;
+      margin-top: 2rem;
+      padding: 1.1rem 24px;
+      font-size: 17px;
       line-height: 1.6;
-      letter-spacing: 0.5px;
+      text-align: left;
+
+      // %common-text-styles {
+      //   font-size: 19px;
+      //   line-height: 1.5;
+      //   letter-spacing: 0.5px;
+      // }
     }
   }
 }
@@ -32,6 +36,7 @@
   .about-container {
     .about-description {
       text-align: justify;
+      border-radius: 15px;
     }
   }
 }

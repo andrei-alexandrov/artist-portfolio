@@ -18,7 +18,7 @@ const Modal = ({ isOpen, onClose, imageSrc }: ModalProps) => {
           style={{ objectFit: "contain" }}
         />
         <button className="modal-close" onClick={onClose}>
-          <span style={{ position: "relative", bottom: "2px" }}>&times;</span>
+          <span>&times;</span>
         </button>
       </div>
     </div>

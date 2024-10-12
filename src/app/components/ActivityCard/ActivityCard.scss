@@ -56,8 +56,8 @@
 
 @media (min-width: 392px) and (max-width: 767px) {
   .activity-card {
-    width: 90%;
-    max-width: 400px;
+    width: 100%;
+    // max-width: 400px;
     height: auto;
     // gap: 1rem;
     // padding-left: 15px;
@@ -69,7 +69,7 @@
       }
 
       .activity-desc {
-        font-size: 18px;
+        font-size: 17px;
       }
 
       .activity-logo img {
@@ -79,7 +79,7 @@
     }
 
     .activity-video {
-      padding: 5px;
+      // padding: 5px;
     }
 
     .activity-image {
@@ -134,7 +134,7 @@
         text-align: justify;
         max-height: 200px;
         color: $description-color;
-        font-size: 19px;
+        font-size: 18px;
       }
     }
 
