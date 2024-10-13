@@ -92,7 +92,7 @@ const Navbar = () => {
 
                 <li>
                   <Link
-                    to="teachings"
+                    to="courses"
                     spy={true}
                     smooth={true}
                     duration={50}
@@ -197,7 +197,7 @@ const Navbar = () => {
 
             <li>
               <Link
-                to="teachings"
+                to="courses"
                 spy={true}
                 smooth={true}
                 duration={50}

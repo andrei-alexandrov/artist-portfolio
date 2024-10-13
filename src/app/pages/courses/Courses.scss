@@ -1,8 +1,56 @@
+@import "../../../variables";
 @import "../../../mixins";
 
-.teachings-container {
-  .teachings-title {
-    margin-top: 1rem;
-    @include portfolio-section-title();
+.courses-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  @include portfolio-section-title();
+}
+
+.card-container {
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.card {
+  background: #0D1114;
+  border-radius: 25px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 100%;
+  max-width: 500px;
+  box-sizing: border-box;
+  text-align: center;
+
+  video {
+    width: 100%;
+    border-radius: 15px;
+  }
+
+  h2 {
+    color: $main-color;
+    font-size: 19px;
+    margin: 18px 0;
+  }
+
+  p {
+    color: $description-color;
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 768px) {
+  .card {
+    width: 45%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .card {
+    width: 30%;
   }
 }

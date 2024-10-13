@@ -13,7 +13,7 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import "./Gallery.scss";
 
-const Inspirations = () => {
+const Gallery = () => {
   const { isOpen, imageSrc, openModal, closeModal } = useModal();
 
   return (
@@ -64,4 +64,4 @@ const Inspirations = () => {
   );
 };
 
-export default Inspirations;
+export default Gallery;

@@ -1,4 +1,5 @@
 "use client";
+
 import { useState } from "react";
 import activityData from "./activityData";
 import Image from "next/image";

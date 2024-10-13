@@ -2,8 +2,8 @@ import { Container, Row, Col } from "react-bootstrap";
 import Intro from "./pages/intro/Intro";
 import About from "./pages/about/About";
 import Activities from "./pages/activities/Activities";
-import Teachings from "./pages/courses/Courses";
-import Inspirations from "./pages/gallery/Gallery";
+import Gallery from "./pages/gallery/Gallery";
+import Courses from "./pages/courses/Courses";
 import Certificates from "./pages/certificates/Certificates";
 import Contact from "./pages/contact/Contact";
 
@@ -27,13 +27,13 @@ export default function Home() {
 
         <Row>
           <Col>
-            <Teachings />
+            <Courses />
           </Col>
         </Row>
 
         <Row>
           <Col>
-            <Inspirations />
+            <Gallery />
           </Col>
         </Row>
 
