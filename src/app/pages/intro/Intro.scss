@@ -84,7 +84,7 @@ section {
       }
 
       %common-text-styles {
-        font-size: 18px;
+        font-size: 16px;
         line-height: 1.7;
         letter-spacing: 0.5px;
       }
@@ -139,6 +139,27 @@ section {
       left: 8px;
     }
   }
+
+  .blur-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .blur {
+      position: absolute;
+      width: 10rem;
+      height: 2rem;
+      border-radius: 50%;
+      background: $main-color;
+      background: #00DBCD;
+      background: #08b208;
+      z-index: 1000;
+      // top: 90%;
+      // left: 42%;
+      filter: blur(89px);
+    }
+  }
+
 }
 
 @media (min-width: 768px) {

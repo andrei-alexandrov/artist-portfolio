@@ -4,7 +4,8 @@
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-  border-radius: 25px;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
   margin: 40px 15px;
   background-color: #0d1114;
 
@@ -27,7 +28,7 @@
     }
 
     .activity-logo img {
-      margin-top: 1.5rem;
+      // margin-top: 1.5rem;
       position: relative;
       left: 8px;
       max-width: 190px;
@@ -69,17 +70,13 @@
       }
 
       .activity-desc {
-        font-size: 17px;
+        font-size: 16px;
       }
 
       .activity-logo img {
         margin-top: 2rem;
         max-width: 200px;
       }
-    }
-
-    .activity-video {
-      // padding: 5px;
     }
 
     .activity-image {
@@ -114,8 +111,7 @@
     margin-top: 2rem;
     padding: 2rem;
     border-radius: 25px;
-    gap: 3rem;
-    // border: 1px solid darken($main-color, 35%);
+    gap: 2rem;
 
     .card-content-wrapper {
       order: 1 !important;
@@ -123,24 +119,26 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      gap: 1rem;
+      gap: 10px;
       text-align: center;
 
       .activity-title {
-        font-size: 1.9rem;
+        font-size: 1.8rem;
       }
 
       .activity-desc {
         text-align: justify;
-        max-height: 200px;
         color: $description-color;
-        font-size: 18px;
+        font-size: 16px;
+        line-height: 1.6;
       }
     }
 
     .card-content-wrapper,
     .activity-image {
       padding: 1rem;
+      position: relative;
+      top: 3.5rem;
     }
 
     &:nth-child(odd) {
@@ -156,7 +154,7 @@
       border-radius: 35px;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
       max-width: 35rem;
-      // border: 1px solid darken($main-color, 40%);
+      border: 1px solid darken($main-color, 40%);
 
       &:hover {
         transform: scale(1) rotate(1deg);

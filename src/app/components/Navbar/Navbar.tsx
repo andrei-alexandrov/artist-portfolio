@@ -86,7 +86,7 @@ const Navbar = () => {
                     duration={50}
                     offset={-95}
                   >
-                    Активности
+                    Дейности
                   </Link>
                 </li>
 
@@ -188,9 +188,10 @@ const Navbar = () => {
                 smooth={true}
                 duration={50}
                 offset={-95}
+
                 onClick={handleToggleSidebar}
               >
-                Активности
+                Дейности
               </Link>
             </li>
 

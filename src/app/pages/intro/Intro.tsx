@@ -46,7 +46,7 @@ const Intro = () => {
             <div>Основател на &quot;Highlight Singing Academy&quot;</div>
             <div>Председател на Сдружение &quot;Музикалните Таланти на България&quot;</div>
             <div>Творчески директор на певчески конкурс &quot;NEXT ARTIST&quot;</div>
-            <div>Вокален педагог в X-Фактор България</div>
+            {/* <div>Вокален педагог в X-Фактор България</div> */}
             <div>
               Сертифициран вокален педагог от IVA (Институт за вокално развитие) - САЩ
             </div>
@@ -86,12 +86,24 @@ const Intro = () => {
           />
         </div>
       </div>
+      <div className="blur-container">
+        <div className="blur"></div>
+      </div>
+      {/* <div
+          className="blur"
+          style={{
+            background: "#C1F5FF",
+            top: "17rem",
+            width: "21rem",
+            height: "11rem",
+            left: "-9rem",
+          }}
+        ></div> */}
     </section>
   );
 };
 
 export default Intro;
-
 
 // "use client";
 

@@ -7,17 +7,18 @@ import mona from "../../assets/people/mona.jpg";
 import sanq from "../../assets/people/inspirations/sanq.jpg";
 import luboKirov from "../../assets/people/inspirations/lubo-kirov.jpg";
 import doni from "../../assets/people/inspirations/doni.jpeg";
-import emptyImage from "../../assets/people/empty-image.jpg"
+import sesil from "../../assets/people/sabri.jpg"
 
 export const clientsData = [
+ 
   { src: jaklinTarakci, name: "Жаклин Таракчи" },
   { src: pollyaIvanova, name: "Поля Иванова" },
   { src: daraYotova, name: "Дара Йотова" },
   { src: hrisi, name: "Хриси" },
   { src: mona, name: "Мона" },
-  { src: sanq, name: "Станислава Армутлиева" },
   { src: luboKirov, name: "Любо Киров" },
-  { src: mihaelaFileva, name: "Михаела Филева" },
   { src: doni, name: "Дони" },
-  { src: emptyImage, name: "Person X" },
+  { src: sesil, name: "Сесил Сабри" },
+  { src: sanq, name: "Станислава Армутлиева" },
+  { src: mihaelaFileva, name: "Михаела Филева" },
 ];
