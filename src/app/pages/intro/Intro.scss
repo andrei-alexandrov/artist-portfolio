@@ -145,19 +145,19 @@ section {
     justify-content: center;
     align-items: center;
 
-    .blur {
-      position: absolute;
-      width: 10rem;
-      height: 2rem;
-      border-radius: 50%;
-      background: $main-color;
-      background: #00DBCD;
-      background: #08b208;
-      z-index: 1000;
-      // top: 90%;
-      // left: 42%;
-      filter: blur(89px);
-    }
+    // .blur {
+    //   position: absolute;
+    //   width: 10rem;
+    //   height: 2rem;
+    //   border-radius: 50%;
+    //   background: $main-color;
+    //   background: #00DBCD;
+    //   background: #08b208;
+    //   z-index: 1000;
+    //   // top: 90%;
+    //   // left: 42%;
+    //   filter: blur(89px);
+    // }
   }
 
 }

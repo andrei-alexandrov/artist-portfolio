@@ -10,9 +10,11 @@ const Courses = () => {
       <div className="card-container">
         {coursesData.map((content: any, index: number) => (
           <div key={index} className="card">
-            <video controls width="100%" poster={content.coverPhoto}>
-              <source src={content.videoUrl} type="video/mp4" />
-              Your browser does not support the video tag.
+            <video
+              src={content.videoUrl}
+              controls
+              playsInline
+              poster={content.coverPhoto}>
             </video>
             <h2>{content.title}</h2>
             <p>{content.description1}</p>

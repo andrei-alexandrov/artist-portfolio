@@ -87,7 +87,7 @@ const Intro = () => {
         </div>
       </div>
       <div className="blur-container">
-        <div className="blur"></div>
+        {/* <div className="blur"></div> */}
       </div>
       {/* <div
           className="blur"
