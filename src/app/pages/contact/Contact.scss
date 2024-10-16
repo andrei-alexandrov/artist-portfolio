@@ -21,15 +21,15 @@
   }
 
   .contact-info {
-    margin-top: 3rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    position: relative;
-    bottom: 25px;
 
     .contact-details {
+
       .contact-email,
       .contact-location {
         margin-bottom: 0.5rem;
@@ -59,23 +59,28 @@
   }
 }
 
-@media (min-width: 576px) {
-}
-@media (min-width: 768px) {
-}
-@media (min-width: 992px) {
-}
+@media (min-width: 576px) {}
+
+@media (min-width: 768px) {}
+
+@media (min-width: 992px) {}
 
 @media (min-width: 1200px) {
   .contact-container {
     padding: 40px;
     background-position: 30% 26%;
 
+    .title-container {
+      position: relative;
+      bottom: 0.5rem;
+    }
+
     .contact-info {
       .contact-details {
+
         .contact-email,
         .contact-location {
-          font-size: 24px;
+          font-size: 25px;
         }
       }
     }
