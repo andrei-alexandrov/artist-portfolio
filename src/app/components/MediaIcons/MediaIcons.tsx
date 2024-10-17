@@ -73,8 +73,8 @@ const MediaIcons = ({ isBlackBackground }: MediaProps) => {
               className="spotify-logo"
               src={spotifyLogo}
               alt="spotify"
-              height={45.5}
-              width={45.5}
+              height={44.2}
+              width={44.2}
               sizes="(max-width: 768px) 24px, (max-width: 1200px) 30px, 40px"
             />
           </div>
