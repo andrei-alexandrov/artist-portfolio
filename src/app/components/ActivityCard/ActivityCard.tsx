@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useModal } from "@/app/customHooks/useModal";
 import activityData from "./activityData";
 import Image from "next/image";
 import Link from "next/link";
@@ -10,18 +10,7 @@ import Modal from "../Modal/Modal";
 import "./ActivityCard.scss";
 
 const ActivityCard = () => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const [selectedImage, setSelectedImage] = useState<string | null>(null);
-
-  const handleImageClick = (imgSrc: string) => {
-    setSelectedImage(imgSrc);
-    setIsModalOpen(true);
-  };
-
-  const closeModal = () => {
-    setIsModalOpen(false);
-    setSelectedImage(null);
-  };
+  const { isOpen, imageSrc, openModal, closeModal } = useModal();
 
   return (
     <>
@@ -65,7 +54,7 @@ const ActivityCard = () => {
               alt={`${item.title}`}
               fill
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-              onClick={() => handleImageClick(item.img)}
+              onClick={() => openModal(item.img)}
               style={{ cursor: "pointer" }}
             />
           )}
@@ -73,9 +62,9 @@ const ActivityCard = () => {
       ))}
 
       <Modal
-        isOpen={isModalOpen}
+        isOpen={isOpen}
         onClose={closeModal}
-        imageSrc={selectedImage}
+        imageSrc={imageSrc}
       />
     </>
   );
