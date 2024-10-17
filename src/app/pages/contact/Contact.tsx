@@ -1,7 +1,10 @@
 "use client";
 
+import { Container } from "react-bootstrap";
 import dynamic from "next/dynamic";
-import contactMic from "../../assets/contact-footer-mic.svg";
+import contactMic from "../../assets/contact/contact-footer-mic.svg";
+import connectMic from "../../assets/lottie-animations/connect-mic-2.json";
+import MediaIcons from "@/app/components/MediaIcons/MediaIcons";
 
 import "./Contact.scss";
 
@@ -11,38 +14,9 @@ const ScrollToTopBtn = dynamic(
   { ssr: false }
 );
 
-import connectMic from "../../assets/lottie-animations/connect-mic-2.json";
-import MediaIcons from "@/app/components/MediaIcons/MediaIcons";
-import { Container } from "react-bootstrap";
+
 
 const Contact = () => {
-  // const form = useRef<HTMLFormElement | null>(null);
-  // const [done, setDone] = useState(false);
-
-  // const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
-  //   e.preventDefault();
-
-  //   if (form.current) {
-  //     emailjs
-  //       .sendForm(
-  //         "service_pn3oa7b",
-  //         "template_v26dk7m",
-  //         form.current,
-  //         "bqrB8XkJapv1svIZy"
-  //       )
-  //       .then((result) => {
-  //         console.log("Email sent:", result.text);
-  //         setDone(true);
-  //         form.current?.reset();
-  //         setTimeout(() => {
-  //           setDone(false);
-  //         }, 3000);
-  //       })
-  //       .catch((error) => {
-  //         console.log("Error sending email:", error.text);
-  //       });
-  //   }
-  // };
 
   return (
     <div id="contact">
@@ -55,7 +29,7 @@ const Contact = () => {
         <Container>
           <div className="contact-info">
             <div className="contact-details">
-              <div className="contact-email">academy@highlight-singing.com</div>
+              <div className="contact-email">iskra@highlight-singing.com</div>
               <div className="contact-location">София, България</div>
               <div className="contact-icons">
                 <MediaIcons isBlackBackground={true} />
@@ -73,9 +47,8 @@ const Contact = () => {
           музикалната индустрия. Чрез съвременни методи на обучение и практически опит, помагам на учениците да открият истинския си глас.
           Независимо дали в студиото или на сцената, моята цел е да вдъхновявам
           развитие и дълготрайна любов към пеенето. Аз съм отдаденa на това да
-          развивам таланти и да помагам на всеки ученик да блести.&quot; <br />
-          <br />
-          <img src={contactMic.src} height={80} />
+          развивам таланти и да помагам на всеки ученик да блести.&quot;
+          <img style={{marginTop: "1.5rem"}} src={contactMic.src} height={80} />
           <span className="author">Искра Милкова Ангелова</span>
         </p>
       </Container>

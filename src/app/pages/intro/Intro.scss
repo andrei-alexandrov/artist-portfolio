@@ -12,7 +12,7 @@ section {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url("../../assets/bright-star.svg");
+    background-image: url("../../assets/intro/bright-star.svg");
     background-size: contain;
     background-repeat: no-repeat;
     // background-position: center;
@@ -39,7 +39,8 @@ section {
 
     .starting-content {
       position: relative;
-      // padding: 20px;
+      padding-left: 13px;
+      padding-right: 13px;
       text-align: center;
       z-index: 2;
 
@@ -174,6 +175,7 @@ section {
       .starting-content {
         text-align: left;
         top: 2rem;
+        padding: 0;
 
         .artist-name {
           font-size: $large-font-below-576;
@@ -185,7 +187,7 @@ section {
 
         .artist-short-info {
           margin-top: 1.5rem;
-          font-size: 18px;
+          font-size: 22px;
         }
 
         .media-icons-container {

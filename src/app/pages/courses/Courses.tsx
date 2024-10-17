@@ -1,7 +1,5 @@
 import coursesData from "./coursesData";
-
 import "./Courses.scss";
-
 
 const Courses = () => {
   return (
@@ -12,13 +10,13 @@ const Courses = () => {
           <div key={index} className="card">
             <video
               src={content.videoUrl}
-              controls
+              controls={!!content.videoUrl}
               playsInline
               poster={content.coverPhoto}>
             </video>
             <h2>{content.title}</h2>
-            <p>{content.description1}</p>
-            <p>{content.description2}</p>
+            <p className="description1">{content.description1}</p>  {/* Use a specific class for description1 */}
+            <p className="description2">{content.description2}</p>  {/* Use a specific class for description2 */}
           </div>
         ))}
       </div>

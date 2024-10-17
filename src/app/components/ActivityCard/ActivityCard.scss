@@ -112,7 +112,7 @@
     padding: 2rem;
     border-radius: 25px;
     gap: 2rem;
-    // border: 1px solid darken($main-color, 40%);
+    border: 1px solid darken($main-color, 40%);
 
     .card-content-wrapper {
       order: 1 !important;
@@ -155,7 +155,7 @@
       border-radius: 35px;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
       max-width: 35rem;
-      border: 1px solid darken($main-color, 40%);
+      // border: 1px solid darken($main-color, 40%);
 
       &:hover {
         transform: scale(1) rotate(1deg);

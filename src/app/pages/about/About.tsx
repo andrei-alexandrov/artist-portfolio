@@ -2,8 +2,8 @@
 import React, { useLayoutEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { clientsData } from "../../components/ClientCard/clientsData";
-import ClientCardCarousel from "@/app/components/ClientCard/ClientCardCarousel";
+import { clientsData } from "../../components/ClientCard/carouselData";
+import ClientCardCarousel from "@/app/components/ClientCard/Carousel";
 
 import "./About.scss";
 
@@ -62,7 +62,7 @@ const About = () => {
         <br />Богатият ѝ опит като преподавател и изпълнител ѝ позволява да внесе в преподаването си практически прозрения и експертен опит от реалния свят.<br />
       </div>
         <div className="carousel-container">
-          <ClientCardCarousel data={clientsData} title="Заглавие? :)" />
+          <ClientCardCarousel data={clientsData} title="Галерия" />
         </div>
     </div>
   );

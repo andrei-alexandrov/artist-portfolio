@@ -6,7 +6,7 @@ import Image from "next/image";
 import { useModal } from "../../customHooks/useModal";
 import Modal from "@/app/components/Modal/Modal";
 
-import inspirationImages from "./inspirationImages";
+import inspirationImages from "./galleryImages";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";

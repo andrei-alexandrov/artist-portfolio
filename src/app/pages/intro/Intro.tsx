@@ -10,7 +10,8 @@ import MediaIcons from "@/app/components/MediaIcons/MediaIcons";
 import Button from "@/app/components/Button/Button";
 
 import highlightLogoWhite from "../../assets/icons/highlight-logo-light.png";
-import artistPhoto from "../../assets/photos/iskra-photo.jpg";
+import artistPhoto from "../../assets/intro/iskra-photo.jpg";
+
 import "./Intro.scss";
 
 const Intro = () => {
@@ -50,6 +51,7 @@ const Intro = () => {
             <div>
               Сертифициран вокален педагог от IVA (Институт за вокално развитие) - САЩ
             </div>
+            <div>Вокален педагог на Жаклин Таракчи, Гласът на България 2022</div>
           </div>
           <MediaIcons isBlackBackground={true} />
           <Link

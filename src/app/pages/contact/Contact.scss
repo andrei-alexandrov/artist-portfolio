@@ -4,10 +4,12 @@
 
 .contact-container {
   margin-bottom: 3rem;
-  background-image: url("../../assets/vec.jpg");
+  background-image: url("../../assets/contact/stars-bg.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  background-position: 42% 10% 5%;
+  padding-bottom: 2rem;
 
   .title-container {
     display: flex;
@@ -17,12 +19,14 @@
 
     .portfolio-section-title {
       @include portfolio-section-title();
+      position: relative;
+      bottom: 10px;
     }
   }
 
   .contact-info {
     margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1.2rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -63,12 +67,24 @@
 
 @media (min-width: 768px) {}
 
-@media (min-width: 992px) {}
+@media (min-width: 992px) {
+  .contact-container {
+    background-position: 29% 0%;
+
+    .title-container {
+      .portfolio-section-title {
+        @include portfolio-section-title();
+        bottom: 0;
+      }
+    }
+  }
+}
 
 @media (min-width: 1200px) {
   .contact-container {
-    padding: 40px;
-    background-position: 30% 26%;
+    padding-bottom: 2rem;
+    padding-top: 2rem;
+    background-position: 30% 19%;
 
     .title-container {
       position: relative;
