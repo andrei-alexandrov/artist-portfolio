@@ -1,0 +1,60 @@
+.toggle-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 2.5rem;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+label {
+    position: relative;
+    width: 46px;
+    height: 28px;
+    border-radius: 2rem;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    cursor: pointer;
+
+    &.bulgarian-flag {
+        background-image: url('../../assets/bg.png');
+    }
+
+    &.uk-flag {
+        background-image: url('../../assets/gb.svg');
+    }
+
+    .toggle-button {
+        width: 1.6rem;
+        height: 1.6rem;
+        border-radius: 50%;
+        position: absolute;
+        top: 0.08rem;
+        left: 0.25rem;
+        transition: left 0.3s ease, background-color 0.3s ease;
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(3px);
+        border: 1px solid rgba(255, 255, 255, 1);
+    }
+}
+
+input:checked+label .toggle-button {
+    left: calc(100% - 1.85rem);
+    background: rgba(255, 255, 255, 0);
+}
+
+
+@media (min-width: 992px) {
+    .toggle-wrapper {
+        margin-right: 0;
+
+        label {
+            width: 54px;
+            height: 30px;
+        }
+    }
+}

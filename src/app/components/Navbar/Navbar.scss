@@ -3,7 +3,7 @@
 
 .navbar-container {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   padding: 15px 25px;
   position: fixed;
   top: 0;
@@ -20,7 +20,6 @@
     font-size: 19px;
     color: $main-color;
     text-decoration: none;
-    width: 100%;
   }
 
   .hamburger-menu {
@@ -122,7 +121,7 @@
     }
   }
 
-  .translate-icon {
+  .translation-icon {
     position: relative;
     right: 36px;
     top: 3px;
@@ -147,7 +146,7 @@
       top: 14px;
     }
 
-    .translate-icon {
+    .translation-icon {
       top: 6px;
     }
   }
@@ -163,7 +162,7 @@
       top: 15px;
     }
 
-    .translate-icon {
+    .translation-icon {
       top: 7px;
     }
   }
@@ -174,6 +173,7 @@
     height: 70px;
     display: flex;
     align-items: center;
+    justify-content: space-between;
 
     .artist-special-name {
       position: relative;
@@ -192,7 +192,7 @@
         display: flex;
         padding: 0;
         margin: 0;
-        gap: 25px;
+        gap: 26px;
 
         li {
           position: relative;
@@ -233,29 +233,20 @@
       }
     }
 
-    .translate-icon {
+    .translation-icon {
       top: 0;
       left: 0;
-      margin-left: 1.5rem;
     }
   }
 }
 
-@media (min-width: 1300px) {
+@media (min-width: 1200px) {
   .navbar-container {
     .artist-special-name {
       font-size: 26px;
-      width: auto;
-      position: absolute;
-      left: 2rem;
-      top: 50%;
-      transform: translateY(-50%);
     }
 
     .navbar-content {
-      display: flex;
-      justify-content: center;
-
       .navbar-menu {
         gap: 30px;
 
@@ -265,12 +256,6 @@
           }
         }
       }
-    }
-
-    .translate-icon {
-      top: 0;
-      left: 0;
-      margin-left: 0;
     }
   }
 }

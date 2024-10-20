@@ -1,17 +1,19 @@
 "use client";
 
-import { useState, useRef, useEffect, useTransition } from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import { useState, useRef, useEffect } from "react";
+import { Col } from "react-bootstrap";
 import { Link as ScrollLink } from "react-scroll";
 import { FaLinkedin } from "react-icons/fa";
 import { FaInstagram, FaSquareFacebook } from "react-icons/fa6";
 import { useTranslations } from "use-intl";
 import { usePathname } from 'next/navigation';
+import Switcher from "../../components/Switcher/Switcher";
 import Image from "next/image";
 import Link from "next/link";
 
 import bgFlag from "../../assets/bg.png";
-import enFlag from "../../assets/gb.png";
+import enFlag from "../../assets/gb.svg";
+
 import "./Navbar.scss";
 
 const Navbar: React.FC = () => {
@@ -58,115 +60,104 @@ const Navbar: React.FC = () => {
         Iskra M. Angelova
       </ScrollLink>
 
-      <Container className="navbar-content">
-        <Row>
-          <Col className="d-none d-lg-flex justify-content-end">
-            <nav>
-              <ul className="navbar-menu">
-                <li>
-                  <ScrollLink
-                    to="intro"
-                    spy={true}
-                    smooth={true}
-                    duration={50}
-                    offset={-120}
-                  >
-                    {t("navbar.home")}
-                  </ScrollLink>
-                </li>
+      <div className="navbar-content">
+        <span className="d-none d-lg-flex justify-content-center">
+          <nav>
+            <ul className="navbar-menu">
+              <li>
+                <ScrollLink
+                  to="intro"
+                  spy={true}
+                  smooth={true}
+                  duration={50}
+                  offset={-120}
+                >
+                  {t("navbar.home")}
+                </ScrollLink>
+              </li>
 
-                <li>
-                  <ScrollLink
-                    to="about"
-                    spy={true}
-                    smooth={true}
-                    duration={50}
-                    offset={-95}
-                  >
-                    {t("navbar.about")}
-                  </ScrollLink>
-                </li>
+              <li>
+                <ScrollLink
+                  to="about"
+                  spy={true}
+                  smooth={true}
+                  duration={50}
+                  offset={-95}
+                >
+                  {t("navbar.about")}
+                </ScrollLink>
+              </li>
 
-                <li>
-                  <ScrollLink
-                    to="activities"
-                    spy={true}
-                    smooth={true}
-                    duration={50}
-                    offset={-95}
-                  >
-                    {t("navbar.activities")}
-                  </ScrollLink>
-                </li>
+              <li>
+                <ScrollLink
+                  to="activities"
+                  spy={true}
+                  smooth={true}
+                  duration={50}
+                  offset={-95}
+                >
+                  {t("navbar.activities")}
+                </ScrollLink>
+              </li>
 
-                <li>
-                  <ScrollLink
-                    to="courses"
-                    spy={true}
-                    smooth={true}
-                    duration={50}
-                    offset={-95}
-                  >
-                    {t("navbar.courses")}
-                  </ScrollLink>
-                </li>
+              <li>
+                <ScrollLink
+                  to="courses"
+                  spy={true}
+                  smooth={true}
+                  duration={50}
+                  offset={-95}
+                >
+                  {t("navbar.courses")}
+                </ScrollLink>
+              </li>
 
-                <li>
-                  <ScrollLink
-                    to="gallery"
-                    spy={true}
-                    smooth={true}
-                    duration={50}
-                    offset={-95}
-                  >
-                    {t("navbar.gallery")}
-                  </ScrollLink>
-                </li>
+              <li>
+                <ScrollLink
+                  to="gallery"
+                  spy={true}
+                  smooth={true}
+                  duration={50}
+                  offset={-95}
+                >
+                  {t("navbar.gallery")}
+                </ScrollLink>
+              </li>
 
-                <li>
-                  <ScrollLink
-                    to="certificates"
-                    spy={true}
-                    smooth={true}
-                    duration={50}
-                    offset={-95}
-                  >
-                    {t("navbar.certificates")}
-                  </ScrollLink>
-                </li>
+              <li>
+                <ScrollLink
+                  to="certificates"
+                  spy={true}
+                  smooth={true}
+                  duration={50}
+                  offset={-95}
+                >
+                  {t("navbar.certificates")}
+                </ScrollLink>
+              </li>
 
-                <li>
-                  <ScrollLink
-                    to="contact"
-                    spy={true}
-                    smooth={true}
-                    duration={50}
-                    offset={-70}
-                  >
-                    {t("navbar.contact")}
-                  </ScrollLink>
-                </li>
-              </ul>
-            </nav>
-          </Col>
-          <Col className="d-flex d-lg-none justify-content-end">
-            <button className="hamburger-menu" onClick={handleToggleSidebar}>
-              &#9776;
-            </button>
-          </Col>
-        </Row>
-      </Container>
+              <li>
+                <ScrollLink
+                  to="contact"
+                  spy={true}
+                  smooth={true}
+                  duration={50}
+                  offset={-70}
+                >
+                  {t("navbar.contact")}
+                </ScrollLink>
+              </li>
+            </ul>
+          </nav>
+        </span>
+        <Col className="d-lg-none">
+          <button className="hamburger-menu" onClick={handleToggleSidebar}>
+            &#9776;
+          </button>
+        </Col>
+      </div>
+      <Switcher />
 
-      {pathname.startsWith("/bg") ? (
-        <Link href="/en">
-          <Image className="translate-icon" src={enFlag} alt="English Flag" width={25} height={15} />
-        </Link>
-      ) : (
-        <Link href="/bg">
-          <Image className="translate-icon" src={bgFlag} alt="Bulgarian Flag" width={25} height={15} />
-        </Link>
-      )}
-      
       {/* Sidebar for Mobile */}
       <div ref={sidebarRef} className={`sidebar ${sidebarOpen ? "open" : ""}`}>
         <button className="close-btn" onClick={handleToggleSidebar}>
