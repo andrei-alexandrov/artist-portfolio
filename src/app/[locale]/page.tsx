@@ -1,11 +1,11 @@
 import { Container, Row, Col } from "react-bootstrap";
-import Intro from "./pages/intro/Intro";
-import About from "./pages/about/About";
-import Activities from "./pages/activities/Activities";
-import Gallery from "./pages/gallery/Gallery";
-import Courses from "./pages/courses/Courses";
-import Certificates from "./pages/certificates/Certificates";
-import Contact from "./pages/contact/Contact";
+import Intro from "../[locale]/pages/intro/Intro";
+import About from "../[locale]/pages/about/About";
+import Activities from "../[locale]/pages/activities/Activities";
+import Gallery from "../[locale]/pages/gallery/Gallery";
+import Courses from "../[locale]/pages/courses/Courses";
+import Certificates from "../[locale]/pages/certificates/Certificates";
+import Contact from "../[locale]/pages/contact/Contact";
 
 export default function Home() {
   return (

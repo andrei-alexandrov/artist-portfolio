@@ -2,15 +2,15 @@
 
 import { Container } from "react-bootstrap";
 import dynamic from "next/dynamic";
-import contactMic from "../../assets/contact/contact-footer-mic.svg";
-import connectMic from "../../assets/lottie-animations/connect-mic-2.json";
+import contactMic from "../../../assets/contact/contact-footer-mic.svg";
+import connectMic from "../../../assets/lottie-animations/connect-mic-2.json";
 import MediaIcons from "@/app/components/MediaIcons/MediaIcons";
 
 import "./Contact.scss";
 
 const Lottie = dynamic(() => import("lottie-react"), { ssr: false });
 const ScrollToTopBtn = dynamic(
-  () => import("../../components/ScrollToTopButton/ScrollToTopBtn"),
+  () => import("../../../components/ScrollToTopButton/ScrollToTopBtn"),
   { ssr: false }
 );
 

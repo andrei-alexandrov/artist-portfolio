@@ -4,13 +4,13 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import { Link } from "react-scroll";
-import Stars from "../../components/Stars/Stars"; //Temporary disabled
+import Stars from "../../../components/Stars/Stars"; //Temporary disabled
 import Image from "next/image";
 import MediaIcons from "@/app/components/MediaIcons/MediaIcons";
 import Button from "@/app/components/Button/Button";
 
-import highlightLogoWhite from "../../assets/icons/highlight-logo-light.png";
-import artistPhoto from "../../assets/intro/iskra-photo.jpg";
+import highlightLogoWhite from "../../../assets/icons/highlight-logo-light.png";
+import artistPhoto from "../../../assets/intro/iskra-photo.jpg";
 
 import "./Intro.scss";
 

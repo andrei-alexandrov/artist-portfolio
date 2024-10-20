@@ -121,6 +121,12 @@
       }
     }
   }
+
+  .translate-icon {
+    position: relative;
+    right: 36px;
+    top: 3px;
+  }
 }
 
 @media (min-width: 392px) {
@@ -136,13 +142,29 @@
     .artist-special-name {
       font-size: 26px;
     }
+
+    .hamburger-menu {
+      top: 14px;
+    }
+
+    .translate-icon {
+      top: 6px;
+    }
   }
 }
 
 @media (min-width: 768px) {
   .navbar-container {
     .artist-special-name {
-      font-size: 28px;
+      font-size: 26px;
+    }
+
+    .hamburger-menu {
+      top: 15px;
+    }
+
+    .translate-icon {
+      top: 7px;
     }
   }
 }
@@ -154,6 +176,10 @@
     align-items: center;
 
     .artist-special-name {
+      position: relative;
+      top: 0;
+      font-size: 22px;
+
       &:hover {
         filter: brightness(1.1);
         cursor: pointer;
@@ -166,14 +192,15 @@
         display: flex;
         padding: 0;
         margin: 0;
-        gap: 30px;
+        gap: 25px;
 
         li {
           position: relative;
 
           a {
-            font-size: 22px;
+            font-size: 20px;
             color: $main-color;
+
 
             &:hover {
               filter: brightness(1.1);
@@ -205,12 +232,19 @@
         }
       }
     }
+
+    .translate-icon {
+      top: 0;
+      left: 0;
+      margin-left: 1.5rem;
+    }
   }
 }
 
 @media (min-width: 1300px) {
   .navbar-container {
     .artist-special-name {
+      font-size: 26px;
       width: auto;
       position: absolute;
       left: 2rem;
@@ -219,9 +253,24 @@
     }
 
     .navbar-content {
-      flex-grow: 1;
       display: flex;
       justify-content: center;
+
+      .navbar-menu {
+        gap: 30px;
+
+        li {
+          a {
+            font-size: 22px;
+          }
+        }
+      }
+    }
+
+    .translate-icon {
+      top: 0;
+      left: 0;
+      margin-left: 0;
     }
   }
 }

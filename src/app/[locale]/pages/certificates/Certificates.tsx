@@ -1,11 +1,11 @@
 "use client";
 import Image from "next/image";
 import Modal from "@/app/components/Modal/Modal";
-import { useModal } from "../../customHooks/useModal";
+import { useModal } from "../../../customHooks/useModal";
 
-import certificateOne from "../../assets/certificates/1.jpg";
-import certificateTwo from "../../assets/certificates/2.jpg";
-import certificateThree from "../../assets/certificates/3.jpg";
+import certificateOne from "../../../assets/certificates/1.jpg";
+import certificateTwo from "../../../assets/certificates/2.jpg";
+import certificateThree from "../../../assets/certificates/3.jpg";
 
 import "./Certificates.scss";
 

@@ -3,7 +3,7 @@
 import { EffectCoverflow, Pagination, Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import Image from "next/image";
-import { useModal } from "../../customHooks/useModal";
+import { useModal } from "../../../customHooks/useModal";
 import Modal from "@/app/components/Modal/Modal";
 
 import inspirationImages from "./galleryImages";
@@ -18,7 +18,7 @@ const Gallery = () => {
 
   return (
     <div className="inspirations-container">
-      <div id="inspirations">
+      <div id="gallery">
         <h1 className="portfolio-section-title">Галерия</h1>
 
         <Swiper

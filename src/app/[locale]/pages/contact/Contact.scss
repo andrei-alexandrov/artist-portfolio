@@ -1,10 +1,10 @@
-@import "../../../variables";
-@import "../../../mixins";
-@import "../../../fonts";
+@import "../../../../variables";
+@import "../../../../mixins";
+@import "../../../../fonts";
 
 .contact-container {
   margin-bottom: 3rem;
-  background-image: url("../../assets/contact/stars-bg-two.png");
+  background-image: url("../../../assets/contact/stars-bg-two.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -65,7 +65,7 @@
 
 @media (min-width: 576px) {
   .contact-container {
-    background-image: url("../../assets/contact/stars-bg.png");
+    background-image: url("../../../assets/contact/stars-bg.png");
   }
 }
 

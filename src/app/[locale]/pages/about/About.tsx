@@ -2,7 +2,7 @@
 import React, { useLayoutEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { clientsData } from "../../components/ClientCard/carouselData";
+import { clientsData } from "../../../components/ClientCard/carouselData";
 import ClientCardCarousel from "@/app/components/ClientCard/Carousel";
 
 import "./About.scss";

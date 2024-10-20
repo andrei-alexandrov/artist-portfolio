@@ -1,0 +1,11 @@
+{
+    "navbar": {
+        "home": "Начало",
+        "about": "За\u00A0мен",
+        "activities": "Дейности",
+        "courses": "Курсове",
+        "gallery": "Галерия",
+        "certificates": "Сертификати",
+        "contact": "Контакт"
+    }
+}

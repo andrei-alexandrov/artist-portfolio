@@ -1,9 +1,9 @@
-@import "../../../mixins";
-@import "../../../variables";
-@import "../../../fonts";
+@import "../../../../mixins";
+@import "../../../../variables";
+@import "../../../../fonts";
 
 .c-container {
-  background-image: url("../../assets/certificates/sparkles.png");
+  background-image: url("../../../assets/certificates/sparkles.png");
   background-size: cover;
   background-position: bottom;
   background-repeat: no-repeat;

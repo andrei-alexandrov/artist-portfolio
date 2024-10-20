@@ -1,14 +1,23 @@
 "use client";
 
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect, useTransition } from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import { Link } from "react-scroll";
+import { Link as ScrollLink } from "react-scroll";
 import { FaLinkedin } from "react-icons/fa";
 import { FaInstagram, FaSquareFacebook } from "react-icons/fa6";
+import { useTranslations } from "use-intl";
+import { usePathname } from 'next/navigation';
+import Image from "next/image";
+import Link from "next/link";
 
+import bgFlag from "../../assets/bg.png";
+import enFlag from "../../assets/gb.png";
 import "./Navbar.scss";
 
-const Navbar = () => {
+const Navbar: React.FC = () => {
+  const t = useTranslations();
+  const pathname = usePathname();
+
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const sidebarRef = useRef<HTMLDivElement>(null);
 
@@ -38,7 +47,7 @@ const Navbar = () => {
 
   return (
     <div className="navbar-container">
-      <Link
+      <ScrollLink
         className="artist-special-name"
         to="intro"
         spy={true}
@@ -47,7 +56,7 @@ const Navbar = () => {
         offset={-160}
       >
         Iskra M. Angelova
-      </Link>
+      </ScrollLink>
 
       <Container className="navbar-content">
         <Row>
@@ -55,87 +64,87 @@ const Navbar = () => {
             <nav>
               <ul className="navbar-menu">
                 <li>
-                  <Link
+                  <ScrollLink
                     to="intro"
                     spy={true}
                     smooth={true}
                     duration={50}
                     offset={-120}
                   >
-                    Начало
-                  </Link>
+                    {t("navbar.home")}
+                  </ScrollLink>
                 </li>
 
                 <li>
-                  <Link
+                  <ScrollLink
                     to="about"
                     spy={true}
                     smooth={true}
                     duration={50}
                     offset={-95}
                   >
-                    За мен
-                  </Link>
+                    {t("navbar.about")}
+                  </ScrollLink>
                 </li>
 
                 <li>
-                  <Link
+                  <ScrollLink
                     to="activities"
                     spy={true}
                     smooth={true}
                     duration={50}
                     offset={-95}
                   >
-                    Дейности
-                  </Link>
+                    {t("navbar.activities")}
+                  </ScrollLink>
                 </li>
 
                 <li>
-                  <Link
+                  <ScrollLink
                     to="courses"
                     spy={true}
                     smooth={true}
                     duration={50}
                     offset={-95}
                   >
-                    Курсове
-                  </Link>
+                    {t("navbar.courses")}
+                  </ScrollLink>
                 </li>
 
                 <li>
-                  <Link
-                    to="inspirations"
+                  <ScrollLink
+                    to="gallery"
                     spy={true}
                     smooth={true}
                     duration={50}
                     offset={-95}
                   >
-                    Галерия
-                  </Link>
+                    {t("navbar.gallery")}
+                  </ScrollLink>
                 </li>
 
                 <li>
-                  <Link
+                  <ScrollLink
                     to="certificates"
                     spy={true}
                     smooth={true}
                     duration={50}
                     offset={-95}
                   >
-                    Сертификати
-                  </Link>
+                    {t("navbar.certificates")}
+                  </ScrollLink>
                 </li>
 
                 <li>
-                  <Link
+                  <ScrollLink
                     to="contact"
                     spy={true}
                     smooth={true}
                     duration={50}
                     offset={-70}
                   >
-                    Контакт
-                  </Link>
+                    {t("navbar.contact")}
+                  </ScrollLink>
                 </li>
               </ul>
             </nav>
@@ -148,6 +157,16 @@ const Navbar = () => {
         </Row>
       </Container>
 
+      {pathname.startsWith("/bg") ? (
+        <Link href="/en">
+          <Image className="translate-icon" src={enFlag} alt="English Flag" width={25} height={15} />
+        </Link>
+      ) : (
+        <Link href="/bg">
+          <Image className="translate-icon" src={bgFlag} alt="Bulgarian Flag" width={25} height={15} />
+        </Link>
+      )}
+      
       {/* Sidebar for Mobile */}
       <div ref={sidebarRef} className={`sidebar ${sidebarOpen ? "open" : ""}`}>
         <button className="close-btn" onClick={handleToggleSidebar}>
@@ -156,7 +175,7 @@ const Navbar = () => {
         <nav>
           <ul>
             <li>
-              <Link
+              <ScrollLink
                 to="intro"
                 spy={true}
                 smooth={true}
@@ -164,12 +183,12 @@ const Navbar = () => {
                 offset={-95}
                 onClick={handleToggleSidebar}
               >
-                Начало
-              </Link>
+                {t("navbar.home")}
+              </ScrollLink>
             </li>
 
             <li>
-              <Link
+              <ScrollLink
                 to="about"
                 spy={true}
                 smooth={true}
@@ -177,12 +196,12 @@ const Navbar = () => {
                 offset={-95}
                 onClick={handleToggleSidebar}
               >
-                За мен
-              </Link>
+                {t("navbar.about")}
+              </ScrollLink>
             </li>
 
             <li>
-              <Link
+              <ScrollLink
                 to="activities"
                 spy={true}
                 smooth={true}
@@ -191,37 +210,37 @@ const Navbar = () => {
 
                 onClick={handleToggleSidebar}
               >
-                Дейности
-              </Link>
+                {t("navbar.activities")}
+              </ScrollLink>
             </li>
 
             <li>
-              <Link
+              <ScrollLink
                 to="courses"
                 spy={true}
                 smooth={true}
                 duration={50}
                 offset={-95}
               >
-                Курсове
-              </Link>
+                {t("navbar.courses")}
+              </ScrollLink>
             </li>
 
             <li>
-              <Link
-                to="inspirations"
+              <ScrollLink
+                to="gallery"
                 spy={true}
                 smooth={true}
                 duration={50}
                 offset={-95}
                 onClick={handleToggleSidebar}
               >
-                Галерия
-              </Link>
+                {t("navbar.gallery")}
+              </ScrollLink>
             </li>
 
             <li>
-              <Link
+              <ScrollLink
                 to="certificates"
                 spy={true}
                 smooth={true}
@@ -229,12 +248,12 @@ const Navbar = () => {
                 offset={-95}
                 onClick={handleToggleSidebar}
               >
-                Сертификати
-              </Link>
+                {t("navbar.certificates")}
+              </ScrollLink>
             </li>
 
             <li>
-              <Link
+              <ScrollLink
                 to="contact"
                 spy={true}
                 smooth={true}
@@ -242,8 +261,8 @@ const Navbar = () => {
                 offset={-70}
                 onClick={handleToggleSidebar}
               >
-                Контакт
-              </Link>
+                {t("navbar.contact")}
+              </ScrollLink>
             </li>
           </ul>
         </nav>
