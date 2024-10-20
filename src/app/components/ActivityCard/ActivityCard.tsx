@@ -1,7 +1,8 @@
 "use client";
 
 import { useModal } from "@/app/customHooks/useModal";
-import activityData from "./activityData";
+import { getActivityData } from "./activityData";
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 import Link from "next/link";
 import Button from "../Button/Button";
@@ -10,7 +11,9 @@ import Modal from "../Modal/Modal";
 import "./ActivityCard.scss";
 
 const ActivityCard = () => {
+  const t = useTranslations();
   const { isOpen, imageSrc, openModal, closeModal } = useModal();
+  const activityData = getActivityData(t);
 
   return (
     <>
@@ -33,7 +36,7 @@ const ActivityCard = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Button>Към сайта</Button>
+                <Button>{t("activities.buttonText")}</Button>
               </Link>
             </div>
           </div>

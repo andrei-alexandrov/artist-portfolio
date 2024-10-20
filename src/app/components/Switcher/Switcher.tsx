@@ -33,7 +33,7 @@ export default function ToggleTheme() {
                 checked={isToggled}
                 onChange={handleToggle}
             />
-            <label htmlFor="flag-toggle" className={isToggled ? "bulgarian-flag" : "uk-flag"}>
+            <label htmlFor="flag-toggle" className={isToggled ? "uk-flag" : "bulgarian-flag"}>
                 {/* <div className="toggle-button" />  */}
             </label>
         </div>

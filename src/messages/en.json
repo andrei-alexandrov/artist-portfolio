@@ -8,7 +8,6 @@
         "certificates": "Certificates",
         "contact": "Contact"
     },
-
     "intro": {
         "artistName": "Iskra Milkova Angelova",
         "artistSlogan": "Highlight the way!",
@@ -16,9 +15,45 @@
         "artistInfoOne": "Owner of \"Highlight Singing Academy\"",
         "artistInfoTwo": "Chairman of Association \"The Musical Talents of Bulgaria\"",
         "artistInfoThree": "Creative director of \"NEXT ARTIST singing competition\"",
-        "artistInfoFour": "Vocal coach at X Factor Bulgaria",
+        "artistInfoFour": "Vocal coach at X-Factor Bulgaria",
         "artistInfoFive": "Certified vocal coach of IVA (Institute for Vocal Advancement) - USA",
-        "artistInfoSix": "Vocal coach of Jaklin Tarakci, The Voice of Bulgaria 2022",
+        "artistInfoSix": "Vocal coach of Jaklin Tarakci - The Voice of Bulgaria 2022",
         "introButtonText": "Contact"
+    },
+    "about": {
+        "title": "About me",
+        "description": "Iskra Milkova has been immersed in the world of music since early childhood. Graduating Art high school with a concentration in piano, she soon discovered that her true passion lay within the power of the human voice, with its unique ability to move people's hearts.\n\nThis passion led her to the National Academy of Music “Pancho Vladigerov”, where she earned her master's degree in pop and jazz singing. Driven by her desire to grow and explore modern teaching methods, she pursued further education at the Institute for Vocal Advancement (IVA) in the USA and Modern Vocal Training (MVT) in Spain, where she deeply immersed herself in the Speech Level Singing (SLS) teaching method.\n\nInspired by newfound knowledge and vocal approaches, Iskra established HighLight Singing Academy. Today, the academy is home to a team of 20 exceptional teachers who cultivate and share their passion for voice, singing, and teaching. In 2014, Iskra was invited to become a vocal coach of the popular TV show \"X Factor of Bulgaria.\" Here, she collaborated with some of the country's finest producers and artists over four exciting seasons. This experience not only expanded her professional network but also sharpened her vision of the qualities singers must develop to thrive in the competitive music industry.\n\nIn parallel to her role as a vocal pedagogue, Iskra continues to feed her soul as an active performer with various bands and engages in diverse musical projects. One of Iskra's most recent success stories as a vocal coach is her student Jaklin Tarakchi, who won The Voice of Bulgaria 2022.\n\nHer rich experience as both a teacher and a performer allows her to infuse her instruction with practical insights and real-world expertise.",
+        "galleryTitle": "Gallery"
+    },
+    "moments": {
+        "mihaelaFileva": "Mihaela Fileva",
+        "daraYotova": "Dara Yotova",
+        "jaklinTarakci": "Jaklin Tarakci",
+        "hrisi": "Hrisi",
+        "pollyaIvanova": "Polly Ivanova",
+        "mona": "Mona",
+        "sanq": "Stanislava Armutlieva",
+        "luboKirov": "Lubo Kirov",
+        "doni": "Doni",
+        "sesil": "Sesil Sabri"
+    },
+    "activities": {
+        "title": "Activities",
+        "highlightSinging": {
+            "title": "Highlight Singing Academy",
+            "description": "\"Highlight Singing Academy\" is Iskra's personal project, which she refers to as \"My first child.\" Highlight is the place where, together with her team, they uncover and develop the potential of their students, focusing not only on their vocal skills but also on their growth as well-rounded musical artists. Beyond being a place for musical education, \"Highlight Singing Academy\" is also a family—a community of people who share their love for singing in a spirit of collaboration and friendship.",
+            "buttonText": "Visit"
+        },
+        "musicTalents": {
+            "title": "Association \"Musical Talents of Bulgaria\"",
+            "description": "A voluntary organization founded by Iskra and part of her team, driven by the belief that Bulgarian children are exceptionally talented in the field of contemporary music and deserve support. The organization has dedicated its efforts and resources to discovering, developing, and supporting contemporary music and the new generation of musical artists in Bulgaria by providing them with opportunities for performance, training, recording, video production, and conditions for songwriting.",
+            "buttonText": "Visit"
+        },
+        "nextArtist": {
+            "title": "Next Artist",
+            "description": "A modern singing competition that provides a stage for talented young performers from Bulgaria and abroad. The goal of the competition is to give more children and young people, who aspire to become professional performing artists, the opportunity to reach a modern, professional stage, and to meet artists, producers, and people from the music industry from whom they can gain knowledge and experience.",
+            "buttonText": "Visit"
+        },
+        "buttonText": "Visit"
     }
 }
