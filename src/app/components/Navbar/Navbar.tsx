@@ -6,19 +6,12 @@ import { Link as ScrollLink } from "react-scroll";
 import { FaLinkedin } from "react-icons/fa";
 import { FaInstagram, FaSquareFacebook } from "react-icons/fa6";
 import { useTranslations } from "use-intl";
-import { usePathname } from 'next/navigation';
 import Switcher from "../../components/Switcher/Switcher";
-import Image from "next/image";
-import Link from "next/link";
-
-import bgFlag from "../../assets/bg.png";
-import enFlag from "../../assets/gb.svg";
 
 import "./Navbar.scss";
 
 const Navbar: React.FC = () => {
   const t = useTranslations();
-  const pathname = usePathname();
 
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const sidebarRef = useRef<HTMLDivElement>(null);

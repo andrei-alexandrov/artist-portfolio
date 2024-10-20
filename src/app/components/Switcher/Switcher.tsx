@@ -21,7 +21,6 @@ export default function ToggleTheme() {
     const handleToggle = () => {
         const newLocale = isToggled ? '/en' : '/bg';
         const newPath = pathname.replace(/(\/bg|\/en)/, newLocale);
-
         router.push(newPath);
         setIsToggled(!isToggled);
     };
@@ -35,7 +34,7 @@ export default function ToggleTheme() {
                 onChange={handleToggle}
             />
             <label htmlFor="flag-toggle" className={isToggled ? "bulgarian-flag" : "uk-flag"}>
-                {/* <div className="toggle-button" /> */}
+                {/* <div className="toggle-button" />  */}
             </label>
         </div>
     );

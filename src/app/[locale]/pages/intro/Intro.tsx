@@ -1,9 +1,9 @@
 "use client";
 
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useEffect, useLayoutEffect, useRef, useState } from "react";
+import { useEffect } from "react";
 import { gsap } from "gsap";
 import { Link } from "react-scroll";
+import { useTranslations } from "use-intl";
 import Stars from "../../../components/Stars/Stars"; //Temporary disabled
 import Image from "next/image";
 import MediaIcons from "@/app/components/MediaIcons/MediaIcons";
@@ -15,6 +15,8 @@ import artistPhoto from "../../../assets/intro/iskra-photo.jpg";
 import "./Intro.scss";
 
 const Intro = () => {
+  const t = useTranslations();
+
   useEffect(() => {
     const timelineTwo = gsap.timeline({ defaults: { duration: 1.7 } });
     timelineTwo.fromTo(
@@ -38,20 +40,20 @@ const Intro = () => {
       <div className="intro-content-wrapper">
         <div className="starting-content">
           <br />
-          <p className="artist-name">Искра Милкова Ангелова</p>
-          <p className="artist-slogan">&quot;Озаряваме пътя!&quot;</p>
+          <p className="artist-name">{t("intro.artistName")}</p>
+          <p className="artist-slogan">&quot;{t("intro.artistSlogan")}&quot;</p>
           <p className="artist-short-info">
-            Вокален педагог<br />
+            {t("intro.artistShortInfo")}<br />
           </p>
           <div className="artist-info">
-            <div>Основател на &quot;Highlight Singing Academy&quot;</div>
-            <div>Председател на Сдружение &quot;Музикалните Таланти на България&quot;</div>
-            <div>Творчески директор на певчески конкурс &quot;NEXT ARTIST&quot;</div>
-            <div>Вокален педагог в X-Фактор България</div>
+            <div>{t("intro.artistInfoOne")}</div>
+            <div>{t("intro.artistInfoTwo")}</div>
+            <div>{t("intro.artistInfoThree")}</div>
+            <div>{t("intro.artistInfoFour")}</div>
             <div>
-              Сертифициран вокален педагог от IVA (Институт за вокално развитие) - САЩ
+            {t("intro.artistInfoFive")}
             </div>
-            <div>Вокален педагог на Жаклин Таракчи, Гласът на България 2022</div>
+            <div>{t("intro.artistInfoSix")}</div>
           </div>
           <MediaIcons isBlackBackground={true} />
           <Link
@@ -62,7 +64,7 @@ const Intro = () => {
             duration={50}
             offset={-70}
           >
-            <Button>Контакт</Button>
+            <Button>{t("intro.introButtonText")}</Button>
           </Link>
         </div>
 
@@ -153,7 +155,7 @@ export default Intro;
 //           </p>
 //           <div className="artist-info">
 //             <div>Owner of Highlight Singing Academy</div>
-//             <div>Председател of Association &quot;The Musical Talents of Bulgaria&quot;</div>
+//             <div>Chairman of Association &quot;The Musical Talents of Bulgaria&quot;</div>
 //             <div>Vocal coach at X Factor Bulgaria</div>
 //             <div>Creative director of NEXT ARTIST singing competition</div>
 //             <div>

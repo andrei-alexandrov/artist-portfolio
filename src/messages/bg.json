@@ -7,5 +7,18 @@
         "gallery": "Галерия",
         "certificates": "Сертификати",
         "contact": "Контакт"
+    },
+
+    "intro": {
+        "artistName": "Искра Милкова Ангелова",
+        "artistSlogan": "Озаряваме пътя!",
+        "artistShortInfo": "Вокален педагог",
+        "artistInfoOne": "Основател на \"Highlight Singing Academy\"",
+        "artistInfoTwo": "Председател на Сдружение \"Музикалните Таланти на България\"",
+        "artistInfoThree": "Творчески директор на певчески конкурс \"NEXT ARTIST\"",
+        "artistInfoFour": "Вокален педагог в X-Фактор България",
+        "artistInfoFive": "Сертифициран вокален педагог от IVA (Институт за вокално развитие) - САЩ",
+        "artistInfoSix": "Вокален педагог на Жаклин Таракчи, Гласът на България 2022",
+        "introButtonText": "Контакт"
     }
 }

@@ -1,3 +1,5 @@
+@import "../../../variables";
+
 .toggle-wrapper {
     display: flex;
     align-items: center;
@@ -17,7 +19,7 @@ label {
     overflow: hidden;
     background-size: cover;
     background-position: center;
-    border: 2px solid rgba(255, 255, 255, 0.8);
+    border: 2px solid $description-color;
     cursor: pointer;
 
     &.bulgarian-flag {
@@ -38,7 +40,7 @@ label {
         transition: left 0.3s ease, background-color 0.3s ease;
         background: rgba(255, 255, 255, 0.1);
         backdrop-filter: blur(3px);
-        border: 1px solid rgba(255, 255, 255, 1);
+        border: 1px solid $main-color;
     }
 }
 
@@ -54,7 +56,7 @@ input:checked+label .toggle-button {
 
         label {
             width: 54px;
-            height: 30px;
+            height: 34px;
         }
     }
 }
