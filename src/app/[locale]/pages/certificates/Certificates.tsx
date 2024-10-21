@@ -1,7 +1,9 @@
 "use client";
+
+import { useModal } from "../../../customHooks/useModal";
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 import Modal from "@/app/components/Modal/Modal";
-import { useModal } from "../../../customHooks/useModal";
 
 import certificateOne from "../../../assets/certificates/1.jpg";
 import certificateTwo from "../../../assets/certificates/2.jpg";
@@ -10,11 +12,12 @@ import certificateThree from "../../../assets/certificates/3.jpg";
 import "./Certificates.scss";
 
 const Certificates = () => {
+  const t = useTranslations();
   const { isOpen, imageSrc, openModal, closeModal } = useModal();
 
   return (
     <div className="c-container" id="certificates">
-      <div className="portfolio-section-title">Сертификати</div>
+      <div className="portfolio-section-title">{t("certificates.title")}</div>
       <div className="certificates-container">
         <Image
           src={certificateOne}

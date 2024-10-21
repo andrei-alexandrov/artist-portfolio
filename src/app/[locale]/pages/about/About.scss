@@ -47,12 +47,18 @@
 @media (min-width: 1200px) {
   .about-container {
     margin-top: 5rem;
+
+    .about-description {
+      font-size: 17px !important;
+    }
   }
 }
 
 @media (min-width: 1600px) {
   .about-container {
     .about-description {
+
+
       .carousel-container {
         flex-direction: row;
         gap: 40rem;

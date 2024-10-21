@@ -55,5 +55,36 @@
             "buttonText": "Visit"
         },
         "buttonText": "Visit"
+    },
+    "courses": {
+        "title": "Courses",
+        "coursesCardOne": {
+            "title": "Introduction to Vocal Technique",
+            "description": "For more information, send a message to iskra@highlight-singing.com"
+        },
+        "coursesCardTwo": {
+            "title": "Online course \"ME, THE ARTIST\"",
+            "description": "For more information, send a message to iskra@highlight-singing.com"
+        },
+        "coursesCardThree": {
+            "title": "Online public speaking course \"Master your voice\"",
+            "description": "For more information, send a message to iskra@highlight-singing.com"
+        }
+    },
+    "gallery": {
+        "title": "Gallery"
+    },
+    "certificates": {
+        "title": "Certificates"
+    },
+    "contact": {
+        "title": "Contact",
+        "location": "Sofia, Bulgaria",
+        "authorMessage": "\"I want to empower singers to unlock their unique vocal potential, transforming passion into powerful emotional expression. At \"HighLight Singing Academy\", I lead a dedicated team to cultivate technical skills, artistic confidence, and industry readiness. Through modern teaching methods and real-world insights, I help students discover their true voice. Whether in the studio or on stage, my goal is to inspire growth and a lifelong love for singing. I am committed to nurturing talent and helping each student shine.\"",
+        "authorName": "Iskra Milkova Angelova"
+    },
+    "footer": {
+        "client": "Iskra Milkova Angelova 2024 ©",
+        "developer": "Website created by andrei.alxv@gmail.com"
     }
 }

@@ -2,6 +2,7 @@
 @import "../../../../mixins";
 
 .courses-container {
+  margin-top: 3rem;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -54,8 +55,11 @@
 }
 
 @media (min-width: 768px) {
-  .card-container {
+  .courses-container {
+    margin-top: 4rem;
+  }
 
+  .card-container {
     .card {
       width: 45%;
       border-radius: 25px;

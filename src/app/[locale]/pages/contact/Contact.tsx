@@ -1,6 +1,7 @@
 "use client";
 
 import { Container } from "react-bootstrap";
+import { useTranslations } from "next-intl";
 import dynamic from "next/dynamic";
 import contactMic from "../../../assets/contact/contact-footer-mic.svg";
 import connectMic from "../../../assets/lottie-animations/connect-mic-2.json";
@@ -17,20 +18,21 @@ const ScrollToTopBtn = dynamic(
 
 
 const Contact = () => {
+  const t = useTranslations();
 
   return (
     <div id="contact">
       <div className="contact-container">
         <Container fluid className="title-container">
           <br />
-          <div className="portfolio-section-title">Контакт</div>
+          <div className="portfolio-section-title">{t("contact.title")}</div>
           <Lottie style={{ width: "110px" }} animationData={connectMic} />
         </Container>
         <Container>
           <div className="contact-info">
             <div className="contact-details">
               <div className="contact-email">iskra@highlight-singing.com</div>
-              <div className="contact-location">София, България</div>
+              <div className="contact-location">{t("contact.location")}</div>
               <div className="contact-icons">
                 <MediaIcons isBlackBackground={true} />
               </div>
@@ -40,16 +42,9 @@ const Contact = () => {
       </div>
       <Container>
         <p className="author-message">
-          &quot;Искам да вдъхновя певците да разгърнат своя вокален потенциал,
-          като превърнат страстта си в силно емоционално изразяване. Във
-          &quot;Вокална Академия Хайлайт&quot; ръководя отдаден екип, който
-          развива технически умения, артистично самочувствие и готовност за
-          музикалната индустрия. Чрез съвременни методи на обучение и практически опит, помагам на учениците да открият истинския си глас.
-          Независимо дали в студиото или на сцената, моята цел е да вдъхновявам
-          развитие и дълготрайна любов към пеенето. Аз съм отдаденa на това да
-          развивам таланти и да помагам на всеки ученик да блести.&quot;
-          <img style={{marginTop: "1.5rem"}} src={contactMic.src} height={80} />
-          <span className="author">Искра Милкова Ангелова</span>
+          {t("contact.authorMessage")}
+          <img style={{ marginTop: "1.5rem" }} src={contactMic.src} height={80} />
+          <span className="author">{t("contact.authorName")}</span>
         </p>
       </Container>
       <ScrollToTopBtn />

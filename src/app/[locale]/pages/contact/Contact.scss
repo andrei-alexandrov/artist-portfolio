@@ -33,7 +33,6 @@
     text-align: center;
 
     .contact-details {
-
       .contact-email,
       .contact-location {
         margin-bottom: 0.5rem;
@@ -48,7 +47,7 @@
   display: flex;
   flex-direction: column;
   text-align: center;
-  font-size: 16px;
+  font-size: 17px;
   color: $description-color;
   line-height: 1.6;
   letter-spacing: 0.5px;
@@ -73,14 +72,15 @@
 
 @media (min-width: 992px) {
   .contact-container {
-
-
     .title-container {
       .portfolio-section-title {
         @include portfolio-section-title();
         bottom: 0;
       }
     }
+  }
+  .author-message {
+    font-size: 18px;
   }
 }
 
@@ -97,12 +97,14 @@
 
     .contact-info {
       .contact-details {
-
         .contact-email,
         .contact-location {
           font-size: 25px;
         }
       }
     }
+  }
+  .author-message {
+    font-size: 18px;
   }
 }

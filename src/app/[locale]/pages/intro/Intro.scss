@@ -223,12 +223,6 @@ section {
       padding-left: 25px;
       padding-right: 15px;
 
-      // .starting-content {
-      //   .about-info {
-      //     font-size: 224px;
-      //   }
-      // }
-
       .artist-photo-wrapper {
         max-width: 21rem;
       }
@@ -275,7 +269,7 @@ section {
 
         .artist-info {
           & div {
-            font-size: 18px;
+            font-size: 18px !important;
           }
         }
       }
