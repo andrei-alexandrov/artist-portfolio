@@ -36,7 +36,7 @@
       .contact-email,
       .contact-location {
         margin-bottom: 0.5rem;
-        font-size: 20px;
+        font-size: 22px;
         color: $main-color;
       }
     }
@@ -47,7 +47,7 @@
   display: flex;
   flex-direction: column;
   text-align: center;
-  font-size: 17px;
+  font-size: $small-font;
   color: $description-color;
   line-height: 1.6;
   letter-spacing: 0.5px;
@@ -58,7 +58,7 @@
     position: relative;
     top: 1rem;
     color: $main-color;
-    font-size: 24px;
+    font-size: 26px;
   }
 }
 

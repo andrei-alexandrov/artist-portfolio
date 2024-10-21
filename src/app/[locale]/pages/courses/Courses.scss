@@ -1,7 +1,7 @@
 @import "../../../../variables";
 @import "../../../../mixins";
 
-.courses-container {
+.courses-title {
   margin-top: 3rem;
   display: flex;
   align-items: center;
@@ -35,16 +35,16 @@
       object-fit: cover;
     }
 
-    h2 {
+    .courses-title {
       color: $main-color;
-      font-size: 19px;
+      font-size: 1.4rem;
       margin: 18px 0;
     }
 
     .description1 {
       margin-top: auto;
       color: $description-color;
-      font-size: 16px;
+      font-size: $small-font;
     }
 
     .description2 {

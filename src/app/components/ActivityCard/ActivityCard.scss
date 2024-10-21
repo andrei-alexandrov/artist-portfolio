@@ -1,4 +1,5 @@
 @import "../../../variables";
+@import "../../../fonts";
 
 .activity-card {
   display: flex;
@@ -7,7 +8,7 @@
   border-top-left-radius: 25px;
   border-top-right-radius: 25px;
   margin: 40px 15px;
-  background-color: #0d1114;
+  background-color: $activity-card-background-color;
 
   .card-content-wrapper {
     order: 2;
@@ -59,19 +60,15 @@
 @media (min-width: 392px) and (max-width: 767px) {
   .activity-card {
     width: 100%;
-    // max-width: 400px;
     height: auto;
-    // gap: 1rem;
-    // padding-left: 15px;
-    // padding-right: 15px;
 
     .card-content-wrapper {
       .activity-title {
-        font-size: 1.6rem;
+        font-size: 1.7rem;
       }
 
       .activity-desc {
-        font-size: 16px;
+        font-size: $small-font;
       }
 
       .activity-logo img {
@@ -94,11 +91,11 @@
 
     .card-content-wrapper {
       .activity-title {
-        font-size: 1.9rem;
+        font-size: 1.8rem;
       }
 
       .activity-desc {
-        font-size: 16px;
+        font-size: $small-font;
       }
     }
   }
@@ -131,7 +128,7 @@
       .activity-desc {
         text-align: justify;
         color: $description-color;
-        font-size: 17px;
+        font-size: $small-font;
         line-height: 1.6;
       }
     }
@@ -156,7 +153,6 @@
       border-radius: 35px;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
       max-width: 35rem;
-      // border: 1px solid darken($main-color, 40%);
 
       &:hover {
         transform: scale(1) rotate(1deg);

@@ -4,7 +4,7 @@
 
 section {
   position: relative;
-  margin-top: 7rem;
+  margin-top: 6rem;
 
   .background-image {
     position: absolute;
@@ -15,7 +15,6 @@ section {
     background-image: url("../../../assets/intro/bright-star.svg");
     background-size: contain;
     background-repeat: no-repeat;
-    // background-position: center;
   }
 
   //Temporary disabled
@@ -30,26 +29,24 @@ section {
   // }
 
   .intro-content-wrapper {
-    margin-top: 5rem;
     position: relative;
+    z-index: 2;
     display: flex;
     flex-direction: column;
     align-items: center;
-    z-index: 2;
 
     .starting-content {
       position: relative;
+      z-index: 2;
       padding-left: 13px;
       padding-right: 13px;
       text-align: center;
-      z-index: 2;
 
       .artist-name {
         opacity: 0;
         color: $main-color;
-        font-weight: 500;
         line-height: 1.3;
-        font-size: $large-font-below-576;
+        font-size: 33px;
       }
 
       .artist-slogan {
@@ -59,7 +56,6 @@ section {
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
-        // text-fill-color: transparent;
         animation: fadeIn 3s ease-in-out;
         font-size: 28px;
 
@@ -79,22 +75,18 @@ section {
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
-        margin-top: 1.5rem;
+        margin-top: 1.3rem;
         color: $description-color;
         font-size: 24px;
-      }
-
-      %common-text-styles {
-        font-size: 16px;
-        line-height: 1.7;
-        letter-spacing: 0.5px;
       }
 
       .artist-info {
         margin-top: 1rem;
 
         & div {
-          @extend %common-text-styles;
+          font-size: 19px;
+          line-height: 1.7;
+          letter-spacing: 0.5px;
         }
 
         div:nth-child(odd) {
@@ -137,36 +129,13 @@ section {
       position: relative;
       width: 15rem;
       height: 5rem;
-      left: 8px;
+      left: 9px;
     }
   }
-
-  .blur-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    // .blur {
-    //   position: absolute;
-    //   width: 10rem;
-    //   height: 2rem;
-    //   border-radius: 50%;
-    //   background: $main-color;
-    //   background: #00DBCD;
-    //   background: #08b208;
-    //   z-index: 1000;
-    //   // top: 90%;
-    //   // left: 42%;
-    //   filter: blur(89px);
-    // }
-  }
-
 }
 
 @media (min-width: 768px) {
   section {
-    position: static;
-
     .intro-content-wrapper {
       flex-direction: row;
       justify-content: space-between;
@@ -178,16 +147,16 @@ section {
         padding: 0;
 
         .artist-name {
-          font-size: $large-font-below-576;
+          font-size: 34px;
         }
 
         .artist-slogan {
-          font-size: $medium-font-below-576;
+          font-size: 26px;
         }
 
         .artist-short-info {
           margin-top: 1.5rem;
-          font-size: 22px;
+          font-size: 24px;
         }
 
         .media-icons-container {
@@ -203,7 +172,7 @@ section {
       }
 
       .artist-photo-wrapper {
-        max-width: 17rem;
+        max-width: 17.5rem;
       }
 
       .contact-button-wrapper {

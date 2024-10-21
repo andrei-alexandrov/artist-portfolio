@@ -3,7 +3,7 @@
 .footer {
   margin-top: 4rem;
   text-align: center;
-  background-color: #0c1015; //2nd place
+  background-color: $footer-background-color;
   box-shadow: 0 4px 38px rgba(0, 0, 0, 0.1);
   padding: 20px;
   backdrop-filter: blur(10px);
@@ -14,21 +14,10 @@
     top: 7px;
     .footer-text {
       color: $main-color;
-      font-size: 15px;
+      font-size: 16px;
       font-weight: 400;
     }
   }
-
-  // .footer-icons>a>svg {
-  //     transition: transform 1s;
-  //     margin-right: 3px;
-  //     margin-left: 3px;
-
-  //     &:hover {
-  //         cursor: pointer;
-  //         transform: scale(1.2);
-  //     }
-  // }
 
   // .screen-reader {
   //     position: absolute;
