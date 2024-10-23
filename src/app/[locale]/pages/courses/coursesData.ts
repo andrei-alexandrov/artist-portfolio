@@ -1,4 +1,3 @@
-// coursesData.ts
 export const getCoursesData = (t: any) => {
     return [
         {
@@ -17,7 +16,7 @@ export const getCoursesData = (t: any) => {
         },
         {
             videoUrl: "",
-            coverPhoto: "/public-assets/iskra-ovladei-svoq-glas.jpg",
+            coverPhoto: "/public-assets/isi-2-pic.JPEG",
             title: t("courses.coursesCardThree.title"),
             description1: t("courses.coursesCardThree.description"),
             description2: "",

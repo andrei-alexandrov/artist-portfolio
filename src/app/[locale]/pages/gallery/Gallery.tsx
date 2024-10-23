@@ -22,7 +22,6 @@ const Gallery = () => {
     <div className="inspirations-container">
       <div id="gallery">
         <h1 className="portfolio-section-title">{t("gallery.title")}</h1>
-
         <Swiper
           effect={"coverflow"}
           grabCursor={true}
