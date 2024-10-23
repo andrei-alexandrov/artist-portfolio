@@ -10,7 +10,7 @@
     },
     "intro": {
         "artistName": "Iskra Milkova Angelova",
-        "artistSlogan": "HighLight the way!",
+        "artistSlogan": "Highlight the way!",
         "artistShortInfo": "Vocal and artist coach",
         "artistInfoOne": "Owner of \"HighLight Singing Academy\"",
         "artistInfoTwo": "Chairman of Association \"The Musical Talents of Bulgaria\"",
@@ -39,7 +39,7 @@
     },
     "activities": {
         "title": "Activities",
-        "HighLightSinging": {
+        "highlightSinging": {
             "title": "HighLight Singing Academy",
             "description": "\"HighLight Singing Academy\" is Iskra's personal project, which she refers to as \"My first child.\" HighLight is the place where, together with her team, they uncover and develop the potential of their students, focusing not only on their vocal skills but also on their growth as well-rounded musical artists. Beyond being a place for musical education, \"HighLight Singing Academy\" is also a family—a community of people who share their love for singing in a spirit of collaboration and friendship.",
             "buttonText": "Visit"
@@ -60,15 +60,15 @@
         "title": "Courses",
         "coursesCardOne": {
             "title": "Introduction to Vocal Technique",
-            "description": "For more information, send a message to iskra@HighLight-singing.com"
+            "description": "For more information, send a message to iskra@highlight-singing.com"
         },
         "coursesCardTwo": {
             "title": "Online course \"ME, THE ARTIST\"",
-            "description": "For more information, send a message to iskra@HighLight-singing.com"
+            "description": "For more information, send a message to iskra@highlight-singing.com"
         },
         "coursesCardThree": {
             "title": "Online public speaking course \"Master your voice\"",
-            "description": "For more information, send a message to iskra@HighLight-singing.com"
+            "description": "For more information, send a message to iskra@highlight-singing.com"
         }
     },
     "gallery": {
