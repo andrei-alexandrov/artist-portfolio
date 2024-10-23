@@ -10,9 +10,9 @@
     },
     "intro": {
         "artistName": "Iskra Milkova Angelova",
-        "artistSlogan": "Highlight the way!",
+        "artistSlogan": "HighLight the way!",
         "artistShortInfo": "Vocal and artist coach",
-        "artistInfoOne": "Owner of \"Highlight Singing Academy\"",
+        "artistInfoOne": "Owner of \"HighLight Singing Academy\"",
         "artistInfoTwo": "Chairman of Association \"The Musical Talents of Bulgaria\"",
         "artistInfoThree": "Creative director of \"NEXT ARTIST\" singing competition",
         "artistInfoFour": "Vocal coach at X-Factor Bulgaria",
@@ -22,7 +22,7 @@
     },
     "about": {
         "title": "About me",
-        "description": "Iskra Milkova has been immersed in the world of music since early childhood. Graduating Art high school with a focus on piano, she soon discovered that her true passion is the power of the human voice, with its unique ability to move people's hearts.\n\nThis passion led her to the National Academy of Music “Pancho Vladigerov”, where she obtained her master's degree in pop and jazz singing. Driven by her desire to grow and explore modern teaching methods, she continued her education at the Institute for Vocal Advancement (IVA) in the USA and Modern Vocal Training (MVT) in Spain, where she deeply immersed herself in the Speech Level Singing (SLS) teaching method.\n\nInspired by newfound knowledge and vocal approaches, Iskra established HighLight Singing Academy. Today, the academy is home to a team of 20 exceptional teachers who cultivate and share their passion for voice, singing, and teaching. In 2014, Iskra was invited to become a vocal coach of the popular TV show \"X-Factor Bulgaria.\", where she collaborated with some of the country's finest producers and artists over four exciting seasons. This experience not only expanded her professional network but also gave her a clearer understanding of the qualities singers must develop to thrive in the competitive music industry.\n\nIn parallel to her role as a vocal pedagogue, Iskra continues to feed her soul as an active performer with various bands and engages in diverse musical projects. One of Iskra's most recent success stories as a vocal coach is her student Jaklin Tarakchi, who won The Voice of Bulgaria 2022.\n\nHer rich experience as both a teacher and a performer allows her to enrich her teaching with practical insights and real-world expertise.",
+        "description": "Iskra Milkova has been immersed in the world of music since early childhood. Graduating Art high school with a focus on piano, she soon discovered that her true passion is the power of the human voice, with its unique ability to move people's hearts.\n\nThis passion led her to the National Academy of Music “Pancho Vladigerov”, where she obtained her master's degree in pop and jazz singing. Driven by her desire to grow and explore modern teaching methods, she continued her education at the Institute for Vocal Advancement (IVA) in the USA and Modern Vocal Training (MVT) in Spain, where she deeply immersed herself in the Speech Level Singing (SLS) teaching method.\n\nInspired by newfound knowledge and vocal approaches, Iskra established HighLight Singing Academy. Today, the academy is home to a team of 20 exceptional teachers who cultivate and share their passion for voice, singing, and teaching. In 2014, Iskra was invited to become a vocal coach of the popular TV show \"X-Factor Bulgaria.\", where she collaborated with some of the country's finest producers and artists over four exciting seasons. This experience not only expanded her professional network but also gave her a clearer understanding of the qualities singers must develop to thrive in the competitive music industry.\n\nIn parallel to her role as a vocal coach, Iskra continues to feed her soul as an active performer with various bands and engages in diverse musical projects. One of Iskra's most recent success stories as a vocal coach is her student Jaklin Tarakchi, who won The Voice of Bulgaria 2022.\n\nHer rich experience as both a teacher and a performer allows her to enrich her teaching with practical insights and real-world expertise.",
         "galleryTitle": "Gallery"
     },
     "moments": {
@@ -39,9 +39,9 @@
     },
     "activities": {
         "title": "Activities",
-        "highlightSinging": {
-            "title": "Highlight Singing Academy",
-            "description": "\"Highlight Singing Academy\" is Iskra's personal project, which she refers to as \"My first child.\" Highlight is the place where, together with her team, they uncover and develop the potential of their students, focusing not only on their vocal skills but also on their growth as well-rounded musical artists. Beyond being a place for musical education, \"Highlight Singing Academy\" is also a family—a community of people who share their love for singing in a spirit of collaboration and friendship.",
+        "HighLightSinging": {
+            "title": "HighLight Singing Academy",
+            "description": "\"HighLight Singing Academy\" is Iskra's personal project, which she refers to as \"My first child.\" HighLight is the place where, together with her team, they uncover and develop the potential of their students, focusing not only on their vocal skills but also on their growth as well-rounded musical artists. Beyond being a place for musical education, \"HighLight Singing Academy\" is also a family—a community of people who share their love for singing in a spirit of collaboration and friendship.",
             "buttonText": "Visit"
         },
         "musicTalents": {
@@ -60,15 +60,15 @@
         "title": "Courses",
         "coursesCardOne": {
             "title": "Introduction to Vocal Technique",
-            "description": "For more information, send a message to iskra@highlight-singing.com"
+            "description": "For more information, send a message to iskra@HighLight-singing.com"
         },
         "coursesCardTwo": {
             "title": "Online course \"ME, THE ARTIST\"",
-            "description": "For more information, send a message to iskra@highlight-singing.com"
+            "description": "For more information, send a message to iskra@HighLight-singing.com"
         },
         "coursesCardThree": {
             "title": "Online public speaking course \"Master your voice\"",
-            "description": "For more information, send a message to iskra@highlight-singing.com"
+            "description": "For more information, send a message to iskra@HighLight-singing.com"
         }
     },
     "gallery": {
