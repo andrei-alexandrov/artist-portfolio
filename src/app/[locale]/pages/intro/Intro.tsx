@@ -42,7 +42,7 @@ const Intro = () => {
           <br />
           <p className="artist-name">{t("intro.artistName")}</p>
           <p className="artist-slogan">&quot;{t("intro.artistSlogan")}&quot;</p>
-          <p className="artist-short-info">
+          <p className="artist-header">
             {t("intro.artistShortInfo")}<br />
           </p>
           <div className="artist-info">

@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useRef, useState } from "react";
 import { useModal } from "@/app/customHooks/useModal";
 import { getActivityData } from "./activityData";
 import { useTranslations } from "next-intl";
@@ -7,6 +8,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Button from "../Button/Button";
 import Modal from "../Modal/Modal";
+import LazyVideo from "../LazyVideo/LazyVideo";
 
 import "./ActivityCard.scss";
 
@@ -42,14 +44,14 @@ const ActivityCard = () => {
           </div>
 
           {item.video ? (
-            <video
-              className="activity-video"
+            <LazyVideo
               src={item.video}
+              className="activity-video"
               autoPlay
               loop
               muted
               playsInline
-            ></video>
+            />
           ) : (
             <Image
               className="activity-image"
@@ -63,13 +65,11 @@ const ActivityCard = () => {
         </div>
       ))}
 
-      <Modal
-        isOpen={isOpen}
-        onClose={closeModal}
-        imageSrc={imageSrc}
-      />
+      <Modal isOpen={isOpen} onClose={closeModal} imageSrc={imageSrc} />
     </>
   );
 };
+
+
 
 export default ActivityCard;

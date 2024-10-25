@@ -43,7 +43,7 @@ const Contact = () => {
       <Container>
         <p className="author-message">
           {t("contact.authorMessage")}
-          <img style={{ marginTop: "1.5rem" }} src={contactMic.src} height={80} />
+          <img style={{ marginTop: "1.5rem" }} src={contactMic.src} height={80} alt="mic" />
           <span className="author">{t("contact.authorName")}</span>
         </p>
       </Container>

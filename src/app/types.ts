@@ -5,3 +5,12 @@ export type ModalProps = {
   onClose: () => void;
   imageSrc: StaticImageData | string | null;
 };
+
+export type LazyVideoProps = {
+  src: string;
+  className?: string;
+  autoPlay?: boolean;
+  loop?: boolean;
+  muted?: boolean;
+  playsInline?: boolean;
+}

@@ -1,4 +1,3 @@
-// Courses.tsx
 import { useTranslations } from "next-intl";
 import { getCoursesData } from "./coursesData";
 

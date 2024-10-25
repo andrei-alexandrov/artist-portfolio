@@ -70,7 +70,7 @@ section {
         }
       }
 
-      .artist-short-info {
+      .artist-header {
         background: linear-gradient(90deg, $main-color, #e4c988, #fff);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
@@ -154,7 +154,7 @@ section {
           font-size: 26px;
         }
 
-        .artist-short-info {
+        .artist-header {
           margin-top: 1.5rem;
           font-size: 24px;
         }
@@ -209,6 +209,14 @@ section {
       padding-left: 45px;
       padding-right: 45px;
 
+      .starting-content {
+        .artist-info {
+          & div {
+            font-size: 19px;
+          }
+        }
+      }
+
       .artist-photo-wrapper {
         max-width: 22rem;
       }
@@ -232,14 +240,8 @@ section {
           font-size: 30px;
         }
 
-        .artist-short-info {
+        .artist-header {
           font-size: 26px;
-        }
-
-        .artist-info {
-          & div {
-            font-size: 18px !important;
-          }
         }
       }
     }

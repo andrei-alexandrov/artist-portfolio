@@ -1,0 +1,11 @@
+@import "../../../variables";
+
+.video-placeholder {
+    width: 100%;
+    height: auto;
+    background-color: $activity-card-background-color;
+    text-align: center;
+    line-height: 200px;
+    color: $main-color;
+    border-radius: 25px;
+}
