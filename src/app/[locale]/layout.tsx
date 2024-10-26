@@ -1,3 +1,4 @@
+import { Analytics } from "@vercel/analytics/react"
 import type { Metadata } from "next";
 import { NextIntlClientProvider, useMessages } from "next-intl";
 import Navbar from "../components/Navbar/Navbar";
@@ -36,6 +37,7 @@ const RootLayout: React.FC<Props> = ({
         <NextIntlClientProvider messages={messages}>
           <Navbar />
           {children}
+          <Analytics />
           <Footer />
         </NextIntlClientProvider>
       </body>
