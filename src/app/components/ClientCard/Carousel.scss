@@ -20,14 +20,13 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  // transform-style: preserve-3d;
   top: 1.2rem;
   gap: 5rem;
 
   .clients-container {
     position: relative;
-    width: 200px;
-    height: 200px;
+    width: 180px;
+    height: 180px;
     transform-style: preserve-3d;
     transform: perspective(1000px) rotateY(0deg);
     transition: transform 1.5s;
@@ -40,22 +39,20 @@
       height: 100%;
       transform-origin: center;
       transform-style: preserve-3d;
-      // transform: rotateY(calc(var(--i) * (360deg / var(--total))))
-      //   translateZ(300px);
-      transform: rotateY(calc(var(--i) * 36deg)) translateZ(360px);
+      transform: rotateY(calc(var(--i) * (360deg / var(--total)))) translateZ(395px);
 
       & .carousel-image {
         object-fit: cover;
         user-select: none;
-        width: 100%;
-        height: 100%;
+        width: 90%;
+        height: 90%;
         border-radius: 20px;
       }
 
       & .image-name {
         position: relative;
         text-align: center;
-        top: 13rem;
+        top: 12.5rem;
         font-size: 14px;
         color: $main-color;
       }

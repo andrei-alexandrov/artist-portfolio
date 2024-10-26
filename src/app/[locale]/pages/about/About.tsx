@@ -3,8 +3,8 @@ import React, { useLayoutEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useTranslations } from "use-intl";
-import ClientCardCarousel from "@/app/components/ClientCard/Carousel";
 import { getClientsData } from "@/app/components/ClientCard/carouselData";
+import ClientCardCarousel from "@/app/components/ClientCard/Carousel";
 
 import "./About.scss";
 
