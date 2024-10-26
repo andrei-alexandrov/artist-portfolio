@@ -10,7 +10,6 @@ import image5 from "../../../assets/gallery/5.jpg";
 import image6 from "../../../assets/gallery/6.jpg";
 import image7 from "../../../assets/gallery/7.jpg";
 import image8 from "../../../assets/gallery/8.jpg";
-import image9 from "../../../assets/gallery/9.jpg";
 import image10 from "../../../assets/gallery/10.jpg";
 import image11 from "../../../assets/gallery/11.jpg";
 import image12 from "../../../assets/gallery/12.jpg";
@@ -35,7 +34,6 @@ const inspirationImages = [
   image6,
   image7,
   image8,
-  image9,
   image10,
   image11,
   image12,
@@ -48,7 +46,6 @@ const inspirationImages = [
   image19,
   image20,
   hristoPopov
-
 ];
 
 export default inspirationImages;
