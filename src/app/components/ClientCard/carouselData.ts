@@ -38,15 +38,15 @@ export const getClientsData = (
   t: (key: `moments.${keyof IntlMessages['moments']}`) => string
 ): ClientData[] => {
   return [
-    { src: greg, name: t("moments.greg") },
-    { src: margaritaHranova, name: t("moments.margaritaHranova") },
     { src: sanq, name: t("moments.sanq") },
     { src: mihaelaFileva, name: t("moments.mihaelaFileva") },
-    { src: pollyaIvanova, name: t("moments.pollyaIvanova") },
     { src: daraYotova, name: t("moments.daraYotova") },
+    { src: luboKirov, name: t("moments.luboKirov") },
+    { src: greg, name: t("moments.greg") },
+    { src: margaritaHranova, name: t("moments.margaritaHranova") },
+    { src: pollyaIvanova, name: t("moments.pollyaIvanova") },
     { src: hrisi, name: t("moments.hrisi") },
     { src: mona, name: t("moments.mona") },
-    { src: luboKirov, name: t("moments.luboKirov") },
     { src: sesil, name: t("moments.sesil") },
     { src: doni, name: t("moments.doni") },
     { src: jaklinTarakci, name: t("moments.jaklinTarakci") },

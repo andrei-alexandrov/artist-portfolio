@@ -11,7 +11,7 @@ import "slick-carousel/slick/slick-theme.css";
 import "../globals.scss";
 
 export const metadata: Metadata = {
-  title: "Iskra's Portfolio",
+  title: "Iskra Milkova-Angelova",
   description: "Vocal and artist coach",
   icons: {
     icon: "/favicon.png",
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Iskra's Portfolio",
+    title: "Iskra Milkova-Angelova",
     description: "Vocal and artist coach",
     images: ["/highlight-logo-round.png"],
   },
