@@ -16,6 +16,26 @@ export const metadata: Metadata = {
   icons: {
     icon: "/favicon.png",
   },
+  openGraph: {
+    title: "Iskra's Portfolio",
+    description: "Vocal and artist coach",
+    url: "www.iskra-vocal-coach.com",
+    images: [
+      {
+        url: "/highlight-logo-round.png",
+        width: 1200,
+        height: 630,
+        alt: "site cover",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Iskra's Portfolio",
+    description: "Vocal and artist coach",
+    images: ["/highlight-logo-round.png"],
+  },
 };
 
 type Props = {
