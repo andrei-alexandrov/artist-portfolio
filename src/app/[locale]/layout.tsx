@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     icon: "/favicon.png",
   },
   openGraph: {
-    title: "Iskra's Portfolio",
+    title: "Iskra Milkova-Angelova",
     description: "Vocal and artist coach",
     url: "www.iskra-vocal-coach.com",
     images: [
