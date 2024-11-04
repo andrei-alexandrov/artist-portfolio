@@ -1,4 +1,5 @@
 import { Analytics } from "@vercel/analytics/react"
+import { SpeedInsights } from "@vercel/speed-insights/react";
 import type { Metadata } from "next";
 import { NextIntlClientProvider, useMessages } from "next-intl";
 import Navbar from "../components/Navbar/Navbar";
@@ -19,7 +20,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Iskra Milkova-Angelova",
     description: "Vocal and artist coach",
-    url: "www.iskra-vocal-coach.com",
+    url: "https://iskra-vocal-coach.com",
     images: [
       {
         url: "/highlight-logo-round.png",
@@ -56,6 +57,7 @@ const RootLayout: React.FC<Props> = ({
       <body>
         <NextIntlClientProvider messages={messages}>
           <Navbar />
+          <SpeedInsights />
           {children}
           <Analytics />
           <Footer />
