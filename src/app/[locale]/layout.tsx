@@ -1,7 +1,7 @@
+import { NextIntlClientProvider, useMessages } from "next-intl";
 import { Analytics } from "@vercel/analytics/react"
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import type { Metadata } from "next";
-import { NextIntlClientProvider, useMessages } from "next-intl";
 import Navbar from "../components/Navbar/Navbar";
 import Footer from "../components/Footer/Footer";
 
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Iskra Milkova-Angelova",
     description: "Vocal and artist coach",
-    url: "https://iskra-vocal-coach.com",
+    url: "https://iskravocal.com",
     images: [
       {
         url: "/highlight-logo-round.png",

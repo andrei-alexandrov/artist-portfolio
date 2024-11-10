@@ -1,6 +1,6 @@
 The portfolio was developed using Next.js 14 and TypeScript for a vocal and artist coach based in Sofia, Bulgaria. It integrates several external libraries and tools for enhanced functionality and interactivity, including GSAP for animations, Lottie-React for dynamic visual effects, and Swiper and Slick-Carousel for responsive carousels. Internationalization support is implemented using Next-Intl, allowing content to be tailored to multiple languages. Additionally, Bootstrap and React-Icons are used for styling and iconography, ensuring the site is fully responsive across all devices.
 
-Open this link [https://iskra-vocal-coach.com](https://iskra-vocal-coach.com) to view it.
+Open this link [https://iskravocal.com](https://iskravocal.com) to view it.
 
 ## Summary
 0. Intro section
