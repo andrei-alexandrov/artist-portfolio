@@ -20,9 +20,5 @@ Open this link [https://iskravocal.com](https://iskravocal.com) to view it.
 ![Gallery](./src/app/assets/github-description/artist-gallery.JPG)
 ![About](./src/app/assets/github-description/artist-about-2.JPG)
 
-## Available Scripts
 
-### `npm install`
-### `npm run dev`
 
-Open this link [http://localhost:3000](http://localhost:3000) to view it in your browser.
