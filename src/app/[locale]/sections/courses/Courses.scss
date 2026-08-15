@@ -8,13 +8,6 @@
   .portfolio-section-title {
     @include portfolio-section-title();
   }
-
-  .courses-note {
-    text-align: center;
-    color: $description-color;
-    font-size: $small-font;
-    margin: $space-xs $space-sm 0;
-  }
 }
 
 .card-container {

@@ -11,7 +11,6 @@ const Courses = () => {
   return (
     <div id="courses" className="courses-container">
       <h2 className="portfolio-section-title">{t("courses.title")}</h2>
-      <p className="courses-note">{t("courses.note")}</p>
       <div className="card-container">
         {coursesData.map((content) => (
           <div key={content.title} className="card">
