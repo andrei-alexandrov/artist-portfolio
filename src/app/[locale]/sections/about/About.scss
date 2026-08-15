@@ -7,7 +7,7 @@
   padding-right: 0;
 
   .about-container {
-    margin-top: 3rem;
+    margin-top: $section-gap;
 
     .portfolio-section-title {
       @include portfolio-section-title();
@@ -46,8 +46,6 @@
 
 @media (min-width: 1200px) {
   .about-container {
-    margin-top: 5rem;
-
     .about-description {
       font-size: 17px !important;
     }

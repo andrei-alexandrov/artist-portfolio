@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import { SOCIAL_URLS } from "../../socialLinks";
 
 import linkedInIcon from "../../assets/icons/linkedIn-round.png";
 import instagramIcon from "../../assets/icons/insta-round.png";
@@ -15,7 +16,7 @@ const MediaIcons = () => {
     <div className="media-icons-container">
       <div className="media-icons-first-row">
         <a
-          href="https://www.linkedin.com/in/iskra-milkova-228991ab/"
+          href={SOCIAL_URLS.linkedIn}
           target="_blank"
           rel="noopener noreferrer"
           aria-label="LinkedIn"
@@ -30,7 +31,7 @@ const MediaIcons = () => {
           </div>
         </a>
         <a
-          href="https://www.instagram.com/iskra_milkova_vocal_coach/"
+          href={SOCIAL_URLS.instagram}
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Instagram"
@@ -45,7 +46,7 @@ const MediaIcons = () => {
           </div>
         </a>
         <a
-          href="https://www.facebook.com/iskra.milkova1"
+          href={SOCIAL_URLS.facebook}
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Facebook"
@@ -61,7 +62,7 @@ const MediaIcons = () => {
         </a>
 
         <a
-          href="https://open.spotify.com/artist/4Nk118aY40N9GnA24giQkU?si=yR5pAzumQYKjQUkRTMuSlQ&nd=1&dlsi=1c2836ca234a4902"
+          href={SOCIAL_URLS.spotify}
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Spotify"
@@ -79,7 +80,7 @@ const MediaIcons = () => {
         </a>
 
         <a
-          href="https://highlight-singing.com/"
+          href={SOCIAL_URLS.highlightAcademy}
           target="_blank"
           rel="noopener noreferrer"
           aria-label="HighLight Singing Academy"
@@ -96,7 +97,7 @@ const MediaIcons = () => {
           </div>
         </a>
         <a
-          href="https://muzikalnite-talanti.com/"
+          href={SOCIAL_URLS.musicTalents}
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Musical Talents of Bulgaria"

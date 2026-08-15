@@ -11,7 +11,7 @@ import { locales, type Locale } from "@/config";
 import "../globals.scss";
 
 const SITE_URL = "https://iskravocal.com";
-const SITE_TITLE = "Iskra Milkova-Angelova";
+const SITE_TITLE = "Iskra Milkova Angelova";
 
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));

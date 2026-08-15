@@ -9,11 +9,12 @@ const Courses = () => {
   const coursesData = getCoursesData(t);
 
   return (
-    <>
-      <h2 id="courses" className="courses-title">{t("courses.title")}</h2>
+    <div id="courses" className="courses-container">
+      <h2 className="portfolio-section-title">{t("courses.title")}</h2>
+      <p className="courses-note">{t("courses.note")}</p>
       <div className="card-container">
-        {coursesData.map((content, index) => (
-          <div key={index} className="card">
+        {coursesData.map((content) => (
+          <div key={content.title} className="card">
             {content.videoUrl ? (
               <video
                 src={content.videoUrl}
@@ -27,16 +28,15 @@ const Courses = () => {
                 className="placeholder-image"
                 src={content.coverPhoto}
                 alt={content.title}
-                width={640}
-                height={360}
+                width={1000}
+                height={940}
               />
             )}
-            <h3 className="courses-title">{content.title}</h3>
-            <p className="description1">{content.description}</p>
+            <h3 className="course-card-title">{content.title}</h3>
           </div>
         ))}
       </div>
-    </>
+    </div>
   );
 };
 

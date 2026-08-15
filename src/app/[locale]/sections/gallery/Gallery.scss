@@ -2,144 +2,63 @@
 @import "../../../../mixins";
 @import "../../../../fonts";
 
-//Needs rework
 .inspirations-container {
-  margin-top: 5rem;
+  margin-top: $section-gap;
+
   .portfolio-section-title {
     @include portfolio-section-title();
   }
 
-  .swiper_container {
-    position: relative;
-    height: 36rem;
-    margin-top: 2.5rem;
-  }
+  .gallery-grid {
+    columns: 2;
+    column-gap: $space-sm;
+    margin-top: $space-lg;
+    padding: 0 $space-sm;
 
-  .swiper-slide {
-    position: relative;
-    width: 25rem;
-    height: 30rem;
-  }
-
-  .swiper-slide img {
-    width: 25rem;
-    height: 30rem;
-    border-radius: 1rem;
-    object-fit: cover;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-
-    &:hover {
-      transform: scale(1) rotate(1deg);
-      box-shadow: 0 0 10px 4px $main-color;
-    }
-  }
-
-  @media (min-width: 600px) and (max-width: 1024px) {
-    .inspirations-container {
-      position: relative;
-    }
-    .swiper_container {
-      height: 28rem;
-    }
-    .swiper-slide {
-      width: 18rem;
-      height: 22rem;
-    }
-    .swiper-slide img {
-      width: 18rem;
-      height: 22rem;
-    }
-  }
-
-  @media (min-width: 1025px) and (max-width: 1440px) {
-    .swiper_container {
-      height: 34rem;
-    }
-    .swiper-slide {
-      width: 22rem;
-      height: 28rem;
-    }
-    .swiper-slide img {
-      width: 22rem;
-      height: 28rem;
+    @media (min-width: 768px) {
+      columns: 3;
     }
 
-    .inspirations-container {
-      position: relative;
-      bottom: 6rem;
-      margin-top: 5rem;
+    @media (min-width: 1200px) {
+      columns: 4;
+      column-gap: $space-md;
+      padding: 0;
     }
-  }
 
-  @media (min-width: 100px) and (max-width: 599px) {
-    .inspirations-container {
-      margin-top: 4rem;
-      .swiper_container {
-        height: 25rem;
+    .gallery-item {
+      display: block;
+      width: 100%;
+      margin-bottom: $space-sm;
+      padding: 0;
+      border: none;
+      background: none;
+      cursor: pointer;
+      break-inside: avoid;
+      border-radius: $radius-sm;
+      overflow: hidden;
+
+      @media (min-width: 1200px) {
+        margin-bottom: $space-md;
       }
-      .swiper-slide {
-        width: 14rem;
-        height: 18rem;
+
+      img {
+        display: block;
+        width: 100%;
+        height: auto;
+        transition: transform 0.4s ease, opacity 0.4s ease;
       }
-      .swiper-slide img {
-        width: 14rem;
-        height: 18rem;
+
+      &:hover img,
+      &:focus-visible img {
+        transform: scale(1.03);
+        opacity: 0.9;
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        img {
+          transition: none;
+        }
       }
     }
   }
-
-  @media (min-width: 1441px) {
-    .swiper_container {
-      height: 40rem;
-    }
-    .swiper-slide {
-      width: 26rem;
-      height: 32rem;
-    }
-    .swiper-slide img {
-      width: 26rem;
-      height: 32rem;
-    }
-
-    .inspirations-container {
-      position: relative;
-      bottom: 8rem;
-    }
-  }
-}
-
-@media (min-width: 100px) and (max-width: 599px) {
-  .inspirations-container {
-    margin-top: 4rem;
-
-    .swiper_container {
-      height: 25rem;
-    }
-    .swiper-slide {
-      width: 14rem;
-      height: 18rem;
-    }
-    .swiper-slide img {
-      width: 14rem;
-      height: 18rem;
-    }
-  }
-}
-
-/* Slider Controller Styling */
-.slider-controler {
-  position: relative;
-  bottom: 2rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.swiper-pagination .swiper-pagination-bullet {
-  filter: drop-shadow(0px 8px 24px rgba(18, 28, 53, 0.1));
-  background-color: white !important;
-}
-
-.swiper-pagination .swiper-pagination-bullet-active {
-  background: $main-color !important;
 }

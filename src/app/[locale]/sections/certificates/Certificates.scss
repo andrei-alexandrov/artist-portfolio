@@ -7,8 +7,8 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: calc(50% + 20px) calc(50% - 20px);
-  margin-top: 2rem;
-  margin-bottom: 4rem;
+  margin-top: $section-gap;
+  margin-bottom: $space-2xl;
 
   .portfolio-section-title {
     @include portfolio-section-title();

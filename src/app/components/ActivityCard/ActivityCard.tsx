@@ -4,6 +4,7 @@ import { useModal } from "@/app/customHooks/useModal";
 import { getActivityData } from "./activityData";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
+import Button from "../Button/Button";
 import Modal from "../Modal/Modal";
 import LazyVideo from "../LazyVideo/LazyVideo";
 
@@ -30,14 +31,7 @@ const ActivityCard = () => {
               />
             </div>
             <div className="activity-card-btn-wrapper">
-              <a
-                className="contact-button"
-                href={item.webAddress}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {t("activities.buttonText")}
-              </a>
+              <Button href={item.webAddress}>{t("activities.buttonText")}</Button>
             </div>
           </div>
 

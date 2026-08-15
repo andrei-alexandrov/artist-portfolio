@@ -5,6 +5,7 @@ import { Link as ScrollLink, scroller } from "react-scroll";
 import { FaLinkedin } from "react-icons/fa";
 import { FaInstagram, FaSquareFacebook } from "react-icons/fa6";
 import { useTranslations } from "next-intl";
+import { SOCIAL_URLS } from "../../socialLinks";
 import Switcher from "../../components/Switcher/Switcher";
 
 import "./Navbar.scss";
@@ -29,9 +30,9 @@ const NAV_ITEMS: NavItem[] = [
 ];
 
 const SOCIAL_LINKS = [
-  { href: "https://www.linkedin.com/in/iskra-milkova-228991ab/", label: "LinkedIn", Icon: FaLinkedin },
-  { href: "https://www.facebook.com/iskra.milkova1", label: "Facebook", Icon: FaSquareFacebook },
-  { href: "https://www.instagram.com/iskra_milkova_vocal_coach/", label: "Instagram", Icon: FaInstagram },
+  { href: SOCIAL_URLS.linkedIn, label: "LinkedIn", Icon: FaLinkedin },
+  { href: SOCIAL_URLS.facebook, label: "Facebook", Icon: FaSquareFacebook },
+  { href: SOCIAL_URLS.instagram, label: "Instagram", Icon: FaInstagram },
 ];
 
 // react-scroll links render anchors without href, so Enter/Space needs a manual handler.
