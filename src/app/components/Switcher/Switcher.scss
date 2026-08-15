@@ -1,62 +1,49 @@
 @import "../../../variables";
 
-.toggle-wrapper {
+.locale-switcher {
     display: flex;
     align-items: center;
-    justify-content: center;
+    gap: 4px;
     margin-right: 2.5rem;
-}
 
-input[type="checkbox"] {
-    display: none;
-}
+    .locale-option {
+        background: none;
+        border: none;
+        padding: 2px 4px;
+        cursor: pointer;
+        font-size: 15px;
+        font-weight: 400;
+        letter-spacing: 0.08em;
+        color: $description-color;
+        opacity: 0.55;
+        transition: opacity 0.3s ease, color 0.3s ease;
 
-label {
-    position: relative;
-    top: 1px;
-    width: 44px;
-    height: 26px;
-    border-radius: 2rem;
-    overflow: hidden;
-    background-size: cover;
-    background-position: center;
-    cursor: pointer;
+        &:hover {
+            opacity: 1;
+        }
 
-    &.bulgarian-flag {
-        background-image: url('../../assets/bg.png');
+        &.active {
+            color: $main-color;
+            opacity: 1;
+            font-weight: 600;
+            cursor: default;
+        }
     }
 
-    &.uk-flag {
-        background-image: url('../../assets/gb.svg');
-    }
-
-    .toggle-button {
-        width: 1.6rem;
-        height: 1.6rem;
-        border-radius: 50%;
-        position: absolute;
-        top: 0.08rem;
-        left: 0.25rem;
-        transition: left 0.3s ease, background-color 0.3s ease;
-        background: rgba(255, 255, 255, 0.1);
-        backdrop-filter: blur(3px);
-        border: 1px solid $main-color;
+    .locale-divider {
+        color: $description-color;
+        opacity: 0.35;
+        font-size: 13px;
+        user-select: none;
     }
 }
-
-input:checked+label .toggle-button {
-    left: calc(100% - 1.85rem);
-    background: rgba(255, 255, 255, 0);
-}
-
 
 @media (min-width: 992px) {
-    .toggle-wrapper {
+    .locale-switcher {
         margin-right: 0;
 
-        label {
-            width: 54px;
-            height: 34px;
+        .locale-option {
+            font-size: 16px;
         }
     }
 }

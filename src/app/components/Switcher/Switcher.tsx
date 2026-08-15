@@ -1,32 +1,42 @@
 "use client";
 
-import { usePathname, useRouter } from 'next/navigation';
-import './Switcher.scss';
+import { usePathname, useRouter } from "next/navigation";
+import type { Locale } from "@/config";
+import "./Switcher.scss";
 
 export default function LocaleSwitcher() {
     const pathname = usePathname();
     const router = useRouter();
-    const isBulgarian = pathname.startsWith('/bg');
+    const currentLocale: Locale = pathname.startsWith("/en") ? "en" : "bg";
 
-    const handleToggle = () => {
-        const newLocale = isBulgarian ? '/en' : '/bg';
-        router.push(pathname.replace(/^\/(bg|en)/, newLocale));
+    const switchTo = (locale: Locale) => {
+        if (locale === currentLocale) return;
+        router.push(pathname.replace(/^\/(bg|en)/, `/${locale}`));
     };
 
     return (
-        <div className="toggle-wrapper">
-            <input
-                type="checkbox"
-                id="flag-toggle"
-                checked={isBulgarian}
-                onChange={handleToggle}
-                aria-label={isBulgarian ? "Switch to English" : "Превключи на български"}
-            />
-            <label
-                htmlFor="flag-toggle"
-                className={isBulgarian ? "uk-flag" : "bulgarian-flag"}
-                aria-hidden="true"
-            ></label>
+        <div className="locale-switcher">
+            <button
+                type="button"
+                className={`locale-option ${currentLocale === "bg" ? "active" : ""}`}
+                onClick={() => switchTo("bg")}
+                aria-current={currentLocale === "bg" ? "true" : undefined}
+                aria-label="Български"
+            >
+                BG
+            </button>
+            <span className="locale-divider" aria-hidden="true">
+                |
+            </span>
+            <button
+                type="button"
+                className={`locale-option ${currentLocale === "en" ? "active" : ""}`}
+                onClick={() => switchTo("en")}
+                aria-current={currentLocale === "en" ? "true" : undefined}
+                aria-label="English"
+            >
+                EN
+            </button>
         </div>
     );
 }
