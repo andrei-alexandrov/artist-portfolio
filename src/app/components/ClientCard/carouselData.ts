@@ -22,7 +22,8 @@ type MomentKey =
   | "doni"
   | "jaklinTarakci"
   | "kristianKostov"
-  | "eurovision2026";
+  | "eurovision2026"
+  | "mona";
 
 export type ClientData = {
   src: string | StaticImageData;
@@ -45,6 +46,6 @@ export const getClientsData = (
     { src: momentOne, name: t("moments.kristianKostov") },
     { src: momentThree, name: t("moments.eurovision2026") },
     { src: momentFour, name: t("moments.eurovision2026") },
-    { src: momentFive, name: t("moments.eurovision2026") },
+    { src: momentFive, name: t("moments.mona") },
   ];
 };
