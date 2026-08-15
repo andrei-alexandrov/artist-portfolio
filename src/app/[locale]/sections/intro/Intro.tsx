@@ -2,7 +2,6 @@
 
 import { useEffect } from "react";
 import { gsap } from "gsap";
-import { scroller } from "react-scroll";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 import MediaIcons from "@/app/components/MediaIcons/MediaIcons";
@@ -39,8 +38,11 @@ const Intro = () => {
     return () => ctx.revert();
   }, []);
 
-  const scrollToContact = () =>
-    scroller.scrollTo("contact", { smooth: true, duration: 50, offset: -70 });
+  // Default scrollIntoView consults CSS scroll-behavior, so smooth scrolling
+  // and the reduced-motion override both come from globals.scss.
+  const scrollToContact = () => {
+    document.getElementById("contact")?.scrollIntoView();
+  };
 
   return (
     <section id="intro">

@@ -24,6 +24,17 @@ body {
   }
 }
 
+// Anchor targets stop below the fixed navbar when scrolled to.
+#intro,
+#about,
+#activities,
+#courses,
+#gallery,
+#certificates,
+#contact {
+  scroll-margin-top: 85px;
+}
+
 // Replacement for the Bootstrap container previously used for page layout.
 .layout-container {
   width: 100%;

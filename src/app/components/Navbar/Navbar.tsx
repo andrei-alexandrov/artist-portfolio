@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useRef, useEffect } from "react";
-import { Link as ScrollLink, scroller } from "react-scroll";
 import { FaLinkedin } from "react-icons/fa";
 import { FaInstagram, FaSquareFacebook } from "react-icons/fa6";
 import { useTranslations } from "next-intl";
@@ -10,23 +9,26 @@ import Switcher from "../../components/Switcher/Switcher";
 
 import "./Navbar.scss";
 
-const SCROLL_PROPS = { spy: true, smooth: true, duration: 50 } as const;
-
 type NavItem = {
   target: string;
-  labelKey: "navbar.home" | "navbar.about" | "navbar.activities" | "navbar.courses" | "navbar.gallery" | "navbar.certificates" | "navbar.contact";
-  desktopOffset: number;
-  sidebarOffset: number;
+  labelKey:
+    | "navbar.home"
+    | "navbar.about"
+    | "navbar.activities"
+    | "navbar.courses"
+    | "navbar.gallery"
+    | "navbar.certificates"
+    | "navbar.contact";
 };
 
 const NAV_ITEMS: NavItem[] = [
-  { target: "intro", labelKey: "navbar.home", desktopOffset: -120, sidebarOffset: -95 },
-  { target: "about", labelKey: "navbar.about", desktopOffset: -95, sidebarOffset: -95 },
-  { target: "activities", labelKey: "navbar.activities", desktopOffset: -95, sidebarOffset: -95 },
-  { target: "courses", labelKey: "navbar.courses", desktopOffset: -95, sidebarOffset: -95 },
-  { target: "gallery", labelKey: "navbar.gallery", desktopOffset: -95, sidebarOffset: -95 },
-  { target: "certificates", labelKey: "navbar.certificates", desktopOffset: -95, sidebarOffset: -95 },
-  { target: "contact", labelKey: "navbar.contact", desktopOffset: -70, sidebarOffset: -70 },
+  { target: "intro", labelKey: "navbar.home" },
+  { target: "about", labelKey: "navbar.about" },
+  { target: "activities", labelKey: "navbar.activities" },
+  { target: "courses", labelKey: "navbar.courses" },
+  { target: "gallery", labelKey: "navbar.gallery" },
+  { target: "certificates", labelKey: "navbar.certificates" },
+  { target: "contact", labelKey: "navbar.contact" },
 ];
 
 const SOCIAL_LINKS = [
@@ -34,13 +36,6 @@ const SOCIAL_LINKS = [
   { href: SOCIAL_URLS.facebook, label: "Facebook", Icon: FaSquareFacebook },
   { href: SOCIAL_URLS.instagram, label: "Instagram", Icon: FaInstagram },
 ];
-
-// react-scroll links render anchors without href, so Enter/Space needs a manual handler.
-const scrollOnKey = (event: React.KeyboardEvent, target: string, offset: number) => {
-  if (event.key !== "Enter" && event.key !== " ") return;
-  event.preventDefault();
-  scroller.scrollTo(target, { ...SCROLL_PROPS, offset });
-};
 
 const Navbar = () => {
   const t = useTranslations();
@@ -73,32 +68,17 @@ const Navbar = () => {
 
   return (
     <header className="navbar-container">
-      <ScrollLink
-        className="artist-special-name"
-        to="intro"
-        {...SCROLL_PROPS}
-        offset={-160}
-        tabIndex={0}
-        onKeyDown={(event: React.KeyboardEvent) => scrollOnKey(event, "intro", -160)}
-      >
+      <a className="artist-special-name" href="#intro">
         Iskra M. Angelova
-      </ScrollLink>
+      </a>
 
       <div className="navbar-content">
         <span className="navbar-desktop">
           <nav>
             <ul className="navbar-menu">
-              {NAV_ITEMS.map(({ target, labelKey, desktopOffset }) => (
+              {NAV_ITEMS.map(({ target, labelKey }) => (
                 <li key={target}>
-                  <ScrollLink
-                    to={target}
-                    {...SCROLL_PROPS}
-                    offset={desktopOffset}
-                    tabIndex={0}
-                    onKeyDown={(event: React.KeyboardEvent) => scrollOnKey(event, target, desktopOffset)}
-                  >
-                    {t(labelKey)}
-                  </ScrollLink>
+                  <a href={`#${target}`}>{t(labelKey)}</a>
                 </li>
               ))}
             </ul>
@@ -124,21 +104,15 @@ const Navbar = () => {
         </button>
         <nav>
           <ul>
-            {NAV_ITEMS.map(({ target, labelKey, sidebarOffset }) => (
+            {NAV_ITEMS.map(({ target, labelKey }) => (
               <li key={target}>
-                <ScrollLink
-                  to={target}
-                  {...SCROLL_PROPS}
-                  offset={sidebarOffset}
+                <a
+                  href={`#${target}`}
                   tabIndex={sidebarOpen ? 0 : -1}
                   onClick={closeSidebar}
-                  onKeyDown={(event: React.KeyboardEvent) => {
-                    scrollOnKey(event, target, sidebarOffset);
-                    if (event.key === "Enter" || event.key === " ") closeSidebar();
-                  }}
                 >
                   {t(labelKey)}
-                </ScrollLink>
+                </a>
               </li>
             ))}
           </ul>
