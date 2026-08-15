@@ -11,7 +11,6 @@ import image6 from "../../../assets/gallery/6.jpg";
 import image7 from "../../../assets/gallery/7.jpg";
 import image8 from "../../../assets/gallery/8.jpg";
 import image10 from "../../../assets/gallery/10.jpg";
-import image11 from "../../../assets/gallery/11.jpg";
 import image12 from "../../../assets/gallery/12.jpg";
 import image13 from "../../../assets/gallery/13.jpg";
 import image14 from "../../../assets/gallery/14.jpg";
@@ -35,7 +34,6 @@ const inspirationImages = [
   image7,
   image8,
   image10,
-  image11,
   image12,
   image13,
   image14,
