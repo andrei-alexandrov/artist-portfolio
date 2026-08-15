@@ -60,6 +60,10 @@ section {
         animation: fadeIn 3s ease-in-out;
         font-size: 28px;
 
+        @media (prefers-reduced-motion: reduce) {
+          animation: none;
+        }
+
         @keyframes fadeIn {
           0% {
             opacity: 0;

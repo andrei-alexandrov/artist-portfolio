@@ -34,3 +34,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Design-audit working files (local documentation, not site code)
+/DESIGN-IS-*/

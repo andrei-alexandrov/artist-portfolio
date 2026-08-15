@@ -18,13 +18,22 @@ const ScrollToTopBtn = dynamic(
 const Contact = () => {
   const t = useTranslations();
 
+  const prefersReducedMotion =
+    typeof window !== "undefined" &&
+    window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
   return (
     <div id="contact">
       <div className="contact-container">
         <div className="title-container">
           <br />
           <h2 className="portfolio-section-title">{t("contact.title")}</h2>
-          <Lottie style={{ width: "110px" }} animationData={connectMic} />
+          <Lottie
+            style={{ width: "110px" }}
+            animationData={connectMic}
+            autoplay={!prefersReducedMotion}
+            loop={!prefersReducedMotion}
+          />
         </div>
         <div className="layout-container">
           <div className="contact-info">

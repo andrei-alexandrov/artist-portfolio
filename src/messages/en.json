@@ -2,6 +2,15 @@
     "metadata": {
         "description": "Vocal and artist coach based in Sofia, Bulgaria — founder of HighLight Singing Academy."
     },
+    "common": {
+        "loadingVideo": "Loading video…",
+        "imagePreview": "Image preview",
+        "fullSizeView": "Full size view",
+        "close": "Close",
+        "backToTop": "Back to top",
+        "previous": "Previous",
+        "next": "Next"
+    },
     "navbar": {
         "home": "Home",
         "about": "About",
@@ -87,7 +96,7 @@
         "authorName": "Iskra Milkova Angelova"
     },
     "footer": {
-        "client": "Iskra Milkova Angelova 2024 ©",
+        "client": "Iskra Milkova Angelova",
         "developer": "Website created by andrei.alxv@gmail.com"
     }
 }

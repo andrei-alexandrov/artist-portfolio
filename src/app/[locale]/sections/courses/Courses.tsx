@@ -19,6 +19,7 @@ const Courses = () => {
                 src={content.videoUrl}
                 controls
                 playsInline
+                preload="none"
                 poster={content.coverPhoto}
               ></video>
             ) : (

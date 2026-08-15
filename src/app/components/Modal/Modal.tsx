@@ -1,12 +1,14 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import { useTranslations } from "next-intl";
 import { type ModalProps } from "@/app/types";
 import Image from "next/image";
 
 import "./Modal.scss";
 
 const Modal = ({ isOpen, onClose, imageSrc }: ModalProps) => {
+  const t = useTranslations();
   const closeButtonRef = useRef<HTMLButtonElement>(null);
 
   useEffect(() => {
@@ -36,12 +38,12 @@ const Modal = ({ isOpen, onClose, imageSrc }: ModalProps) => {
         className="modal-content"
         role="dialog"
         aria-modal="true"
-        aria-label="Image preview"
+        aria-label={t("common.imagePreview")}
         onClick={(e) => e.stopPropagation()}
       >
         <Image
           src={imageSrc}
-          alt="Full size view"
+          alt={t("common.fullSizeView")}
           fill
           style={{ objectFit: "contain" }}
         />
@@ -49,7 +51,7 @@ const Modal = ({ isOpen, onClose, imageSrc }: ModalProps) => {
           ref={closeButtonRef}
           className="modal-close"
           onClick={onClose}
-          aria-label="Close"
+          aria-label={t("common.close")}
         >
           <span>&times;</span>
         </button>

@@ -1,11 +1,13 @@
 "use client"
 
 import { useRef, useEffect, useState } from "react";
+import { useTranslations } from "next-intl";
 import type { LazyVideoProps } from "@/app/types";
 
 import "./LazyVideo.scss";
 
 const LazyVideo = ({ src, className, autoPlay, loop, muted, playsInline }: LazyVideoProps) => {
+    const t = useTranslations();
     const placeholderRef = useRef<HTMLDivElement>(null);
     const [isLoaded, setIsLoaded] = useState(false);
 
@@ -41,7 +43,7 @@ const LazyVideo = ({ src, className, autoPlay, loop, muted, playsInline }: LazyV
         />
     ) : (
         <div ref={placeholderRef} className="video-placeholder">
-            Loading video...
+            {t("common.loadingVideo")}
         </div>
     );
 };

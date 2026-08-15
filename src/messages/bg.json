@@ -2,6 +2,15 @@
     "metadata": {
         "description": "Вокален и артистичен коуч в София, България — основател на HighLight Singing Academy."
     },
+    "common": {
+        "loadingVideo": "Видеото се зарежда…",
+        "imagePreview": "Преглед на изображение",
+        "fullSizeView": "Изглед в пълен размер",
+        "close": "Затвори",
+        "backToTop": "Обратно нагоре",
+        "previous": "Предишна",
+        "next": "Следваща"
+    },
     "navbar": {
         "home": "Начало",
         "about": "За\u00A0мен",
@@ -87,7 +96,7 @@
         "authorName": "Искра Милкова Ангелова"
     },
     "footer": {
-        "client": "Искра Милкова Ангелова 2024 ©",
+        "client": "Искра Милкова Ангелова",
         "developer": "Уеб сайт от andrei.alxv@gmail.com"
     }
 }

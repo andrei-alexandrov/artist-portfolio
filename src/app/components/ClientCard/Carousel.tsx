@@ -1,4 +1,5 @@
 import { useRef, useState } from "react";
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 import type { ClientData } from "./carouselData";
 
@@ -10,6 +11,7 @@ type CarouselProps = {
 };
 
 const ClientCardCarousel = ({ data, title }: CarouselProps) => {
+  const t = useTranslations();
   const boxRef = useRef<HTMLDivElement>(null);
   const degrees = useRef<number>(0);
   const [startX, setStartX] = useState<number | null>(null);
@@ -84,13 +86,13 @@ const ClientCardCarousel = ({ data, title }: CarouselProps) => {
             type="button"
             className="btn prev"
             onClick={() => rotateBox("prev")}
-            aria-label="Previous"
+            aria-label={t("common.previous")}
           ></button>
           <button
             type="button"
             className="btn next"
             onClick={() => rotateBox("next")}
-            aria-label="Next"
+            aria-label={t("common.next")}
           ></button>
         </div>
       </div>
