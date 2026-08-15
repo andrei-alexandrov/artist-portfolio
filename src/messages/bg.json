@@ -1,4 +1,7 @@
 {
+    "metadata": {
+        "description": "Вокален и артистичен коуч в София, България — основател на HighLight Singing Academy."
+    },
     "navbar": {
         "home": "Начало",
         "about": "За\u00A0мен",
@@ -6,7 +9,9 @@
         "courses": "Курсове",
         "gallery": "Галерия",
         "certificates": "Сертификати",
-        "contact": "Контакт"
+        "contact": "Контакт",
+        "openMenu": "Отвори менюто",
+        "closeMenu": "Затвори менюто"
     },
     "intro": {
         "artistName": "Искра Милкова Ангелова",
@@ -31,13 +36,11 @@
         "mihaelaFileva": "Михаела Филева",
         "daraYotova": "Дара Йотова",
         "jaklinTarakci": "Жаклин Таракчи",
-        "hrisi": "Хриси",
-        "pollyaIvanova": "Поля Иванова",
-        "mona": "Мона",
         "sanq": "Станислава Армутлиева",
         "luboKirov": "Любо Киров",
         "doni": "Дони",
-        "sesil": "Сесил Сабри"
+        "kristianKostov": "Кристиян Костов",
+        "eurovision2026": "Евровизия 2026"
     },
     "activities": {
         "title": "Дейности",

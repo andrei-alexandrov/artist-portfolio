@@ -1,9 +1,15 @@
 import { useRef, useState } from "react";
 import Image from "next/image";
+import type { ClientData } from "./carouselData";
 
 import "./Carousel.scss";
 
-const ClientCardCarousel = ({ data, title }: any) => {
+type CarouselProps = {
+  data: ClientData[];
+  title: string;
+};
+
+const ClientCardCarousel = ({ data, title }: CarouselProps) => {
   const boxRef = useRef<HTMLDivElement>(null);
   const degrees = useRef<number>(0);
   const [startX, setStartX] = useState<number | null>(null);
@@ -45,7 +51,7 @@ const ClientCardCarousel = ({ data, title }: any) => {
 
   return (
     <div className="client-card-section">
-      <h2 className="carousel-title">{title}</h2>
+      <h3 className="carousel-title">{title}</h3>
       <div
         className="carousel-container"
         onTouchStart={handleTouchStart}
@@ -57,12 +63,15 @@ const ClientCardCarousel = ({ data, title }: any) => {
           style={{ "--total": data.length } as React.CSSProperties}
           ref={boxRef}
         >
-          {data.map((userData: any, index: any) => (
-            <span key={index} style={{ "--i": index + 1 } as React.CSSProperties}>
+          {data.map((userData, index) => (
+            <span
+              key={typeof userData.src === "string" ? userData.src : userData.src.src}
+              style={{ "--i": index } as React.CSSProperties}
+            >
               <Image
                 className="carousel-image"
                 src={userData.src}
-                alt={`Image ${index + 1}`}
+                alt={userData.name}
                 fill
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               />
@@ -71,8 +80,18 @@ const ClientCardCarousel = ({ data, title }: any) => {
           ))}
         </div>
         <div className="buttons">
-          <div className="btn prev" onClick={() => rotateBox("prev")}></div>
-          <div className="btn next" onClick={() => rotateBox("next")}></div>
+          <button
+            type="button"
+            className="btn prev"
+            onClick={() => rotateBox("prev")}
+            aria-label="Previous"
+          ></button>
+          <button
+            type="button"
+            className="btn next"
+            onClick={() => rotateBox("next")}
+            aria-label="Next"
+          ></button>
         </div>
       </div>
     </div>

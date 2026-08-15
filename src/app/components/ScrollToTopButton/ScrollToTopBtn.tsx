@@ -1,61 +1,43 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import Lottie from "lottie-react";
 import backToTop1 from "../../assets/lottie-animations/backToTop1.json";
 import "./ScrollToTopBtn.scss";
 
 const ScrollToTopBtn = () => {
   const [backToTop, setBackToTop] = useState(false);
-  const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
-    setIsClient(true);
-  }, []);
-
-  useEffect(() => {
-    if (!isClient) return;
-
     const handleScroll = () => {
-      if (window.scrollY > 901) {
-        setBackToTop(true);
-      } else {
-        setBackToTop(false);
-      }
+      setBackToTop(window.scrollY > 901);
     };
 
+    handleScroll();
     window.addEventListener("scroll", handleScroll);
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, [isClient]);
+  }, []);
 
   const goUp = () => {
-    if (isClient) {
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth",
-      });
-    }
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
   };
 
   return (
-    <>
-      {isClient && (
-        <div
-          onClick={goUp}
-          className={`scroll-to-top-btn ${backToTop ? "visible" : ""}`}
-        >
-          <Lottie
-            className="scrollToTop-icon"
-            role="img"
-            aria-label="backToTop Icon"
-            animationData={backToTop1}
-          />
-        </div>
-      )}
-    </>
+    <button
+      type="button"
+      onClick={goUp}
+      className={`scroll-to-top-btn ${backToTop ? "visible" : ""}`}
+      aria-label="Back to top"
+      tabIndex={backToTop ? 0 : -1}
+    >
+      <Lottie className="scrollToTop-icon" animationData={backToTop1} />
+    </button>
   );
 };
 

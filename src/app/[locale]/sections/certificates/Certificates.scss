@@ -3,9 +3,8 @@
 @import "../../../../fonts";
 
 .c-container {
-  background-image: url("../../../assets/certificates/sparkles.png");
+  background-image: url("../../../assets/certificates/sparkles.webp");
   background-size: cover;
-  background-position: bottom;
   background-repeat: no-repeat;
   background-position: calc(50% + 20px) calc(50% - 20px);
   margin-top: 2rem;
@@ -19,6 +18,13 @@
     margin-top: 1rem;
     position: relative;
     text-align: center;
+
+    .certificate-button {
+      background: none;
+      border: none;
+      padding: 0;
+      cursor: pointer;
+    }
 
     & img {
       border-radius: 20px;

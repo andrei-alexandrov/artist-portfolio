@@ -6,10 +6,13 @@ import type { LazyVideoProps } from "@/app/types";
 import "./LazyVideo.scss";
 
 const LazyVideo = ({ src, className, autoPlay, loop, muted, playsInline }: LazyVideoProps) => {
-    const videoRef = useRef(null);
+    const placeholderRef = useRef<HTMLDivElement>(null);
     const [isLoaded, setIsLoaded] = useState(false);
 
     useEffect(() => {
+        const target = placeholderRef.current;
+        if (!target) return;
+
         const observer = new IntersectionObserver(
             ([entry]) => {
                 if (entry.isIntersecting) {
@@ -20,20 +23,15 @@ const LazyVideo = ({ src, className, autoPlay, loop, muted, playsInline }: LazyV
             { threshold: 0.25 }
         );
 
-        if (videoRef.current) {
-            observer.observe(videoRef.current);
-        }
+        observer.observe(target);
 
         return () => {
-            if (observer && videoRef.current) {
-                observer.unobserve(videoRef.current);
-            }
+            observer.disconnect();
         };
     }, []);
 
     return isLoaded ? (
         <video
-            ref={videoRef}
             className={className}
             src={src}
             autoPlay={autoPlay}
@@ -42,7 +40,7 @@ const LazyVideo = ({ src, className, autoPlay, loop, muted, playsInline }: LazyV
             playsInline={playsInline}
         />
     ) : (
-        <div ref={videoRef} className="video-placeholder">
+        <div ref={placeholderRef} className="video-placeholder">
             Loading video...
         </div>
     );

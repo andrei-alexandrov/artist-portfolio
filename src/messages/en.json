@@ -1,4 +1,7 @@
 {
+    "metadata": {
+        "description": "Vocal and artist coach based in Sofia, Bulgaria — founder of HighLight Singing Academy."
+    },
     "navbar": {
         "home": "Home",
         "about": "About",
@@ -6,7 +9,9 @@
         "courses": "Courses",
         "gallery": "Gallery",
         "certificates": "Certificates",
-        "contact": "Contact"
+        "contact": "Contact",
+        "openMenu": "Open menu",
+        "closeMenu": "Close menu"
     },
     "intro": {
         "artistName": "Iskra Milkova Angelova",
@@ -26,35 +31,30 @@
         "galleryTitle": "Gallery"
     },
     "moments": {
-        "greg": "Greg Enriquez", 
-        "margaritaHranova": "Margarita Hranova", 
+        "greg": "Greg Enriquez",
+        "margaritaHranova": "Margarita Hranova",
         "mihaelaFileva": "Mihaela Fileva",
         "daraYotova": "Dara Yotova",
         "jaklinTarakci": "Jaklin Tarakci",
-        "hrisi": "Hrisi",
-        "pollyaIvanova": "Polly Ivanova",
-        "mona": "Mona",
         "sanq": "Stanislava Armutlieva",
         "luboKirov": "Lubo Kirov",
         "doni": "Doni",
-        "sesil": "Sesil Sabri"
+        "kristianKostov": "Kristian Kostov",
+        "eurovision2026": "Eurovision 2026"
     },
     "activities": {
         "title": "Activities",
         "highlightSinging": {
             "title": "HighLight Singing Academy",
-            "description": "\"HighLight Singing Academy\" is Iskra's personal project, which she refers to as \"My first child.\" HighLight is the place where, together with her team, they uncover and develop the potential of their students, focusing not only on their vocal skills but also on their growth as well-rounded musical artists. Beyond being a place for musical education, \"HighLight Singing Academy\" is also a family—a community of people who share their love for singing in a spirit of collaboration and friendship.",
-            "buttonText": "Visit"
+            "description": "\"HighLight Singing Academy\" is Iskra's personal project, which she refers to as \"My first child.\" HighLight is the place where, together with her team, they uncover and develop the potential of their students, focusing not only on their vocal skills but also on their growth as well-rounded musical artists. Beyond being a place for musical education, \"HighLight Singing Academy\" is also a family—a community of people who share their love for singing in a spirit of collaboration and friendship."
         },
         "musicTalents": {
             "title": "Association \"Musical Talents of Bulgaria\"",
-            "description": "A voluntary organization founded by Iskra and part of her team, driven by the belief that Bulgarian children are exceptionally talented in the field of contemporary music and deserve support. The organization has dedicated its efforts and resources to discovering, developing, and supporting contemporary music and the new generation of musical artists in Bulgaria by providing them with opportunities for performance, training, recording, video production, and support for songwriting.",
-            "buttonText": "Visit"
+            "description": "A voluntary organization founded by Iskra and part of her team, driven by the belief that Bulgarian children are exceptionally talented in the field of contemporary music and deserve support. The organization has dedicated its efforts and resources to discovering, developing, and supporting contemporary music and the new generation of musical artists in Bulgaria by providing them with opportunities for performance, training, recording, video production, and support for songwriting."
         },
         "nextArtist": {
             "title": "Next Artist",
-            "description": "A modern singing competition that offers a stage for talented young performers from Bulgaria and abroad. The goal of the competition is to give more children and young people, who aspire to become professional performing artists, the opportunity to reach a modern, professional stage, and to meet artists, producers, and people from the music industry from whom they can gain knowledge and experience.",
-            "buttonText": "Visit"
+            "description": "A modern singing competition that offers a stage for talented young performers from Bulgaria and abroad. The goal of the competition is to give more children and young people, who aspire to become professional performing artists, the opportunity to reach a modern, professional stage, and to meet artists, producers, and people from the music industry from whom they can gain knowledge and experience."
         },
         "buttonText": "Visit"
     },

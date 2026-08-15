@@ -1,28 +1,16 @@
 "use client";
 
-import { useState, useEffect } from 'react';
 import { usePathname, useRouter } from 'next/navigation';
 import './Switcher.scss';
 
-export default function ToggleTheme() {
-    const [isToggled, setIsToggled] = useState(false);
+export default function LocaleSwitcher() {
     const pathname = usePathname();
     const router = useRouter();
-
-    useEffect(() => {
-        const isBulgarian = pathname.startsWith('/bg');
-        setIsToggled(isBulgarian);
-
-        if (!pathname.startsWith('/bg') && !pathname.startsWith('/en')) {
-            router.replace('/bg' + pathname);
-        }
-    }, [pathname, router]);
+    const isBulgarian = pathname.startsWith('/bg');
 
     const handleToggle = () => {
-        const newLocale = isToggled ? '/en' : '/bg';
-        const newPath = pathname.replace(/(\/bg|\/en)/, newLocale);
-        router.push(newPath);
-        setIsToggled(!isToggled);
+        const newLocale = isBulgarian ? '/en' : '/bg';
+        router.push(pathname.replace(/^\/(bg|en)/, newLocale));
     };
 
     return (
@@ -30,12 +18,15 @@ export default function ToggleTheme() {
             <input
                 type="checkbox"
                 id="flag-toggle"
-                checked={isToggled}
+                checked={isBulgarian}
                 onChange={handleToggle}
+                aria-label={isBulgarian ? "Switch to English" : "Превключи на български"}
             />
-            <label htmlFor="flag-toggle" className={isToggled ? "uk-flag" : "bulgarian-flag"}>
-                {/* <div className="toggle-button" />  */}
-            </label>
+            <label
+                htmlFor="flag-toggle"
+                className={isBulgarian ? "uk-flag" : "bulgarian-flag"}
+                aria-hidden="true"
+            ></label>
         </div>
     );
 }

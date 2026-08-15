@@ -1,6 +1,6 @@
 "use client";
 
-import { EffectCoverflow, Pagination, Navigation } from "swiper/modules";
+import { EffectCoverflow, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { useModal } from "../../../customHooks/useModal";
 import { useTranslations } from "next-intl";
@@ -11,7 +11,6 @@ import inspirationImages from "./galleryImages";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
-import "swiper/css/navigation";
 import "./Gallery.scss";
 
 const Gallery = () => {
@@ -21,7 +20,7 @@ const Gallery = () => {
   return (
     <div className="inspirations-container">
       <div id="gallery">
-        <h1 className="portfolio-section-title">{t("gallery.title")}</h1>
+        <h2 className="portfolio-section-title">{t("gallery.title")}</h2>
         <Swiper
           effect={"coverflow"}
           grabCursor={true}
@@ -35,20 +34,24 @@ const Gallery = () => {
             modifier: 2.5,
           }}
           pagination={{ el: ".swiper-pagination", clickable: true }}
-          navigation={{
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-          }}
-          modules={[EffectCoverflow, Pagination, Navigation]}
+          modules={[EffectCoverflow, Pagination]}
           className="swiper_container"
         >
           {inspirationImages.map((img, index) => (
-            <SwiperSlide key={index} onClick={() => openModal(img)}>
+            <SwiperSlide key={img.src} onClick={() => openModal(img)}>
               <Image
                 src={img}
-                alt="image"
+                alt={`${t("gallery.title")} ${index + 1}`}
                 fill
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                role="button"
+                tabIndex={0}
+                onKeyDown={(event) => {
+                  if (event.key === "Enter" || event.key === " ") {
+                    event.preventDefault();
+                    openModal(img);
+                  }
+                }}
               />
             </SwiperSlide>
           ))}

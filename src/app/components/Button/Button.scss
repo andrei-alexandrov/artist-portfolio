@@ -5,6 +5,14 @@
   margin: 3rem 0
 }
 
+// Link styled as a button (avoids nesting a <button> inside an <a>)
+a.contact-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
 @media (min-width: 768px) {
   .contact-button {
     position: relative;

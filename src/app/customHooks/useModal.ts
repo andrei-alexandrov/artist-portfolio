@@ -3,14 +3,14 @@ import { StaticImageData } from "next/image";
 
 type UseModalTypes = {
   isOpen: boolean;
-  imageSrc: StaticImageData | string;
+  imageSrc: StaticImageData | string | null;
   openModal: (image: StaticImageData | string) => void;
   closeModal: () => void;
 };
 
 export const useModal = (): UseModalTypes => {
   const [isOpen, setIsOpen] = useState(false);
-  const [imageSrc, setImageSrc] = useState<StaticImageData | string>("");
+  const [imageSrc, setImageSrc] = useState<StaticImageData | string | null>(null);
 
   const openModal = (image: StaticImageData | string) => {
     setImageSrc(image);
@@ -19,7 +19,7 @@ export const useModal = (): UseModalTypes => {
 
   const closeModal = () => {
     setIsOpen(false);
-    setImageSrc("");
+    setImageSrc(null);
   };
 
   return {

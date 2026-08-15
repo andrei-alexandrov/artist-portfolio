@@ -7,16 +7,10 @@ import facebookIcon from "../../assets/icons/facebook-round.png";
 import musicTalentsIcon from "../../assets/icons/music-talents.png";
 import highlightLogo from "../../assets/icons/highlight-logo-round.png";
 import spotifyLogo from "../../assets/icons/spotify.png";
-// import highlightLogoBlack from "../../assets/icons/highlight-logo-dark.png";
-// import highlightLogoWhite from "../../assets/icons/highlight-logo-light.png";
 
 import "./MediaIcons.scss";
 
-type MediaProps = {
-  isBlackBackground?: boolean;
-};
-
-const MediaIcons = ({ isBlackBackground }: MediaProps) => {
+const MediaIcons = () => {
   return (
     <div className="media-icons-container">
       <div className="media-icons-first-row">
@@ -24,11 +18,12 @@ const MediaIcons = ({ isBlackBackground }: MediaProps) => {
           href="https://www.linkedin.com/in/iskra-milkova-228991ab/"
           target="_blank"
           rel="noopener noreferrer"
+          aria-label="LinkedIn"
         >
           <div className="media-icons-wrapper">
             <Image
               src={linkedInIcon}
-              alt="linkedIn"
+              alt="LinkedIn"
               fill
               sizes="(max-width: 768px) 24px, (max-width: 1200px) 30px, 40px"
             />
@@ -38,11 +33,12 @@ const MediaIcons = ({ isBlackBackground }: MediaProps) => {
           href="https://www.instagram.com/iskra_milkova_vocal_coach/"
           target="_blank"
           rel="noopener noreferrer"
+          aria-label="Instagram"
         >
           <div className="media-icons-wrapper">
             <Image
               src={instagramIcon}
-              alt="instagram"
+              alt="Instagram"
               fill
               sizes="(max-width: 768px) 24px, (max-width: 1200px) 30px, 40px"
             />
@@ -52,11 +48,12 @@ const MediaIcons = ({ isBlackBackground }: MediaProps) => {
           href="https://www.facebook.com/iskra.milkova1"
           target="_blank"
           rel="noopener noreferrer"
+          aria-label="Facebook"
         >
           <div className="media-icons-wrapper">
             <Image
               src={facebookIcon}
-              alt="facebook"
+              alt="Facebook"
               fill
               sizes="(max-width: 768px) 24px, (max-width: 1200px) 30px, 40px"
             />
@@ -67,14 +64,15 @@ const MediaIcons = ({ isBlackBackground }: MediaProps) => {
           href="https://open.spotify.com/artist/4Nk118aY40N9GnA24giQkU?si=yR5pAzumQYKjQUkRTMuSlQ&nd=1&dlsi=1c2836ca234a4902"
           target="_blank"
           rel="noopener noreferrer"
+          aria-label="Spotify"
         >
           <div className="media-icons-wrapper">
             <Image
               className="spotify-logo"
               src={spotifyLogo}
-              alt="spotify"
-              height={44.2}
-              width={44.2}
+              alt="Spotify"
+              height={44}
+              width={44}
               sizes="(max-width: 768px) 24px, (max-width: 1200px) 30px, 40px"
             />
           </div>
@@ -84,15 +82,16 @@ const MediaIcons = ({ isBlackBackground }: MediaProps) => {
           href="https://highlight-singing.com/"
           target="_blank"
           rel="noopener noreferrer"
+          aria-label="HighLight Singing Academy"
         >
           <div className="media-icons-wrapper">
             <Image
               className="highlight-logo"
               src={highlightLogo}
-              alt="highlight"
+              alt="HighLight Singing Academy"
               sizes="(max-width: 768px) 24px, (max-width: 1200px) 30px, 40px"
-              height={53.4}
-              width={53.4}
+              height={53}
+              width={53}
             />
           </div>
         </a>
@@ -100,12 +99,13 @@ const MediaIcons = ({ isBlackBackground }: MediaProps) => {
           href="https://muzikalnite-talanti.com/"
           target="_blank"
           rel="noopener noreferrer"
+          aria-label="Musical Talents of Bulgaria"
         >
           <div className="media-icons-wrapper">
             <Image
               className="music-talents-logo"
               src={musicTalentsIcon}
-              alt="music-talents"
+              alt="Musical Talents of Bulgaria"
               fill
               sizes="(max-width: 768px) 24px, (max-width: 1200px) 30px, 40px"
             />

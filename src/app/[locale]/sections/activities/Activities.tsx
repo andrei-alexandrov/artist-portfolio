@@ -8,7 +8,7 @@ const Activities = () => {
 
   return (
     <div id="activities" className="activity-container">
-      <div className="portfolio-section-title">{t("activities.title")}</div>
+      <h2 className="portfolio-section-title">{t("activities.title")}</h2>
       <ActivityCard />
     </div>
   );

@@ -1,3 +1,5 @@
+"use client";
+
 import { useRef, useEffect, useState } from "react";
 import "./Stars.scss";
 import gsap from "gsap";
@@ -88,7 +90,7 @@ export default function StarGrid() {
           return [...Array(30)].map((_, j) => {
             return (
               <path
-                key={i + j}
+                key={`${i}-${j}`}
                 fill="currentColor"
                 opacity=".2"
                 className="star-grid-item"

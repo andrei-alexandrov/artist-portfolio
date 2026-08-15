@@ -4,11 +4,10 @@
 
 .contact-container {
   margin-bottom: 3rem;
-  background-image: url("../../../assets/contact/stars-bg-two.png");
+  background-image: url("../../../assets/contact/stars-bg-two.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-position: 42% 10% 5%;
   padding-bottom: 2rem;
 
   .title-container {
@@ -54,6 +53,13 @@
   padding-left: 20px;
   padding-right: 20px;
 
+  .author-mic {
+    height: 80px;
+    width: auto;
+    margin-top: 1.5rem;
+    align-self: center;
+  }
+
   .author {
     position: relative;
     top: 1rem;
@@ -64,11 +70,9 @@
 
 @media (min-width: 576px) {
   .contact-container {
-    background-image: url("../../../assets/contact/stars-bg.png");
+    background-image: url("../../../assets/contact/stars-bg.webp");
   }
 }
-
-@media (min-width: 768px) {}
 
 @media (min-width: 992px) {
   .contact-container {

@@ -1,48 +1,31 @@
-import { Container, Row, Col } from "react-bootstrap";
-import Intro from "../[locale]/pages/intro/Intro";
-import About from "../[locale]/pages/about/About";
-import Activities from "../[locale]/pages/activities/Activities";
-import Gallery from "../[locale]/pages/gallery/Gallery";
-import Courses from "../[locale]/pages/courses/Courses";
-import Certificates from "../[locale]/pages/certificates/Certificates";
-import Contact from "../[locale]/pages/contact/Contact";
+import { unstable_setRequestLocale } from "next-intl/server";
+import Intro from "./sections/intro/Intro";
+import About from "./sections/about/About";
+import Activities from "./sections/activities/Activities";
+import Gallery from "./sections/gallery/Gallery";
+import Courses from "./sections/courses/Courses";
+import Certificates from "./sections/certificates/Certificates";
+import Contact from "./sections/contact/Contact";
 
-export default function Home() {
+type Props = {
+  params: {
+    locale: string;
+  };
+};
+
+export default function Home({ params: { locale } }: Props) {
+  unstable_setRequestLocale(locale);
+
   return (
     <main>
-      <Container>
+      <div className="layout-container">
         <Intro />
-
-        <Row>
-          <Col>
-            <About />
-          </Col>
-        </Row>
-
-        <Row>
-          <Col>
-            <Activities />
-          </Col>
-        </Row>
-
-        <Row>
-          <Col>
-            <Courses />
-          </Col>
-        </Row>
-
-        <Row>
-          <Col>
-            <Gallery />
-          </Col>
-        </Row>
-
-        <Row>
-          <Col>
-            <Certificates />
-          </Col>
-        </Row>
-      </Container>
+        <About />
+        <Activities />
+        <Courses />
+        <Gallery />
+        <Certificates />
+      </div>
       <Contact />
     </main>
   );

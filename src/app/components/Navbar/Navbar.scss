@@ -10,16 +10,20 @@
   left: 0;
   right: 0;
   z-index: 99;
-  font-family: "Jost", sans-serif;
   background-color: $navbar-background-color;
+
+  .navbar-desktop {
+    display: none;
+  }
 
   .artist-special-name {
     position: relative;
     top: 3px;
-    font-family: "EyeSome", sans-serif;
+    font-family: var(--font-eyesome), cursive;
     font-size: 19px;
     color: $main-color;
     text-decoration: none;
+    cursor: pointer;
   }
 
   .hamburger-menu {
@@ -48,7 +52,8 @@
     background-color: $navbar-background-color;
     color: $main-color;
     padding: 30px;
-    transition: right 0.4s ease-in-out;
+    visibility: hidden;
+    transition: right 0.4s ease-in-out, visibility 0.4s;
     z-index: 1000;
     box-shadow: -4px 0 8px rgba(0, 0, 0, 0.15);
     cursor: pointer;
@@ -67,7 +72,6 @@
             font-size: 18px;
             font-weight: 500;
             transition: color 0.3s ease, transform 0.3s ease;
-            font-family: "Jost";
           }
         }
       }
@@ -75,6 +79,7 @@
 
     &.open {
       right: 0;
+      visibility: visible;
     }
 
     .close-btn {
@@ -174,6 +179,15 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    .navbar-desktop {
+      display: flex;
+      justify-content: center;
+    }
+
+    .navbar-mobile-toggle {
+      display: none;
+    }
 
     .artist-special-name {
       position: relative;

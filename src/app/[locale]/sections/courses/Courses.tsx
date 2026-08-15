@@ -1,5 +1,6 @@
 import { useTranslations } from "next-intl";
 import { getCoursesData } from "./coursesData";
+import Image from "next/image";
 
 import "./Courses.scss";
 
@@ -9,19 +10,28 @@ const Courses = () => {
 
   return (
     <>
-      <div id="courses" className="courses-title">{t("courses.title")}</div>
+      <h2 id="courses" className="courses-title">{t("courses.title")}</h2>
       <div className="card-container">
         {coursesData.map((content, index) => (
           <div key={index} className="card">
-            <video
-              src={content.videoUrl}
-              controls={!!content.videoUrl}
-              playsInline
-              poster={content.coverPhoto}
-            ></video>
-            <div className="courses-title">{content.title}</div>
-            <p className="description1">{content.description1}</p>
-            <p className="description2">{content.description2}</p>
+            {content.videoUrl ? (
+              <video
+                src={content.videoUrl}
+                controls
+                playsInline
+                poster={content.coverPhoto}
+              ></video>
+            ) : (
+              <Image
+                className="placeholder-image"
+                src={content.coverPhoto}
+                alt={content.title}
+                width={640}
+                height={360}
+              />
+            )}
+            <h3 className="courses-title">{content.title}</h3>
+            <p className="description1">{content.description}</p>
           </div>
         ))}
       </div>

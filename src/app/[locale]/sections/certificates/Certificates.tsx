@@ -11,35 +11,31 @@ import certificateThree from "../../../assets/certificates/3.jpg";
 
 import "./Certificates.scss";
 
+const certificates = [certificateOne, certificateTwo, certificateThree];
+
 const Certificates = () => {
   const t = useTranslations();
   const { isOpen, imageSrc, openModal, closeModal } = useModal();
 
   return (
     <div className="c-container" id="certificates">
-      <div className="portfolio-section-title">{t("certificates.title")}</div>
+      <h2 className="portfolio-section-title">{t("certificates.title")}</h2>
       <div className="certificates-container">
-        <Image
-          src={certificateOne}
-          alt="certificate"
-          width={380}
-          height={300}
-          onClick={() => openModal(certificateOne)}
-        />
-        <Image
-          src={certificateTwo}
-          alt="certificate"
-          width={380}
-          height={300}
-          onClick={() => openModal(certificateTwo)}
-        />
-        <Image
-          src={certificateThree}
-          alt="certificate"
-          width={380}
-          height={300}
-          onClick={() => openModal(certificateThree)}
-        />
+        {certificates.map((certificate, index) => (
+          <button
+            key={index}
+            className="certificate-button"
+            onClick={() => openModal(certificate)}
+            aria-label={`${t("certificates.title")} ${index + 1}`}
+          >
+            <Image
+              src={certificate}
+              alt={`${t("certificates.title")} ${index + 1}`}
+              width={380}
+              height={300}
+            />
+          </button>
+        ))}
       </div>
 
       <Modal isOpen={isOpen} onClose={closeModal} imageSrc={imageSrc} />
