@@ -2,9 +2,31 @@
 @import "../../../../mixins";
 @import "../../../../fonts";
 
+// Overlay stack for the starfield: readability scrim behind the text block,
+// corner vignette to quiet the sparkle clusters, and a bottom fade into the
+// page background. Applied above whichever star image the breakpoint uses.
+$contact-overlay:
+  linear-gradient(
+    to bottom,
+    $portfolio-background-color 0%,
+    rgba(6, 8, 10, 0) 14%,
+    rgba(6, 8, 10, 0) 78%,
+    $portfolio-background-color 100%
+  ),
+  radial-gradient(
+    ellipse 75% 55% at 50% 40%,
+    rgba(6, 8, 10, 0.4),
+    rgba(6, 8, 10, 0) 72%
+  ),
+  radial-gradient(
+    ellipse 140% 120% at 50% 45%,
+    rgba(6, 8, 10, 0) 52%,
+    rgba(6, 8, 10, 0.55) 100%
+  );
+
 .contact-container {
   margin-bottom: 3rem;
-  background-image: url("../../../assets/contact/stars-bg-two.webp");
+  background-image: $contact-overlay, url("../../../assets/contact/stars-bg-two.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -70,7 +92,7 @@
 
 @media (min-width: 576px) {
   .contact-container {
-    background-image: url("../../../assets/contact/stars-bg.webp");
+    background-image: $contact-overlay, url("../../../assets/contact/stars-bg.webp");
   }
 }
 

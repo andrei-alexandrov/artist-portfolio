@@ -9,6 +9,7 @@ import Button from "@/app/components/Button/Button";
 
 import highlightLogoWhite from "../../../assets/icons/highlight-logo-light.png";
 import artistPhoto from "../../../assets/intro/iskra-photo.jpg";
+import brightStar from "../../../assets/intro/bright-star-3.png";
 
 import "./Intro.scss";
 
@@ -46,7 +47,18 @@ const Intro = () => {
 
   return (
     <section id="intro">
-      <div className="background-image"></div>
+      {/* LCP element: a real <img> with priority so the browser discovers it
+          from the initial HTML instead of waiting for the CSS to parse. */}
+      <div className="background-image">
+        <Image
+          src={brightStar}
+          alt=""
+          fill
+          priority
+          sizes="100vw"
+          style={{ objectFit: "contain", objectPosition: "left top" }}
+        />
+      </div>
       <div className="intro-content-wrapper">
         <div className="starting-content">
           <br />
